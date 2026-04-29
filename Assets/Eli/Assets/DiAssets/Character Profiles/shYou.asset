@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de96142db9930664c8ebc66d76258c61, type: 3}
+  m_Name: shYou
+  m_EditorClassIdentifier: 
+  myName: You
+  xBase: -370
+  yBase: -31
+  xFace: -427
+  yFace: 78
+  shadowStatus: 1
+  emotionBase:
+    neutralBase: {fileID: 21300000, guid: 7d74dfd422668f746bf105819234f0d6, type: 3}
+    happyBase: {fileID: 21300000, guid: c1a880302020bd14ca73a24e2f115299, type: 3}
+    angeryBase: {fileID: 0}
+    sadBase: {fileID: 0}
+    surprisedBase: {fileID: 0}
+    hurtBase: {fileID: 0}
+    blushBase: {fileID: 0}
+    custom1Base: {fileID: 0}
+    custom2Base: {fileID: 0}
+    custom3Base: {fileID: 0}
+  emotionBlink:
+    neutralBlink: {fileID: 21300000, guid: 4a6ad87452f87cf489425812713d9b57, type: 3}
+    happyBlink: {fileID: 21300000, guid: 206cf79d7b907684fa7e57944349b688, type: 3}
+    angeryBlink: {fileID: 0}
+    sadBlink: {fileID: 0}
+    surprisedBlink: {fileID: 0}
+    hurtBlink: {fileID: 0}
+    blushBlink: {fileID: 0}
+    custom1Blink: {fileID: 0}
+    custom2Blink: {fileID: 0}
+    custom3Blink: {fileID: 0}
+  emotionMouth2:
+    neutralMouth2: {fileID: 21300000, guid: 4c22580eea4254b46b07f01276aea712, type: 3}
+    happyMouth2: {fileID: 21300000, guid: 4c22580eea4254b46b07f01276aea712, type: 3}
+    angeryMouth2: {fileID: 0}
+    sadMouth2: {fileID: 0}
+    surprisedMouth2: {fileID: 0}
+    hurtMouth2: {fileID: 0}
+    blushMouth2: {fileID: 0}
+    custom1Mouth2: {fileID: 0}
+    custom2Mouth2: {fileID: 0}
+    custom3Mouth2: {fileID: 0}
+  emotionMouth3:
+    neutralMouth3: {fileID: 21300000, guid: e127b5babc9a4dd498f95b38d4bf8ec2, type: 3}
+    happyMouth3: {fileID: 21300000, guid: e127b5babc9a4dd498f95b38d4bf8ec2, type: 3}
+    angeryMouth3: {fileID: 0}
+    sadMouth3: {fileID: 0}
+    surprisedMouth3: {fileID: 0}
+    hurtMouth3: {fileID: 0}
+    blushMouth3: {fileID: 0}
+    custom1Mouth3: {fileID: 0}
+    custom2Mouth3: {fileID: 0}
+    custom3Mouth3: {fileID: 0}

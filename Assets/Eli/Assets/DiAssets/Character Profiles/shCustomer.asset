@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de96142db9930664c8ebc66d76258c61, type: 3}
+  m_Name: shCustomer
+  m_EditorClassIdentifier: 
+  myName: Customer
+  xBase: -382
+  yBase: 25
+  xFace: -407
+  yFace: 43
+  shadowStatus: 1
+  emotionBase:
+    neutralBase: {fileID: 21300000, guid: 39a8cc514ebdf8d47a78460c9dd1a878, type: 3}
+    happyBase: {fileID: 21300000, guid: 39a8cc514ebdf8d47a78460c9dd1a878, type: 3}
+    angeryBase: {fileID: 0}
+    sadBase: {fileID: 21300000, guid: 7448a7fe3eac86d42b52b862ba69a2df, type: 3}
+    surprisedBase: {fileID: 0}
+    hurtBase: {fileID: 0}
+    blushBase: {fileID: 0}
+    custom1Base: {fileID: 21300000, guid: 39a8cc514ebdf8d47a78460c9dd1a878, type: 3}
+    custom2Base: {fileID: 0}
+    custom3Base: {fileID: 0}
+  emotionBlink:
+    neutralBlink: {fileID: 21300000, guid: 21c492067e4bab44d9798d0606d78a6c, type: 3}
+    happyBlink: {fileID: 21300000, guid: f2db37c6c2ac49f4f86d03fe323c0292, type: 3}
+    angeryBlink: {fileID: 0}
+    sadBlink: {fileID: 0}
+    surprisedBlink: {fileID: 0}
+    hurtBlink: {fileID: 0}
+    blushBlink: {fileID: 0}
+    custom1Blink: {fileID: 0}
+    custom2Blink: {fileID: 0}
+    custom3Blink: {fileID: 0}
+  emotionMouth2:
+    neutralMouth2: {fileID: 21300000, guid: 94a34e4ccd3f023498e91ac177c1e81d, type: 3}
+    happyMouth2: {fileID: 21300000, guid: 94a34e4ccd3f023498e91ac177c1e81d, type: 3}
+    angeryMouth2: {fileID: 0}
+    sadMouth2: {fileID: 0}
+    surprisedMouth2: {fileID: 0}
+    hurtMouth2: {fileID: 0}
+    blushMouth2: {fileID: 0}
+    custom1Mouth2: {fileID: 0}
+    custom2Mouth2: {fileID: 0}
+    custom3Mouth2: {fileID: 0}
+  emotionMouth3:
+    neutralMouth3: {fileID: 21300000, guid: 682f83ce00a2e4f46b4a2030b6879dc1, type: 3}
+    happyMouth3: {fileID: 21300000, guid: 682f83ce00a2e4f46b4a2030b6879dc1, type: 3}
+    angeryMouth3: {fileID: 0}
+    sadMouth3: {fileID: 0}
+    surprisedMouth3: {fileID: 0}
+    hurtMouth3: {fileID: 0}
+    blushMouth3: {fileID: 0}
+    custom1Mouth3: {fileID: 0}
+    custom2Mouth3: {fileID: 0}
+    custom3Mouth3: {fileID: 0}

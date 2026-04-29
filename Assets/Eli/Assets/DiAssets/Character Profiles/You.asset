@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de96142db9930664c8ebc66d76258c61, type: 3}
+  m_Name: You
+  m_EditorClassIdentifier: 
+  myName: You
+  xBase: -370
+  yBase: -31
+  xFace: -427
+  yFace: 78
+  shadowStatus: 0
+  emotionBase:
+    neutralBase: {fileID: 21300000, guid: 9237becb451de074eab600fcf1cfadec, type: 3}
+    happyBase: {fileID: 21300000, guid: 9237becb451de074eab600fcf1cfadec, type: 3}
+    angeryBase: {fileID: 21300000, guid: f42a930337d0de541ab497b502d5f2c8, type: 3}
+    sadBase: {fileID: 21300000, guid: 30c7c2dc9d1315d40a3d97d47979243b, type: 3}
+    surprisedBase: {fileID: 21300000, guid: 58dce5590e3efce468774838bfff19ec, type: 3}
+    hurtBase: {fileID: 21300000, guid: 8d193b10efd71b04290f38154ae5fc1f, type: 3}
+    blushBase: {fileID: 21300000, guid: 8b1d81f5a9af29e49b08d6c2d0882937, type: 3}
+    custom1Base: {fileID: 21300000, guid: 9095096273bf79d4583fb654e1604462, type: 3}
+    custom2Base: {fileID: 21300000, guid: fc3f012e96751ae44936d6e29537baaa, type: 3}
+    custom3Base: {fileID: 21300000, guid: 73549f3013c4ee7438c52185368a1fd9, type: 3}
+  emotionBlink:
+    neutralBlink: {fileID: 21300000, guid: 56def829f76af5a4ba7a34b55fcb43d8, type: 3}
+    happyBlink: {fileID: 21300000, guid: 6204178151cd9f54e821db8f86c068d2, type: 3}
+    angeryBlink: {fileID: 21300000, guid: f38b1c6180d67304f80d96bb49940027, type: 3}
+    sadBlink: {fileID: 21300000, guid: 2a90355146239cf48adc50edf16d4c53, type: 3}
+    surprisedBlink: {fileID: 21300000, guid: 7afc23eefb420a44c9875e6488769c56, type: 3}
+    hurtBlink: {fileID: 21300000, guid: 646746bdff05073468e31dfe0109b872, type: 3}
+    blushBlink: {fileID: 21300000, guid: b6b8a6a065fe36a48a21b740ed06a5ad, type: 3}
+    custom1Blink: {fileID: 21300000, guid: 541a3d3c3e4d11449bc5c37bf40968c4, type: 3}
+    custom2Blink: {fileID: 21300000, guid: 4b20b91dfceac494d99fd57f75b6efdb, type: 3}
+    custom3Blink: {fileID: 21300000, guid: c0b338e25da087e48b91b3208f4a3e36, type: 3}
+  emotionMouth2:
+    neutralMouth2: {fileID: 21300000, guid: ad31ff27c89a5224ea1a7957f63a432c, type: 3}
+    happyMouth2: {fileID: 21300000, guid: 16883f2f80e152f46b350ee6f81d9c65, type: 3}
+    angeryMouth2: {fileID: 21300000, guid: aa17829c3d12cb242bf1fc2b167d2450, type: 3}
+    sadMouth2: {fileID: 21300000, guid: fb3dd0e3ce197df4db381c86e30693d5, type: 3}
+    surprisedMouth2: {fileID: 21300000, guid: 065b541c73a77c54dad84e63dc4397c0, type: 3}
+    hurtMouth2: {fileID: 21300000, guid: 74b25d613b0882f4eaf7078cd7d02039, type: 3}
+    blushMouth2: {fileID: 21300000, guid: 0b7871bb36f9ef744ba530f744dcfa45, type: 3}
+    custom1Mouth2: {fileID: 21300000, guid: bc02135db8be5424e97230a5e324c9cc, type: 3}
+    custom2Mouth2: {fileID: 21300000, guid: 0e4f2c0ed9d5d82459a0af567e3c7e2a, type: 3}
+    custom3Mouth2: {fileID: 21300000, guid: 84619c377a2f5ce4db0c98df1b8d5870, type: 3}
+  emotionMouth3:
+    neutralMouth3: {fileID: 21300000, guid: 2bbeaa9d373781c4cb48be75838231d8, type: 3}
+    happyMouth3: {fileID: 21300000, guid: bdb762f3e62be674386472083e8262f4, type: 3}
+    angeryMouth3: {fileID: 21300000, guid: c17d412239fa5104e96c77a6413b3bf8, type: 3}
+    sadMouth3: {fileID: 21300000, guid: 14a6cdc29206a6d4c96b8ef1090eb6ff, type: 3}
+    surprisedMouth3: {fileID: 21300000, guid: 69383c7940d81084982d8e5e5ad70aed, type: 3}
+    hurtMouth3: {fileID: 21300000, guid: e1f0351ec3857d04ba835c0cfc10501e, type: 3}
+    blushMouth3: {fileID: 21300000, guid: 413cce8fc2c83214db69fa35e96bbf96, type: 3}
+    custom1Mouth3: {fileID: 21300000, guid: c1e17726ceae82946a08a07e6a7b0cf8, type: 3}
+    custom2Mouth3: {fileID: 21300000, guid: 69936d6289ac5cf448effbdcec77a9d9, type: 3}
+    custom3Mouth3: {fileID: 21300000, guid: 8dc1ff9c464e71d4eaa69e23289925c4, type: 3}
