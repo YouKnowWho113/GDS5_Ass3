@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FoodScanner : MonoBehaviour
 {
-    public float radius = 2f;
+    public float radius = 2.5f;
     public LayerMask foodLayer;
 
     void Update()
@@ -17,8 +17,7 @@ public class FoodScanner : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
-            ScanTarget target =
-                hit.GetComponent<ScanTarget>();
+            ScanTarget target = hit.GetComponent<ScanTarget>();
 
             if (target != null)
             {
@@ -27,8 +26,7 @@ public class FoodScanner : MonoBehaviour
                         transform.position,
                         hit.transform.position);
 
-                float reveal =
-                    1 - (dist / radius);
+                float reveal = 1.5f - (dist / radius);
 
                 reveal = Mathf.Clamp01(reveal);
 
