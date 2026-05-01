@@ -1,15 +1,25 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [System.Serializable]
 public struct MaterialAudioData
 {
+    [Header("Identity")]
     public string materialName;
+    public string evidenceID;
+
+    [Header("Mask")]
     public Color maskColor;
+
+    [Header("Audio")]
     public AudioClip dragSound;
 
     [Range(0.5f, 2f)]
     public float basePitch;
+
+    [Header("Evidence")]
+    public float requiredScrapeTime;
 }
 
 [RequireComponent(typeof(AudioSource))]
@@ -19,47 +29,66 @@ public class FoodScan : MonoBehaviour
     public SpriteRenderer foodRenderer;
     public Texture2D audioMask;
 
+    [Header("Input")]
+    public int mouseButton = 0; // 0 = left click
+    public bool ignoreWhenPointerOverUI = true;
+
     [Header("Audio Settings")]
     public AudioSource audioSource;
     public float maxSpeedThreshold = 15f;
+    public float minMouseSpeed = 0.1f;
     public float colorTolerance = 0.1f;
 
     [Header("Debug")]
-    public bool debugScan = true;
+    public bool debugScan = false;
 
     [Header("Material Database")]
-    public List<MaterialAudioData> materialDatabase;
+    public List<MaterialAudioData> materialDatabase = new List<MaterialAudioData>();
 
     private Vector2 lastMousePos;
-    private MaterialAudioData currentMaterial;
-    private bool isPlayingMaterialSound = false;
+    private string currentEvidenceID;
+    private float scrapeTimer;
+    private bool evidenceUnlockedForCurrentRegion;
+    private bool isPlayingMaterialSound;
 
-    void Start()
+    private void Awake()
     {
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
 
         audioSource.loop = true;
+        audioSource.playOnAwake = false;
     }
 
-    void Update()
+    private void Update()
     {
         if (foodRenderer == null || audioMask == null)
         {
-            Debug.LogWarning("[FoodScan] Missing foodRenderer or audioMask.");
+            StopAudio();
+            return;
+        }
+
+        if (Camera.main == null)
+        {
+            StopAudio();
             return;
         }
 
         Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetMouseButton(0))
+        if (ignoreWhenPointerOverUI &&
+            EventSystem.current != null &&
+            EventSystem.current.IsPointerOverGameObject())
+        {
+            ResetScrape();
+            StopAudio();
+            lastMousePos = currentMousePos;
+            return;
+        }
+
+        if (Input.GetMouseButton(mouseButton))
         {
             bool insideFood = foodRenderer.bounds.Contains(currentMousePos);
-
-            if (debugScan)
-            {
-                Debug.Log("[FoodScan] Mouse held. World Pos: " + currentMousePos + " | Inside food: " + insideFood);
-            }
 
             if (insideFood)
             {
@@ -67,13 +96,14 @@ public class FoodScan : MonoBehaviour
             }
             else
             {
-                StopAudio("Mouse outside food sprite");
+                ResetScrape();
+                StopAudio();
             }
         }
-
-        if (Input.GetMouseButtonUp(0))
+        else
         {
-            StopAudio("Mouse released");
+            ResetScrape();
+            StopAudio();
         }
 
         lastMousePos = currentMousePos;
@@ -81,134 +111,143 @@ public class FoodScan : MonoBehaviour
 
     private void ProcessAudioForensics(Vector2 mousePos)
     {
-        float mouseSpeed = Vector2.Distance(mousePos, lastMousePos) / Time.deltaTime;
+        float deltaTime = Mathf.Max(Time.deltaTime, 0.0001f);
+        float mouseSpeed = Vector2.Distance(mousePos, lastMousePos) / deltaTime;
 
-        if (debugScan)
+        if (mouseSpeed < minMouseSpeed)
         {
-            Debug.Log("[FoodScan] Mouse speed: " + mouseSpeed);
-        }
-
-        if (mouseSpeed < 0.1f)
-        {
-            StopAudio("Mouse too slow");
+            StopAudio();
             return;
         }
 
         Color hitColor = GetColorFromMask(mousePos);
 
-        if (debugScan)
+        if (!TryFindMaterial(hitColor, out MaterialAudioData matchedMaterial))
         {
-            Debug.Log("[FoodScan] Scanned mask color: " + hitColor);
+            ResetScrape();
+            StopAudio();
+            return;
         }
 
-        bool foundMaterial = false;
+        PlayMaterialSound(matchedMaterial, mouseSpeed);
+        TrackSoundEvidence(matchedMaterial);
+    }
 
-        foreach (var mat in materialDatabase)
+    private bool TryFindMaterial(Color hitColor, out MaterialAudioData matchedMaterial)
+    {
+        foreach (MaterialAudioData material in materialDatabase)
         {
-            float colorDistance = Vector4.Distance(hitColor, mat.maskColor);
+            float colorDistance = Vector4.Distance(hitColor, material.maskColor);
 
-            if (debugScan)
+            if (colorDistance <= colorTolerance)
             {
-                Debug.Log("[FoodScan] Checking: " + mat.materialName +
-                          " | Target Color: " + mat.maskColor +
-                          " | Distance: " + colorDistance);
-            }
-
-            if (colorDistance < colorTolerance)
-            {
-                currentMaterial = mat;
-                foundMaterial = true;
-
-                if (debugScan)
-                {
-                    Debug.Log("[FoodScan] MATCH FOUND: " + mat.materialName);
-                }
-
-                break;
+                matchedMaterial = material;
+                return true;
             }
         }
 
-        if (foundMaterial)
+        matchedMaterial = default;
+        return false;
+    }
+
+    private void PlayMaterialSound(MaterialAudioData material, float mouseSpeed)
+    {
+        if (material.dragSound == null)
         {
-            if (audioSource.clip != currentMaterial.dragSound)
-            {
-                audioSource.clip = currentMaterial.dragSound;
-                audioSource.Play();
-                isPlayingMaterialSound = true;
-
-                if (debugScan)
-                {
-                    Debug.Log("[FoodScan] Playing new sound: " + currentMaterial.materialName);
-                }
-            }
-            else if (!isPlayingMaterialSound)
-            {
-                audioSource.Play();
-                isPlayingMaterialSound = true;
-
-                if (debugScan)
-                {
-                    Debug.Log("[FoodScan] Resuming sound: " + currentMaterial.materialName);
-                }
-            }
-
-            float speedRatio = Mathf.Clamp01(mouseSpeed / maxSpeedThreshold);
-
-            audioSource.volume = Mathf.Lerp(0.2f, 1.0f, speedRatio);
-            audioSource.pitch = Mathf.Lerp(
-                currentMaterial.basePitch - 0.2f,
-                currentMaterial.basePitch + 0.3f,
-                speedRatio
-            );
-
-            if (debugScan)
-            {
-                Debug.Log("[FoodScan] Volume: " + audioSource.volume +
-                          " | Pitch: " + audioSource.pitch);
-            }
+            StopAudio();
+            return;
         }
-        else
+
+        if (audioSource.clip != material.dragSound)
         {
-            StopAudio("No matching material color");
+            audioSource.clip = material.dragSound;
+            audioSource.Play();
+            isPlayingMaterialSound = true;
+        }
+        else if (!isPlayingMaterialSound)
+        {
+            audioSource.Play();
+            isPlayingMaterialSound = true;
+        }
+
+        float speedRatio = Mathf.Clamp01(mouseSpeed / maxSpeedThreshold);
+
+        audioSource.volume = Mathf.Lerp(0.2f, 1.0f, speedRatio);
+        audioSource.pitch = Mathf.Lerp(
+            material.basePitch - 0.2f,
+            material.basePitch + 0.3f,
+            speedRatio
+        );
+    }
+
+    private void TrackSoundEvidence(MaterialAudioData material)
+    {
+        if (currentEvidenceID != material.evidenceID)
+        {
+            currentEvidenceID = material.evidenceID;
+            scrapeTimer = 0f;
+            evidenceUnlockedForCurrentRegion = false;
+        }
+
+        if (evidenceUnlockedForCurrentRegion)
+            return;
+
+        scrapeTimer += Time.deltaTime;
+
+        if (scrapeTimer >= material.requiredScrapeTime)
+        {
+            evidenceUnlockedForCurrentRegion = true;
+
+            if (EvidenceNotebook.Instance != null)
+            {
+                EvidenceNotebook.Instance.AddAudibleEvidence(material.evidenceID);
+            }
+            else
+            {
+                Debug.LogWarning("[FoodScan] EvidenceNotebook missing in scene.");
+            }
         }
     }
 
     private Color GetColorFromMask(Vector2 worldPos)
     {
         Vector2 localPos = foodRenderer.transform.InverseTransformPoint(worldPos);
-
         Bounds bounds = foodRenderer.sprite.bounds;
 
         float u = Mathf.InverseLerp(bounds.min.x, bounds.max.x, localPos.x);
         float v = Mathf.InverseLerp(bounds.min.y, bounds.max.y, localPos.y);
 
-        int pixelX = Mathf.Clamp(Mathf.RoundToInt(u * audioMask.width), 0, audioMask.width - 1);
-        int pixelY = Mathf.Clamp(Mathf.RoundToInt(v * audioMask.height), 0, audioMask.height - 1);
+        int pixelX = Mathf.Clamp(Mathf.RoundToInt(u * (audioMask.width - 1)), 0, audioMask.width - 1);
+        int pixelY = Mathf.Clamp(Mathf.RoundToInt(v * (audioMask.height - 1)), 0, audioMask.height - 1);
 
         Color pixelColor = audioMask.GetPixel(pixelX, pixelY);
 
         if (debugScan)
         {
-            Debug.Log("[FoodScan] Local Pos: " + localPos +
-                      " | UV: " + new Vector2(u, v) +
-                      " | Pixel: " + pixelX + "," + pixelY +
-                      " | Color: " + pixelColor);
+            Debug.Log(
+                "[FoodScan] Pos: " + worldPos +
+                " | UV: " + new Vector2(u, v) +
+                " | Pixel: " + pixelX + "," + pixelY +
+                " | Color: " + pixelColor
+            );
         }
 
         return pixelColor;
     }
 
-    private void StopAudio(string reason)
+    private void ResetScrape()
     {
-        if (isPlayingMaterialSound)
-        {
-            audioSource.Pause();
-            isPlayingMaterialSound = false;
+        scrapeTimer = 0f;
+        currentEvidenceID = "";
+        evidenceUnlockedForCurrentRegion = false;
+    }
 
-            if (debugScan)
-            {
-                Debug.Log("[FoodScan] Audio stopped. Reason: " + reason);
-            }
-        }
+    private void StopAudio()
+    {
+        if (!isPlayingMaterialSound)
+            return;
+
+        audioSource.Pause();
+        isPlayingMaterialSound = false;
     }
 }
