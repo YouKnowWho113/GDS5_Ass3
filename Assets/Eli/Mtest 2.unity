@@ -1393,7 +1393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1180927793
 Transform:
   m_ObjectHideFlags: 0
@@ -1869,6 +1869,10 @@ PrefabInstance:
     - target: {fileID: 4728755720649599025, guid: 97444e059277f4345957f4ab856661af, type: 3}
       propertyPath: m_Name
       value: ScanMask
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728755720649599025, guid: 97444e059277f4345957f4ab856661af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8546174396983933356, guid: 97444e059277f4345957f4ab856661af, type: 3}
       propertyPath: m_LocalPosition.x
