@@ -1,6 +1,10 @@
+using System;
+
+[Flags]
 public enum EvidenceChannel
 {
-    Visible,
-    Audible,
-    Both
+    None = 0,
+    Visible = 1,
+    Audible = 2,
+    Both = Visible | Audible
 }

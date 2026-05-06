@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DeductionManager : MonoBehaviour
@@ -10,8 +11,15 @@ public class DeductionManager : MonoBehaviour
 
     [Header("Game State")]
     public int remainingTries = 3;
+    public int maxSelectedEvidence = 3;
 
-    private readonly List<string> selectedEvidence = new List<string>();
+    [Header("Rules")]
+    public bool requireEvidenceBeforeCorrect = true;
+
+    public event Action OnSelectedEvidenceChanged;
+    public event Action<bool> OnReportSubmitted;
+
+    private readonly HashSet<string> selectedEvidence = new HashSet<string>();
 
     private void Awake()
     {
@@ -24,35 +32,101 @@ public class DeductionManager : MonoBehaviour
         Instance = this;
     }
 
-    public void AddIngredient(string evidenceID)
+    public void SetCurrentDish(DishCase dishCase)
     {
-        AddEvidence(evidenceID);
+        currentDish = dishCase;
+        ResetReport();
+
+        Debug.Log("[DeductionManager] Current dish set to: " +
+                  (currentDish != null ? currentDish.dishName : "None"));
     }
 
-    public void RemoveIngredient(string evidenceID)
+    public bool AddIngredient(string evidenceID)
     {
-        RemoveEvidence(evidenceID);
+        return AddEvidence(evidenceID);
     }
 
-    public void AddEvidence(string evidenceID)
+    public bool RemoveIngredient(string evidenceID)
+    {
+        return RemoveEvidence(evidenceID);
+    }
+
+    public bool AddEvidence(string evidenceID)
     {
         if (string.IsNullOrWhiteSpace(evidenceID))
-            return;
+            return false;
 
-        if (!selectedEvidence.Contains(evidenceID))
+        if (selectedEvidence.Contains(evidenceID))
+            return true;
+
+        if (selectedEvidence.Count >= maxSelectedEvidence)
         {
-            selectedEvidence.Add(evidenceID);
-            Debug.Log("[Report] Added evidence answer: " + evidenceID);
+            Debug.Log("[Report] Cannot select more than " + maxSelectedEvidence + " evidence.");
+            return false;
         }
+
+        selectedEvidence.Add(evidenceID);
+        Debug.Log("[Report] Selected evidence: " + evidenceID);
+
+        OnSelectedEvidenceChanged?.Invoke();
+        return true;
     }
 
-    public void RemoveEvidence(string evidenceID)
+    public bool RemoveEvidence(string evidenceID)
     {
-        if (selectedEvidence.Contains(evidenceID))
+        if (string.IsNullOrWhiteSpace(evidenceID))
+            return false;
+
+        bool removed = selectedEvidence.Remove(evidenceID);
+
+        if (removed)
         {
-            selectedEvidence.Remove(evidenceID);
-            Debug.Log("[Report] Removed evidence answer: " + evidenceID);
+            Debug.Log("[Report] Removed evidence: " + evidenceID);
+            OnSelectedEvidenceChanged?.Invoke();
         }
+
+        return removed;
+    }
+
+    public bool ToggleEvidence(string evidenceID)
+    {
+        if (IsSelected(evidenceID))
+            return RemoveEvidence(evidenceID);
+
+        return AddEvidence(evidenceID);
+    }
+
+    public bool IsSelected(string evidenceID)
+    {
+        return selectedEvidence.Contains(evidenceID);
+    }
+
+    public bool CanSelectMore()
+    {
+        return selectedEvidence.Count < maxSelectedEvidence;
+    }
+
+    public int GetSelectedCount()
+    {
+        return selectedEvidence.Count;
+    }
+
+    public List<string> GetSelectedEvidence()
+    {
+        return new List<string>(selectedEvidence);
+    }
+
+    public void ResetReport()
+    {
+        selectedEvidence.Clear();
+        OnSelectedEvidenceChanged?.Invoke();
+
+        Debug.Log("[Report] Report selections cleared.");
+    }
+
+    public void ResetTries(int tries)
+    {
+        remainingTries = tries;
     }
 
     public void MakeConclusion()
@@ -81,7 +155,9 @@ public class DeductionManager : MonoBehaviour
 
         CheckMissingAnswers(ref reportCorrect);
         CheckWrongAnswers(ref reportCorrect);
-        CheckEvidenceChannels(ref reportCorrect);
+
+        if (requireEvidenceBeforeCorrect)
+            CheckEvidenceChannels(ref reportCorrect);
 
         if (reportCorrect)
         {
@@ -96,6 +172,8 @@ public class DeductionManager : MonoBehaviour
                 Debug.Log("[Report] GAME OVER. Correct dish was: " + currentDish.dishName);
             }
         }
+
+        OnReportSubmitted?.Invoke(reportCorrect);
     }
 
     private void CheckMissingAnswers(ref bool reportCorrect)
@@ -114,18 +192,7 @@ public class DeductionManager : MonoBehaviour
     {
         foreach (string selected in selectedEvidence)
         {
-            bool existsInDish = false;
-
-            foreach (EvidenceRequirement requirement in currentDish.correctEvidence)
-            {
-                if (requirement.evidenceID == selected)
-                {
-                    existsInDish = true;
-                    break;
-                }
-            }
-
-            if (!existsInDish)
+            if (!DishContainsEvidence(selected))
             {
                 reportCorrect = false;
                 Debug.Log("[Report] Wrong answer selected: " + selected);
@@ -148,24 +215,30 @@ public class DeductionManager : MonoBehaviour
             if (!hasRequiredEvidence)
             {
                 reportCorrect = false;
+
+                EvidenceChannel foundChannel =
+                    EvidenceNotebook.Instance.GetDiscoveredChannel(requirement.evidenceID);
+
                 Debug.Log(
-                    "[Report] Missing required " +
+                    "[Report] Missing required evidence for: " +
+                    requirement.evidenceID +
+                    " | Required: " +
                     requirement.evidenceChannel +
-                    " evidence for: " +
-                    requirement.evidenceID
+                    " | Found: " +
+                    foundChannel
                 );
             }
         }
     }
 
-    public void ClearSelectedEvidence()
+    private bool DishContainsEvidence(string evidenceID)
     {
-        selectedEvidence.Clear();
-        Debug.Log("[Report] Cleared selected report answers.");
-    }
+        foreach (EvidenceRequirement requirement in currentDish.correctEvidence)
+        {
+            if (requirement.evidenceID == evidenceID)
+                return true;
+        }
 
-    public List<string> GetSelectedEvidence()
-    {
-        return new List<string>(selectedEvidence);
+        return false;
     }
 }

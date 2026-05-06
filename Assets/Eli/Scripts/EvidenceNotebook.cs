@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,51 +6,105 @@ public class EvidenceNotebook : MonoBehaviour
 {
     public static EvidenceNotebook Instance;
 
-    private HashSet<string> visibleEvidence = new HashSet<string>();
-    private HashSet<string> audibleEvidence = new HashSet<string>();
+    public event Action<string, EvidenceChannel> OnEvidenceAdded;
+    public event Action OnEvidenceCleared;
+
+    private readonly Dictionary<string, EvidenceChannel> discoveredEvidence =
+        new Dictionary<string, EvidenceChannel>();
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
     }
 
     public void AddVisibleEvidence(string evidenceID)
     {
-        if (visibleEvidence.Add(evidenceID))
-            Debug.Log("[Evidence] Visible found: " + evidenceID);
+        AddEvidence(evidenceID, EvidenceChannel.Visible);
     }
 
     public void AddAudibleEvidence(string evidenceID)
     {
-        if (audibleEvidence.Add(evidenceID))
-            Debug.Log("[Evidence] Audible found: " + evidenceID);
+        AddEvidence(evidenceID, EvidenceChannel.Audible);
+    }
+
+    public void AddEvidence(string evidenceID, EvidenceChannel channel)
+    {
+        if (string.IsNullOrWhiteSpace(evidenceID))
+            return;
+
+        EvidenceChannel oldChannel = EvidenceChannel.None;
+
+        if (discoveredEvidence.ContainsKey(evidenceID))
+            oldChannel = discoveredEvidence[evidenceID];
+
+        EvidenceChannel newChannel = oldChannel | channel;
+
+        if (newChannel == oldChannel)
+            return;
+
+        discoveredEvidence[evidenceID] = newChannel;
+
+        Debug.Log("[EvidenceNotebook] Found " + channel + " evidence: " + evidenceID);
+
+        OnEvidenceAdded?.Invoke(evidenceID, newChannel);
     }
 
     public bool HasVisibleEvidence(string evidenceID)
     {
-        return visibleEvidence.Contains(evidenceID);
+        return HasEvidence(evidenceID, EvidenceChannel.Visible);
     }
 
     public bool HasAudibleEvidence(string evidenceID)
     {
-        return audibleEvidence.Contains(evidenceID);
+        return HasEvidence(evidenceID, EvidenceChannel.Audible);
     }
 
-    public bool HasEvidence(string evidenceID, EvidenceChannel channel)
+    public bool HasEvidence(string evidenceID, EvidenceChannel requiredChannel)
     {
-        switch (channel)
-        {
-            case EvidenceChannel.Visible:
-                return HasVisibleEvidence(evidenceID);
+        if (string.IsNullOrWhiteSpace(evidenceID))
+            return false;
 
-            case EvidenceChannel.Audible:
-                return HasAudibleEvidence(evidenceID);
+        if (requiredChannel == EvidenceChannel.None)
+            return true;
 
-            case EvidenceChannel.Both:
-                return HasVisibleEvidence(evidenceID) && HasAudibleEvidence(evidenceID);
+        if (!discoveredEvidence.TryGetValue(evidenceID, out EvidenceChannel foundChannel))
+            return false;
 
-            default:
-                return false;
-        }
+        return (foundChannel & requiredChannel) == requiredChannel;
+    }
+
+    public EvidenceChannel GetDiscoveredChannel(string evidenceID)
+    {
+        if (string.IsNullOrWhiteSpace(evidenceID))
+            return EvidenceChannel.None;
+
+        if (discoveredEvidence.TryGetValue(evidenceID, out EvidenceChannel channel))
+            return channel;
+
+        return EvidenceChannel.None;
+    }
+
+    public bool HasAnyEvidence(string evidenceID)
+    {
+        return GetDiscoveredChannel(evidenceID) != EvidenceChannel.None;
+    }
+
+    public Dictionary<string, EvidenceChannel> GetAllDiscoveredEvidence()
+    {
+        return new Dictionary<string, EvidenceChannel>(discoveredEvidence);
+    }
+
+    public void ClearEvidence()
+    {
+        discoveredEvidence.Clear();
+        Debug.Log("[EvidenceNotebook] Cleared all evidence.");
+
+        OnEvidenceCleared?.Invoke();
     }
 }

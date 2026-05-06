@@ -41,6 +41,8 @@ public class FoodScan : MonoBehaviour
 
     [Header("Debug")]
     public bool debugScan = false;
+    private string lastDebugEvidenceID;
+    private Color lastDebugColor;
 
     [Header("Material Database")]
     public List<MaterialAudioData> materialDatabase = new List<MaterialAudioData>();
@@ -224,12 +226,15 @@ public class FoodScan : MonoBehaviour
 
         if (debugScan)
         {
-            Debug.Log(
-                "[FoodScan] Pos: " + worldPos +
-                " | UV: " + new Vector2(u, v) +
-                " | Pixel: " + pixelX + "," + pixelY +
-                " | Color: " + pixelColor
-            );
+            if (Vector4.Distance(pixelColor, lastDebugColor) > 0.05f)
+            {
+                Debug.Log(
+                    "[FoodScan] Pixel: " + pixelX + "," + pixelY +
+                    " | Color: " + pixelColor
+                );
+
+                lastDebugColor = pixelColor;
+            }
         }
 
         return pixelColor;
