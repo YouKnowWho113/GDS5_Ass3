@@ -12,6 +12,10 @@ public class EvidenceNotebook : MonoBehaviour
     private readonly Dictionary<string, EvidenceChannel> discoveredEvidence =
         new Dictionary<string, EvidenceChannel>();
 
+    private void Start()
+    {
+        Instance.ClearEvidence();
+    }
     private void Awake()
     {
         if (Instance != null && Instance != this)
