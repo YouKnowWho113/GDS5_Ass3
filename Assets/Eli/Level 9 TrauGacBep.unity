@@ -392,7 +392,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Submit
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -526,7 +528,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Spicy
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -871,7 +875,7 @@ MonoBehaviour:
   currentDish: {fileID: 11400000, guid: c0878d22dd9f5f1459508d5271dcc2bf, type: 2}
   remainingTries: 3
   maxSelectedEvidence: 3
-  requireEvidenceBeforeCorrect: 0
+  requireEvidenceBeforeCorrect: 1
 --- !u!114 &1159629366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,7 +1955,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1159629365}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1
@@ -2209,7 +2213,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Sweet
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2394,6 +2400,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 874684947847221131, guid: 3941522b7fc29e2478464563fdabdb6d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 874684947847221131, guid: 3941522b7fc29e2478464563fdabdb6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 64269aa8b14ff4c4caf69e225458f96f, type: 2}
@@ -2533,6 +2543,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 829ee397c9a451243900c539fca20d7e, type: 3}
+    - target: {fileID: 6637403531975448801, guid: 3941522b7fc29e2478464563fdabdb6d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7345908040092976293, guid: 3941522b7fc29e2478464563fdabdb6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2545,6 +2559,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 84c2561ab2a182c428178026d91225ef, type: 3}
+    - target: {fileID: 7577405424947476720, guid: 3941522b7fc29e2478464563fdabdb6d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8181543358386271152, guid: 3941522b7fc29e2478464563fdabdb6d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2573,6 +2591,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 829ee397c9a451243900c539fca20d7e, type: 3}
+    - target: {fileID: 8766360270116838910, guid: 3941522b7fc29e2478464563fdabdb6d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

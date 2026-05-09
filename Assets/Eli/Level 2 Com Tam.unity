@@ -153,6 +153,7 @@ Transform:
   m_Children:
   - {fileID: 162947074}
   - {fileID: 1946040551}
+  - {fileID: 540712359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162947073
@@ -213,19 +214,19 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+    maskColor: {r: 0.9490197, g: 0.7607844, b: 0.45882356, a: 1}
     dragSound: {fileID: 0}
     basePitch: 0.85
     requiredScrapeTime: 0.7
   - materialName: Salty
     evidenceID: salty
-    maskColor: {r: 0.17254902, g: 0.3647059, b: 0.5294118, a: 1}
+    maskColor: {r: 0.9294118, g: 0.5372549, b: 0.29803923, a: 1}
     dragSound: {fileID: 0}
     basePitch: 1.35
     requiredScrapeTime: 0.6
-  - materialName: Crunchy
-    evidenceID: crunchy
-    maskColor: {r: 1, g: 0, b: 0, a: 1}
+  - materialName: Spicy
+    evidenceID: spicy
+    maskColor: {r: 0.7960785, g: 0.43921572, b: 0.23137257, a: 1}
     dragSound: {fileID: 0}
     basePitch: 1.1
     requiredScrapeTime: 0.5
@@ -466,7 +467,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Submit
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -789,6 +792,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &540712358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 540712359}
+  - component: {fileID: 540712360}
+  m_Layer: 0
+  m_Name: DIshInstance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &540712359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540712358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 58721789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540712360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540712358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e430c84ace501f54ca42ba72ebf3f82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dishCase: {fileID: 11400000, guid: c573cf682e64dff4eba250e95dc854f8, type: 2}
+  autoRegisterOnStart: 1
+  clearEvidenceOnRegister: 1
+  clearReportOnRegister: 1
+  resetTriesOnRegister: 1
+  startingTries: 3
 --- !u!1 &545355267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,7 +1199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Spicy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1445,7 +1498,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Sweet
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1636,7 +1691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca203cb1f5a6c354c9ae4202955037fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDish: {fileID: 11400000, guid: 3477727a0fe724b498b05773c6b97dcc, type: 2}
+  currentDish: {fileID: 11400000, guid: c573cf682e64dff4eba250e95dc854f8, type: 2}
   remainingTries: 3
   maxSelectedEvidence: 3
   requireEvidenceBeforeCorrect: 1
@@ -2209,7 +2264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a75e80e9a82c584084c29666f66021b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 19.5
+  radius: 15
   foodLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2387,7 +2442,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1159629365}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1
@@ -2600,7 +2655,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Salty
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2828,7 +2885,7 @@ GameObject:
   - component: {fileID: 1826101051}
   - component: {fileID: 1826101050}
   m_Layer: 5
-  m_Name: CrunchyButton
+  m_Name: SaltyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2866,7 +2923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab86d368d305a44b167755973ebc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientID: crunchy
+  ingredientID: salty
   outlineImage: {fileID: 0}
   button: {fileID: 1826101051}
   visibleFoundIcon: {fileID: 0}
