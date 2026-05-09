@@ -255,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 238751567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.69193184, y: 1.4613931, z: 0.059719}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -982,7 +982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1100704387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1231,13 +1231,25 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 99fb87e11e31f69448f19ad2b52e7007, type: 3}
+    - target: {fileID: 6385529018719995271, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9474393
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385529018719995271, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9474393
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385529018719995271, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6570115302097701182, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
       propertyPath: m_Name
       value: DiaCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 6570115302097701182, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7739815946408445461, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1921,7 +1933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1674337584
 RectTransform:
   m_ObjectHideFlags: 0
