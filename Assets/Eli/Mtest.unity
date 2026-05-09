@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 640987358}
   - component: {fileID: 640987357}
   m_Layer: 5
-  m_Name: SpicyButton
+  m_Name: SaltyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab86d368d305a44b167755973ebc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientID: spicy
+  ingredientID: salty
   outlineImage: {fileID: 0}
   button: {fileID: 640987358}
   visibleFoundIcon: {fileID: 0}
@@ -2403,7 +2403,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Salty
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2630,7 +2632,7 @@ GameObject:
   - component: {fileID: 1939832633}
   - component: {fileID: 1939832632}
   m_Layer: 7
-  m_Name: SpicyVisual
+  m_Name: SaltyVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2664,7 +2666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scannedRenderer: {fileID: 1939832634}
-  evidenceID: spicy
+  evidenceID: salty
   requiredRevealTime: 0.5
   revealThreshold: 0.6
   fadeOutWhenNotScanned: 1

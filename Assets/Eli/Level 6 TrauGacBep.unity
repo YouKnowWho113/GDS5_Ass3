@@ -1377,7 +1377,7 @@ GameObject:
   - component: {fileID: 1598081019}
   - component: {fileID: 1598081018}
   m_Layer: 0
-  m_Name: kitchen table 3 fixed
+  m_Name: kitchen table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
