@@ -492,6 +492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScannerLight
       objectReference: {fileID: 0}
+    - target: {fileID: 7391785741940252662, guid: b24b4cb5e7ca1c5479519459b9ce1cbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1483,7 +1487,7 @@ MonoBehaviour:
   requireInput: 1
   mouseButton: 1
   revealStrength: 1.5
-  scannerLight2D: {fileID: 0}
+  scannerLight2D: {fileID: 1683571028}
   maxLightIntensity: 1
   fadeInSpeed: 8
   fadeOutSpeed: 6
@@ -1915,8 +1919,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 4
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
