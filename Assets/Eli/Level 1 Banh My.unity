@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 58721788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: -3, z: 0}
+  m_LocalPosition: {x: -1, y: 0.29999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 621303680}
   - component: {fileID: 621303679}
   m_Layer: 7
-  m_Name: SavouryVisual
+  m_Name: UmamiVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -915,8 +915,8 @@ RectTransform:
   m_GameObject: {fileID: 745400717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1998497220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -945,12 +945,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Submit
-
-'
+  m_text: SUBMIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
+  m_sharedMaterial: {fileID: -7784278538909227094, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1122,7 +1120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &832181736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1424,7 +1422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.3, y: 20.8}
+  m_AnchoredPosition: {x: -10.6, y: 19.8}
   m_SizeDelta: {x: 45.39476, y: 18.44679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &917642119
@@ -1642,7 +1640,7 @@ Transform:
   m_GameObject: {fileID: 1100704386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: -3, z: 0}
+  m_LocalPosition: {x: -1, y: 0.3, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1678,10 +1676,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca203cb1f5a6c354c9ae4202955037fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDish: {fileID: 11400000, guid: 3477727a0fe724b498b05773c6b97dcc, type: 2}
+  currentDish: {fileID: 11400000, guid: e850fb63e8d80014585c185b1ca0e58d, type: 2}
   remainingTries: 3
   maxSelectedEvidence: 3
-  requireEvidenceBeforeCorrect: 1
+  requireEvidenceBeforeCorrect: 0
 --- !u!114 &1159629366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,7 +2004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6570115302097701182, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7037184424583349628, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
       propertyPath: m_IsActive
@@ -2628,7 +2626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: 5.1}
+  m_AnchoredPosition: {x: -11.299999, y: 4.1}
   m_SizeDelta: {x: 45.39476, y: 18.44679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1531269934
@@ -2812,19 +2810,13 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 0.654902, g: 0.654902, b: 0.654902, a: 0}
-    dragSound: {fileID: 0}
+    maskColor: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 0}
+    dragSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
     basePitch: 0
     requiredScrapeTime: 0
-  - materialName: Crunchy
-    evidenceID: crunchy
-    maskColor: {r: 0.9215687, g: 0.6117647, b: 0.31764707, a: 0}
-    dragSound: {fileID: 0}
-    basePitch: 0
-    requiredScrapeTime: 0
-  - materialName: Savoury
-    evidenceID: savoury
-    maskColor: {r: 0.5647059, g: 0.23529413, b: 0.20392159, a: 0}
+  - materialName: Umami
+    evidenceID: umami
+    maskColor: {r: 0.59607846, g: 0.2627451, b: 0.19215688, a: 0}
     dragSound: {fileID: 0}
     basePitch: 0
     requiredScrapeTime: 0
@@ -2951,8 +2943,8 @@ RectTransform:
   m_GameObject: {fileID: 1589392372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2144374179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2985,8 +2977,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
+  m_sharedMaterial: {fileID: -7784278538909227094, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3094,7 +3086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.5, y: 12.1}
+  m_AnchoredPosition: {x: -10.799999, y: 11.1}
   m_SizeDelta: {x: 45.39476, y: 18.44679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625157558
@@ -3214,7 +3206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1674337584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3770,7 +3762,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 9e34a1a0c0479694b92523711d28e323, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a73e99ed31d0d7c468aac00527cbe293, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3943,7 +3935,7 @@ GameObject:
   - component: {fileID: 1892294892}
   - component: {fileID: 1892294891}
   m_Layer: 5
-  m_Name: SavouryButton
+  m_Name: UmamiButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3967,7 +3959,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1550, y: -975}
-  m_SizeDelta: {x: 135, y: 25}
+  m_SizeDelta: {x: 135, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892294891
 MonoBehaviour:
@@ -3981,7 +3973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab86d368d305a44b167755973ebc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientID: savoury
+  ingredientID: umami
   outlineImage: {fileID: 0}
   button: {fileID: 1892294892}
   visibleFoundIcon: {fileID: 0}
@@ -4240,8 +4232,8 @@ RectTransform:
   m_GameObject: {fileID: 1925427545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1892294890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4274,8 +4266,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
+  m_sharedMaterial: {fileID: -7784278538909227094, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4636,7 +4628,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 975}
-  m_SizeDelta: {x: 135, y: 25}
+  m_SizeDelta: {x: 135, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998497221
 MonoBehaviour:
@@ -5106,7 +5098,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1550, y: -975}
-  m_SizeDelta: {x: 135, y: 25}
+  m_SizeDelta: {x: 135, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144374180
 MonoBehaviour:

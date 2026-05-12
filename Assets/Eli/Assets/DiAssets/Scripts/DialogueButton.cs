@@ -1,19 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class DialogueButton : MonoBehaviour
 {
-    public void Update()
+    private Button button;
+
+    private void Awake()
     {
-        if (Input.GetButtonDown("Submit"))
-        {
-            GetNextLine();
-        }
+        button = GetComponent<Button>();
+        button.onClick.AddListener(GetNextLine);
     }
-  public void GetNextLine()
+
+    private void OnDestroy()
     {
-        DialogueManager.instance.DequeueDialogue();
-        DialogueManager.instance.textBoxAnim();
+        if (button != null)
+            button.onClick.RemoveListener(GetNextLine);
+    }
+
+    public void GetNextLine()
+    {
+        if (DialogueManager.Instance == null)
+        {
+            Debug.LogWarning("[DialogueButton] DialogueManager missing.");
+            return;
+        }
+
+        DialogueManager.Instance.AdvanceDialogue();
     }
 }

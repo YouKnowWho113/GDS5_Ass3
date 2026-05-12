@@ -122,6 +122,90 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &31462471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31462473}
+  - component: {fileID: 31462472}
+  m_Layer: 0
+  m_Name: White Dish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &31462472
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31462471}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 21528062304863544978d724a1f3b940, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 40.96, y: 23.04}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &31462473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31462471}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1999998, y: 0, z: 0}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 58721789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &58721788
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,12 +231,14 @@ Transform:
   m_GameObject: {fileID: 58721788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1600606021}
   - {fileID: 1460268125}
+  - {fileID: 851646235}
+  - {fileID: 31462473}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &94340507
@@ -539,8 +625,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9e34a1a0c0479694b92523711d28e323, type: 3}
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: a73e99ed31d0d7c468aac00527cbe293, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -591,7 +677,7 @@ Transform:
   m_GameObject: {fileID: 238751567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.69193184, y: 1.4613931, z: 0.059719}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1009,7 +1095,7 @@ GameObject:
   - component: {fileID: 621303680}
   - component: {fileID: 621303679}
   m_Layer: 7
-  m_Name: SaltyVisual
+  m_Name: UmamiVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1025,7 +1111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1460268125}
@@ -1043,7 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scannedRenderer: {fileID: 621303681}
-  evidenceID: salty
+  evidenceID: umami
   requiredRevealTime: 0.6
   revealThreshold: 0.6
   fadeOutWhenNotScanned: 1
@@ -1085,7 +1171,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 40.96, y: 40.96}
+    newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1133,13 +1219,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5538f2c48cecabc439d63cdf9aaf2939, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 2301f1cdeea703342923ef75a48977c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 40.96, y: 40.96}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1202,7 +1288,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Submit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1372,7 +1458,7 @@ GameObject:
   - component: {fileID: 832181738}
   - component: {fileID: 832181737}
   m_Layer: 5
-  m_Name: CrunchyButton
+  m_Name: UmamiButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1410,7 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab86d368d305a44b167755973ebc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientID: crunchy
+  ingredientID: umami
   outlineImage: {fileID: 0}
   button: {fileID: 832181738}
   visibleFoundIcon: {fileID: 0}
@@ -1509,6 +1595,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832181735}
   m_CullTransparentMesh: 1
+--- !u!1 &851646234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851646235}
+  - component: {fileID: 851646236}
+  m_Layer: 0
+  m_Name: DishInstance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851646235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851646234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 58721789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &851646236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851646234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e430c84ace501f54ca42ba72ebf3f82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dishCase: {fileID: 11400000, guid: a5e44b6ad0e81514cb868d81d12bb3fe, type: 2}
+  autoRegisterOnStart: 1
+  clearEvidenceOnRegister: 1
+  clearReportOnRegister: 1
+  resetTriesOnRegister: 1
+  startingTries: 3
 --- !u!1 &858300156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Umami
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2287,10 +2423,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca203cb1f5a6c354c9ae4202955037fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDish: {fileID: 11400000, guid: 3477727a0fe724b498b05773c6b97dcc, type: 2}
+  currentDish: {fileID: 11400000, guid: a5e44b6ad0e81514cb868d81d12bb3fe, type: 2}
   remainingTries: 3
   maxSelectedEvidence: 3
-  requireEvidenceBeforeCorrect: 1
+  requireEvidenceBeforeCorrect: 0
 --- !u!114 &1159629366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2814,7 +2950,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1460268125}
@@ -2874,7 +3010,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 40.96, y: 40.96}
+    newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -2922,13 +3058,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5538f2c48cecabc439d63cdf9aaf2939, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 2301f1cdeea703342923ef75a48977c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 40.96, y: 40.96}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3160,7 +3296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a75e80e9a82c584084c29666f66021b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2.5
+  radius: 15
   foodLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -3502,7 +3638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Sweet
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -3608,7 +3744,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 58721789}
@@ -3626,7 +3762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodRenderer: {fileID: 1600606023}
-  audioMask: {fileID: 2800000, guid: 5538f2c48cecabc439d63cdf9aaf2939, type: 3}
+  audioMask: {fileID: 2800000, guid: 2301f1cdeea703342923ef75a48977c0, type: 3}
   mouseButton: 0
   ignoreWhenPointerOverUI: 1
   audioSource: {fileID: 0}
@@ -3637,19 +3773,19 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 0.8470589, g: 1, b: 0, a: 1}
+    maskColor: {r: 0.9960785, g: 0.97647065, b: 0.9607844, a: 1}
     dragSound: {fileID: 0}
     basePitch: 0.85
     requiredScrapeTime: 0.7
-  - materialName: Salty
-    evidenceID: salty
-    maskColor: {r: 0.17254902, g: 0.3647059, b: 0.5294118, a: 1}
+  - materialName: Umami
+    evidenceID: umami
+    maskColor: {r: 0.34509805, g: 0.18823531, b: 0.16470589, a: 1}
     dragSound: {fileID: 0}
     basePitch: 1.35
     requiredScrapeTime: 0.6
-  - materialName: Crunchy
-    evidenceID: crunchy
-    maskColor: {r: 1, g: 0, b: 0, a: 1}
+  - materialName: Sour
+    evidenceID: sour
+    maskColor: {r: 0.9725491, g: 0.7568628, b: 0.42352945, a: 1}
     dragSound: {fileID: 0}
     basePitch: 1.1
     requiredScrapeTime: 0.5
@@ -3693,8 +3829,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5538f2c48cecabc439d63cdf9aaf2939, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e90ced4bb1196bc4d9fbee97bb9d167d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4408,7 +4544,7 @@ GameObject:
   - component: {fileID: 1892294892}
   - component: {fileID: 1892294891}
   m_Layer: 5
-  m_Name: SpicyButton
+  m_Name: SourButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4446,7 +4582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab86d368d305a44b167755973ebc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientID: spicy
+  ingredientID: sour
   outlineImage: {fileID: 0}
   button: {fileID: 1892294892}
   visibleFoundIcon: {fileID: 0}
@@ -4602,7 +4738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Sour
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4692,7 +4828,7 @@ GameObject:
   - component: {fileID: 1939832633}
   - component: {fileID: 1939832632}
   m_Layer: 7
-  m_Name: SpicyVisual
+  m_Name: SourVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4708,7 +4844,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1460268125}
@@ -4726,7 +4862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scannedRenderer: {fileID: 1939832634}
-  evidenceID: spicy
+  evidenceID: sour
   requiredRevealTime: 0.5
   revealThreshold: 0.6
   fadeOutWhenNotScanned: 1
@@ -4768,7 +4904,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 40.96, y: 40.96}
+    newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4816,13 +4952,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5538f2c48cecabc439d63cdf9aaf2939, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 2301f1cdeea703342923ef75a48977c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 40.96, y: 40.96}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4911,7 +5047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1159629365}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1
@@ -5184,7 +5320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2120475580
 MonoBehaviour:
   m_ObjectHideFlags: 0

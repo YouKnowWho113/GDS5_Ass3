@@ -2240,7 +2240,7 @@ MonoBehaviour:
   currentDish: {fileID: 11400000, guid: 1aa43f69f5552fe48b507318b860c997, type: 2}
   remainingTries: 3
   maxSelectedEvidence: 3
-  requireEvidenceBeforeCorrect: 1
+  requireEvidenceBeforeCorrect: 0
 --- !u!114 &1159629366
 MonoBehaviour:
   m_ObjectHideFlags: 0

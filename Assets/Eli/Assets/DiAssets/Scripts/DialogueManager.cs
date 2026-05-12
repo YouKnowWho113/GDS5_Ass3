@@ -6,84 +6,22 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager instance;
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("fix this" + gameObject.name);
-        }
-        else
-        {
-            instance = this;
-        }
-    }
+    public static DialogueManager Instance;
+    public static DialogueManager instance; // legacy support
 
+    [Header("Input")]
+    public bool allowSubmitInput = true;
+    public string submitButtonName = "Submit";
+
+    [Header("Animators")]
     public Animator textBoxAnimator;
     public Animator nameTagAnimator;
     public Animator boxTextAnimator;
     public Animator nameTextAnimator;
     public Animator bumperAnimator;
-    public void Update()
-    {
-        if (Input.GetButtonDown("Submit"))
-        {
-            StopAllCoroutines();
-            if (dialogueInfo.Count > 0)
-            {
-                SFXManager.instance?.PlayDialogueNext();
-            }
-            DequeueDialogue();
-            textBoxAnim();
-        }
-            
-    }
 
-    private bool continueCheck;
-    public void textBoxAnim()
-    {
-        if(shadowCheck == true)
-          {
-            if (continueCheck == true)
-            {
-                textBoxAnimator.Play("YBoxContinue");
-                nameTagAnimator.Play("yelTagContinue");
-                boxTextAnimator.Play("textBoxEntry", 0, 0f);
-                nameTextAnimator.Play("nameTextEntry", 0, 0f);
-                bumperAnimator.Play("bumperEntry", 0, 0f);
-            }
-            else if (continueCheck == false)
-            {
-                textBoxAnimator.Play("YBoxEntry");
-                nameTagAnimator.Play("yelTagEntry");
-                boxTextAnimator.Play("textBoxEntry", 0, 0f);
-                nameTextAnimator.Play("nameTextEntry", 0, 0f);
-                bumperAnimator.Play("bumperEntry", 0, 0f);
-            }
-         }
-            else if(shadowCheck == false)
-            {
-            if (continueCheck == true)
-            {
-                textBoxAnimator.Play("RBoxContinue");
-                nameTagAnimator.Play("redTagContinue");
-                boxTextAnimator.Play("textBoxEntry", 0, 0f);
-                nameTextAnimator.Play("nameTextEntry", 0, 0f);
-                bumperAnimator.Play("bumperEntry", 0, 0f);
-            }
-            else if (continueCheck == false)
-            {
-                textBoxAnimator.Play("RBoxENtry");
-                nameTagAnimator.Play("redTagEntry");
-                boxTextAnimator.Play("textBoxEntry", 0, 0f);
-                nameTextAnimator.Play("nameTextEntry", 0, 0f);
-                bumperAnimator.Play("bumperEntry", 0, 0f);
-            }
-        }
-    }
-
+    [Header("UI")]
     public GameObject dialogueBox;
-
     public TextMeshProUGUI dialogueName;
     public TextMeshProUGUI dialogueText;
     public Image dialoguePortrait;
@@ -91,173 +29,354 @@ public class DialogueManager : MonoBehaviour
     public Image dialogueMouths;
     public Image dialogueTextBox;
 
+    private readonly Queue<DialogueBase.Info> dialogueInfo = new Queue<DialogueBase.Info>();
+
     private Sprite eyeBlink;
     private Sprite mouth2;
     private Sprite mouth3;
+
     private int xEyes;
     private int yEyes;
     private float xSprite;
     private float ySprite;
+
     private bool shadowCheck;
-    
+    private bool continueCheck;
+    private bool dialogueActive;
 
+    private Coroutine eyeRoutine;
+    private Coroutine mouthRoutine;
+    private Coroutine portraitMoveRoutine;
+    private Coroutine spriteFadeRoutine;
 
-    public Queue<DialogueBase.Info> dialogueInfo = new Queue<DialogueBase.Info>();
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        instance = this;
+
+        if (dialogueBox != null)
+            dialogueBox.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!allowSubmitInput)
+            return;
+
+        if (!dialogueActive)
+            return;
+
+        if (Input.GetButtonDown(submitButtonName))
+        {
+            AdvanceDialogue();
+        }
+    }
 
     public void EnqueueDialogue(DialogueBase db)
     {
-        dialogueBox.SetActive(true);
+        if (db == null)
+        {
+            Debug.LogWarning("[DialogueManager] No DialogueBase assigned.");
+            return;
+        }
+
+        if (dialogueBox == null)
+        {
+            Debug.LogWarning("[DialogueManager] Dialogue box missing.");
+            return;
+        }
+
         dialogueInfo.Clear();
 
         foreach (DialogueBase.Info info in db.dialogueInfo)
         {
             dialogueInfo.Enqueue(info);
         }
-        SFXManager.instance?.PlayDialogueOpen();
-        DequeueDialogue();
-        textBoxAnim();
+
+        dialogueActive = true;
+        dialogueBox.SetActive(true);
+
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayDialogueOpen();
+
+        ShowNextLine(false);
     }
 
+    public void AdvanceDialogue()
+    {
+        if (!dialogueActive)
+            return;
+
+        ShowNextLine(true);
+    }
+
+    // Legacy name so older buttons/scripts still work.
     public void DequeueDialogue()
     {
-        if(dialogueInfo.Count == 0)
+        AdvanceDialogue();
+    }
+
+    private void ShowNextLine(bool playNextSfx)
+    {
+        if (dialogueInfo.Count == 0)
         {
-            StopAllCoroutines();
             EndDialogue();
             return;
         }
-        DialogueBase.Info info = dialogueInfo.Dequeue();
 
-        dialogueName.text = info.character.myName;
-        dialogueText.text = info.charText;
+        if (playNextSfx && SFXManager.Instance != null)
+            SFXManager.Instance.PlayDialogueNext();
+
+        StopFaceCoroutines();
+
+        DialogueBase.Info info = dialogueInfo.Dequeue();
+        ApplyDialogueLine(info);
+        PlayTextBoxAnim();
+
+        if (!continueCheck)
+        {
+            if (dialoguePortrait != null)
+                portraitMoveRoutine = StartCoroutine(PortraitMove());
+
+            if (dialoguePortrait != null)
+                spriteFadeRoutine = StartCoroutine(SpriteFade());
+        }
+
+        if (dialogueEyes != null && eyeBlink != null)
+            eyeRoutine = StartCoroutine(EyeAnimate());
+
+        if (dialogueMouths != null && mouth2 != null && mouth3 != null)
+            mouthRoutine = StartCoroutine(MouthAnimate());
+    }
+
+    private void ApplyDialogueLine(DialogueBase.Info info)
+    {
+        if (info == null)
+            return;
+
+        if (dialogueText != null)
+            dialogueText.text = info.charText;
+
+        if (info.character == null)
+        {
+            if (dialogueName != null)
+                dialogueName.text = "";
+
+            return;
+        }
+
         info.ChangeEmotion();
-        dialoguePortrait.sprite = info.character.EmotionBaseDisplay;
+
+        if (dialogueName != null)
+            dialogueName.text = info.character.myName;
+
+        if (dialoguePortrait != null)
+            dialoguePortrait.sprite = info.character.EmotionBaseDisplay;
+
         eyeBlink = info.character.EmotionBlinkDisplay;
         mouth2 = info.character.EmotionMouth2Display;
         mouth3 = info.character.EmotionMouth3Display;
+
         xEyes = info.character.xFace;
         yEyes = info.character.yFace;
         xSprite = info.character.xBase;
         ySprite = info.character.yBase;
-        
+
         shadowCheck = info.character.shadowStatus;
         continueCheck = info.continueCheck;
 
-        if (continueCheck == false)
+        if (dialogueEyes != null)
+            dialogueEyes.sprite = eyeBlink;
+
+        if (dialogueMouths != null)
+            dialogueMouths.sprite = mouth2;
+    }
+
+    private void PlayTextBoxAnim()
+    {
+        if (shadowCheck)
         {
-            StartCoroutine("PortraitMove");
-            StartCoroutine("SpriteFade");
-        }
-        StartCoroutine("EyeAnimate");
-        StartCoroutine("MouthAnimate");
-    }
-
-    private float slideDistance;
-    private float spriteOpacity;
-    private float faceOpacity;
-
-    public IEnumerator PortraitMove()
-    {
-        slideDistance = 12;
-        while (slideDistance >= 0)
+            if (continueCheck)
             {
-            dialoguePortrait.rectTransform.anchoredPosition = new Vector3(xSprite - slideDistance, ySprite, 0);
+                PlayAnimator(textBoxAnimator, "YBoxContinue");
+                PlayAnimator(nameTagAnimator, "yelTagContinue");
+            }
+            else
+            {
+                PlayAnimator(textBoxAnimator, "YBoxEntry");
+                PlayAnimator(nameTagAnimator, "yelTagENtry");
+            }
+        }
+        else
+        {
+            if (continueCheck)
+            {
+                PlayAnimator(textBoxAnimator, "RBoxContinue");
+                PlayAnimator(nameTagAnimator, "redTagContinue");
+            }
+            else
+            {
+                PlayAnimator(textBoxAnimator, "RBoxENtry");
+                PlayAnimator(nameTagAnimator, "redTagEntry");
+            }
+        }
 
-            dialogueEyes.rectTransform.anchoredPosition = new Vector3(xEyes - slideDistance, yEyes, 0);
-            dialogueMouths.rectTransform.anchoredPosition = new Vector3(xEyes - slideDistance, yEyes, 0);
+        PlayAnimator(boxTextAnimator, "textBoxEntry");
+        PlayAnimator(nameTextAnimator, "nameTextEntry");
+        PlayAnimator(bumperAnimator, "bumperEntry");
+    }
 
-            slideDistance += -4;
-            yield return new WaitForSeconds(.05f);
+    private void PlayAnimator(Animator animator, string stateName)
+    {
+        if (animator == null || string.IsNullOrWhiteSpace(stateName))
+            return;
+
+        animator.Play(stateName, 0, 0f);
+    }
+
+    private IEnumerator PortraitMove()
+    {
+        float slideDistance = 12f;
+
+        while (slideDistance >= 0f)
+        {
+            if (dialoguePortrait != null)
+                dialoguePortrait.rectTransform.anchoredPosition =
+                    new Vector3(xSprite - slideDistance, ySprite, 0f);
+
+            if (dialogueEyes != null)
+                dialogueEyes.rectTransform.anchoredPosition =
+                    new Vector3(xEyes - slideDistance, yEyes, 0f);
+
+            if (dialogueMouths != null)
+                dialogueMouths.rectTransform.anchoredPosition =
+                    new Vector3(xEyes - slideDistance, yEyes, 0f);
+
+            slideDistance -= 4f;
+            yield return new WaitForSeconds(0.05f);
         }
     }
 
-    public IEnumerator SpriteFade()
+    private IEnumerator SpriteFade()
     {
-        spriteOpacity = 0.34f;
+        float spriteOpacity = 0.34f;
+
         while (spriteOpacity <= 1f)
         {
-            dialoguePortrait.color = new Color(1f, 1f, 1f, spriteOpacity);
+            if (dialoguePortrait != null)
+                dialoguePortrait.color = new Color(1f, 1f, 1f, spriteOpacity);
+
             spriteOpacity += 0.33f;
-            yield return new WaitForSeconds(.05f);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        if (dialoguePortrait != null)
+            dialoguePortrait.color = Color.white;
+    }
+
+    private IEnumerator EyeAnimate()
+    {
+        while (dialogueActive)
+        {
+            SetImageAlpha(dialogueEyes, 0f);
+            yield return new WaitForSeconds(Random.Range(2f, 4f));
+
+            SetImageAlpha(dialogueEyes, 1f);
+            if (dialogueEyes != null)
+                dialogueEyes.sprite = eyeBlink;
+
+            yield return new WaitForSeconds(0.15f);
+
+            SetImageAlpha(dialogueEyes, 0f);
+            yield return new WaitForSeconds(Random.Range(2f, 6f));
         }
     }
 
-    private bool animationBool;
-
-    public IEnumerator EyeAnimate()
+    private IEnumerator MouthAnimate()
     {
-        while (true)
+        while (dialogueActive)
         {
-            dialogueEyes.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(Random.Range(2f, 4.0f));
-
-            dialogueEyes.color = new Color(1f, 1f, 1f, 1f);
-            dialogueEyes.sprite = eyeBlink;
-            yield return new WaitForSeconds(0.15f);
-
-            dialogueEyes.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(Random.Range(2f, 6.0f));
-
-            dialogueEyes.color = new Color(1f, 1f, 1f, 1f);
-            dialogueEyes.sprite = eyeBlink;
-            yield return new WaitForSeconds(0.15f);
-
-            dialogueEyes.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(0.15f);
-
-            dialogueEyes.color = new Color(1f, 1f, 1f, 1f);
-            dialogueEyes.sprite = eyeBlink;
-            yield return new WaitForSeconds(0.15f);
-
-            dialogueEyes.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(Random.Range(3f, 4.0f));
-        }
-    }
-
-    public IEnumerator MouthAnimate()
-    {
-        while(true)
-        {
-            dialogueMouths.color = new Color(1f, 1f, 1f, 0f);
+            SetImageAlpha(dialogueMouths, 0f);
             yield return new WaitForSeconds(Random.Range(0.2f, 0.5f));
 
-            dialogueMouths.color = new Color(1f, 1f, 1f, 1f);
-            dialogueMouths.sprite = mouth2;
+            SetImageAlpha(dialogueMouths, 1f);
+
+            if (dialogueMouths != null)
+                dialogueMouths.sprite = mouth2;
+
             yield return new WaitForSeconds(0.1f);
 
-            dialogueMouths.sprite = mouth3;
+            if (dialogueMouths != null)
+                dialogueMouths.sprite = mouth3;
+
             yield return new WaitForSeconds(0.2f);
 
-            dialogueMouths.sprite = mouth2;
+            if (dialogueMouths != null)
+                dialogueMouths.sprite = mouth2;
+
             yield return new WaitForSeconds(0.1f);
-
-            dialogueMouths.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(Random.Range(0.2f, 0.5f));
-
-            dialogueMouths.color = new Color(1f, 1f, 1f, 1f);
-            dialogueMouths.sprite = mouth2;
-            yield return new WaitForSeconds(0.1f);
-
-            dialogueMouths.sprite = mouth3;
-            yield return new WaitForSeconds(0.2f);
-
-            dialogueMouths.sprite = mouth2;
-            yield return new WaitForSeconds(0.1f);
-
-            dialogueMouths.sprite = mouth3;
-            yield return new WaitForSeconds(0.2f);
-
-            dialogueMouths.sprite = mouth2;
-            yield return new WaitForSeconds(0.1f);
-
-            dialogueMouths.color = new Color(1f, 1f, 1f, 0f);
-            yield return new WaitForSeconds(.05f);
         }
     }
-       
+
+    private void SetImageAlpha(Image image, float alpha)
+    {
+        if (image == null)
+            return;
+
+        Color c = image.color;
+        c.a = alpha;
+        image.color = c;
+    }
+
+    private void StopFaceCoroutines()
+    {
+        if (eyeRoutine != null)
+        {
+            StopCoroutine(eyeRoutine);
+            eyeRoutine = null;
+        }
+
+        if (mouthRoutine != null)
+        {
+            StopCoroutine(mouthRoutine);
+            mouthRoutine = null;
+        }
+
+        if (portraitMoveRoutine != null)
+        {
+            StopCoroutine(portraitMoveRoutine);
+            portraitMoveRoutine = null;
+        }
+
+        if (spriteFadeRoutine != null)
+        {
+            StopCoroutine(spriteFadeRoutine);
+            spriteFadeRoutine = null;
+        }
+    }
+
     public void EndDialogue()
     {
-        SFXManager.instance?.PlayDialogueClose();
-        dialogueBox.SetActive(false);
+        StopFaceCoroutines();
+
+        dialogueInfo.Clear();
+        dialogueActive = false;
+
+        if (dialogueBox != null)
+            dialogueBox.SetActive(false);
+
+        if (SFXManager.Instance != null)
+            SFXManager.Instance.PlayDialogueClose();
+    }
+
+    public bool IsDialogueActive()
+    {
+        return dialogueActive;
     }
 }

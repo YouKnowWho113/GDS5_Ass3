@@ -2544,7 +2544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca203cb1f5a6c354c9ae4202955037fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDish: {fileID: 11400000, guid: 3477727a0fe724b498b05773c6b97dcc, type: 2}
+  currentDish: {fileID: 11400000, guid: cce83a4e7709ca641829b78c5bd78554, type: 2}
   remainingTries: 3
   maxSelectedEvidence: 3
   requireEvidenceBeforeCorrect: 1
