@@ -309,7 +309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &60104332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodRenderer: {fileID: 162947076}
-  audioMask: {fileID: 2800000, guid: e77a99a3ab873b84281a290707dc3f73, type: 3}
+  audioMask: {fileID: 2800000, guid: c1dd1805f821eaf4faa9b322e1838736, type: 3}
   mouseButton: 0
   ignoreWhenPointerOverUI: 1
   audioSource: {fileID: 162947077}
@@ -599,20 +599,20 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 0.9490197, g: 0.7607844, b: 0.45882356, a: 1}
+    maskColor: {r: 0.9960785, g: 0.9803922, b: 0.9686275, a: 1}
     dragSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
     basePitch: 0.85
     requiredScrapeTime: 0.7
   - materialName: Salty
     evidenceID: salty
-    maskColor: {r: 0.9294118, g: 0.5372549, b: 0.29803923, a: 1}
+    maskColor: {r: 0.9490197, g: 0.7725491, b: 0.65882355, a: 1}
     dragSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
     basePitch: 1.35
     requiredScrapeTime: 0.6
-  - materialName: Spicy
-    evidenceID: spicy
-    maskColor: {r: 0.7960785, g: 0.43921572, b: 0.23137257, a: 1}
-    dragSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
+  - materialName: Umami
+    evidenceID: umami
+    maskColor: {r: 0.13725491, g: 0.003921569, b: 0, a: 1}
+    dragSound: {fileID: 0}
     basePitch: 1.1
     requiredScrapeTime: 0.5
 --- !u!212 &162947076
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spicy
+  m_text: Umami
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2086,7 +2086,7 @@ GameObject:
   - component: {fileID: 840193216}
   - component: {fileID: 840193219}
   m_Layer: 7
-  m_Name: SpicyVisual
+  m_Name: UmamiVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2232,7 +2232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scannedRenderer: {fileID: 840193218}
-  evidenceID: spicy
+  evidenceID: umami
   requiredRevealTime: 0.6
   revealThreshold: 0.6
   fadeOutWhenNotScanned: 1
@@ -2417,6 +2417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f41c880ce6f86438ef8e590a5a2cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowSubmitInput: 1
+  submitButtonName: Submit
   textBoxAnimator: {fileID: 0}
   nameTagAnimator: {fileID: 0}
   boxTextAnimator: {fileID: 0}
@@ -3419,115 +3421,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294229272}
   m_CullTransparentMesh: 1
---- !u!1001 &1295993995
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1924868088409704225, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 3840
-      objectReference: {fileID: 0}
-    - target: {fileID: 1924868088409704225, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 2160
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576566766676491665, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6570115302097701182, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_Name
-      value: DiaCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6570115302097701182, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7088aa44815cb7f4db2c149f8d251cca, type: 3}
 --- !u!1 &1351094184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3542,7 +3435,7 @@ GameObject:
   - component: {fileID: 1351094187}
   - component: {fileID: 1351094186}
   m_Layer: 5
-  m_Name: SpicyButton
+  m_Name: UmamiButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3580,7 +3473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab86d368d305a44b167755973ebc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientID: spicy
+  ingredientID: umami
   outlineImage: {fileID: 0}
   button: {fileID: 1351094187}
   visibleFoundIcon: {fileID: 0}
@@ -5501,7 +5394,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1817987766}
-  - {fileID: 1295993995}
   - {fileID: 58721789}
   - {fileID: 238751568}
   - {fileID: 1676882431}

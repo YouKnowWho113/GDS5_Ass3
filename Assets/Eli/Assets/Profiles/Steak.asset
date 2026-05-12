@@ -18,4 +18,4 @@ MonoBehaviour:
   - evidenceID: salty
     evidenceChannel: -1
   - evidenceID: sweet
-    evidenceChannel: 1
+    evidenceChannel: -1

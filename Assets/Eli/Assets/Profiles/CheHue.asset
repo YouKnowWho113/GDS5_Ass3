@@ -17,7 +17,3 @@ MonoBehaviour:
   correctEvidence:
   - evidenceID: sweet
     evidenceChannel: -1
-  - evidenceID: salty
-    evidenceChannel: 2
-  - evidenceID: 'sour '
-    evidenceChannel: 1

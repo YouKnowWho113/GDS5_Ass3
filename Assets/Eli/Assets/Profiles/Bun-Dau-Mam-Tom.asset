@@ -17,7 +17,5 @@ MonoBehaviour:
   correctEvidence:
   - evidenceID: umami
     evidenceChannel: 1
-  - evidenceID: salty
-    evidenceChannel: 0
-  - evidenceID: spicy
+  - evidenceID: sweet
     evidenceChannel: -1

@@ -20,4 +20,4 @@ MonoBehaviour:
   - evidenceID: umami
     evidenceChannel: 1
   - evidenceID: salty
-    evidenceChannel: 0
+    evidenceChannel: -1
