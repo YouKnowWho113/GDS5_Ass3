@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de96142db9930664c8ebc66d76258c61, type: 3}
   m_Name: Mom
   m_EditorClassIdentifier: 
-  myName: Me
+  myName: Mom
   xBase: -394
   yBase: 24
   xFace: -424
