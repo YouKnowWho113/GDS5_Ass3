@@ -17,48 +17,48 @@ MonoBehaviour:
   yBase: 24
   xFace: -424
   yFace: 36
-  shadowStatus: 0
+  shadowStatus: 1
   emotionBase:
-    neutralBase: {fileID: 21300000, guid: 77e3e8050c5b9d148b46340c463b4e4e, type: 3}
-    happyBase: {fileID: 21300000, guid: de874bc3445e042418224af51d807732, type: 3}
-    angeryBase: {fileID: 21300000, guid: f44da8d6a63edc64389bf6993b6bcebe, type: 3}
-    sadBase: {fileID: 21300000, guid: b5f0b194f8418b34cb716813d163f9a1, type: 3}
-    surprisedBase: {fileID: 21300000, guid: dd285a7dc3c75104f824e5c63363db3a, type: 3}
-    hurtBase: {fileID: 21300000, guid: 89fcba236f8eac74a961198bd90dc09b, type: 3}
-    blushBase: {fileID: 21300000, guid: 7b8ad64a3be057a479e3fc2481ec2dfb, type: 3}
-    custom1Base: {fileID: 21300000, guid: 39a8cc514ebdf8d47a78460c9dd1a878, type: 3}
+    neutralBase: {fileID: 0}
+    happyBase: {fileID: 0}
+    angeryBase: {fileID: 0}
+    sadBase: {fileID: 0}
+    surprisedBase: {fileID: 0}
+    hurtBase: {fileID: 0}
+    blushBase: {fileID: 0}
+    custom1Base: {fileID: 0}
     custom2Base: {fileID: 0}
     custom3Base: {fileID: 0}
   emotionBlink:
-    neutralBlink: {fileID: 21300000, guid: b13109434d0422b4591c9e609dc119e6, type: 3}
-    happyBlink: {fileID: 21300000, guid: 73824b68bce670046ac9b09cf7e7555e, type: 3}
-    angeryBlink: {fileID: 21300000, guid: 71270c64393a5ca429c60936674032d8, type: 3}
-    sadBlink: {fileID: 21300000, guid: b212715b1c226054cb959001328f0511, type: 3}
-    surprisedBlink: {fileID: 21300000, guid: 4324b34654af6f14aa2260f1e3138aff, type: 3}
-    hurtBlink: {fileID: 21300000, guid: 9481fe000946f8745b62139846f7bd2e, type: 3}
-    blushBlink: {fileID: 21300000, guid: 4da4d09f117be9144b4b6dc4f5d11d8e, type: 3}
-    custom1Blink: {fileID: 21300000, guid: 936ae74a0cfecf540bf1d18f4704a61d, type: 3}
+    neutralBlink: {fileID: 0}
+    happyBlink: {fileID: 0}
+    angeryBlink: {fileID: 0}
+    sadBlink: {fileID: 0}
+    surprisedBlink: {fileID: 0}
+    hurtBlink: {fileID: 0}
+    blushBlink: {fileID: 0}
+    custom1Blink: {fileID: 0}
     custom2Blink: {fileID: 0}
     custom3Blink: {fileID: 0}
   emotionMouth2:
-    neutralMouth2: {fileID: 21300000, guid: a8cffb69f1a41524f99e7cbaf0660f70, type: 3}
-    happyMouth2: {fileID: 21300000, guid: 71677a268ffb1dd4c9fa26b3778d44a3, type: 3}
-    angeryMouth2: {fileID: 21300000, guid: 1e4f0ee587d2cfe44882b1f5f0b69fd2, type: 3}
-    sadMouth2: {fileID: 21300000, guid: 9ffa4df079c4a2f4782a4cc0a16e69e8, type: 3}
-    surprisedMouth2: {fileID: 21300000, guid: bee2a779f48ed0849a1ebe6d161d24bb, type: 3}
-    hurtMouth2: {fileID: 21300000, guid: 620ad950180ac9d499d702460cdf9e34, type: 3}
-    blushMouth2: {fileID: 21300000, guid: ed26da1c81440b449a425d958dd8488f, type: 3}
-    custom1Mouth2: {fileID: 21300000, guid: d794582a1cdfe834da6b7cc6d412e7ad, type: 3}
+    neutralMouth2: {fileID: 0}
+    happyMouth2: {fileID: 0}
+    angeryMouth2: {fileID: 0}
+    sadMouth2: {fileID: 0}
+    surprisedMouth2: {fileID: 0}
+    hurtMouth2: {fileID: 0}
+    blushMouth2: {fileID: 0}
+    custom1Mouth2: {fileID: 0}
     custom2Mouth2: {fileID: 0}
     custom3Mouth2: {fileID: 0}
   emotionMouth3:
-    neutralMouth3: {fileID: 21300000, guid: b9af4ff8680ce2841856be5bef4e7eef, type: 3}
-    happyMouth3: {fileID: 21300000, guid: 0ad30d69f1a7a7348a6d0ff681547afa, type: 3}
-    angeryMouth3: {fileID: 21300000, guid: d764844405e3f5e408345e94a2adaa7c, type: 3}
-    sadMouth3: {fileID: 21300000, guid: f502542e98036544aab80c1c58b37c72, type: 3}
-    surprisedMouth3: {fileID: 21300000, guid: e7bd4cf9b8442cb4f97589b6fa60994e, type: 3}
-    hurtMouth3: {fileID: 21300000, guid: b883ff522adffc94585578d08f5f2956, type: 3}
-    blushMouth3: {fileID: 21300000, guid: 944aa89cc5444f54a8ce7e962db0cd20, type: 3}
-    custom1Mouth3: {fileID: 21300000, guid: 8120bc7727bfb57489dd0c7f86578f9d, type: 3}
+    neutralMouth3: {fileID: 0}
+    happyMouth3: {fileID: 0}
+    angeryMouth3: {fileID: 0}
+    sadMouth3: {fileID: 0}
+    surprisedMouth3: {fileID: 0}
+    hurtMouth3: {fileID: 0}
+    blushMouth3: {fileID: 0}
+    custom1Mouth3: {fileID: 0}
     custom2Mouth3: {fileID: 0}
     custom3Mouth3: {fileID: 0}
