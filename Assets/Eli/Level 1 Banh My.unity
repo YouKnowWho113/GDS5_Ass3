@@ -2718,13 +2718,13 @@ MonoBehaviour:
   globalVolume: 1
   playInterval: 0.35
   colorTolerance: 1
-  gracePeriod: 10
+  gracePeriod: 0.12
   regionSwitchDelay: 0.08
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
     maskColor: {r: 0.99607843, g: 0.003921569, b: 0.76862746, a: 0}
-    scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
+    scanSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
     volume: 1
     requiredScanTime: 0.1
   debugMode: 0

@@ -441,29 +441,29 @@ MonoBehaviour:
   mouseButton: 0
   ignoreWhenPointerOverUI: 1
   audioSource: {fileID: 95182759}
-  loopSound: 1
-  globalVolumeMultiplier: 1
+  maxSpeedThreshold: 15
+  minMouseSpeed: 0.1
   colorTolerance: 0.1
   debugScan: 0
   materialDatabase:
   - materialName: Salty
     evidenceID: salty
     maskColor: {r: 0.8313726, g: 0.7843138, b: 0.7294118, a: 1}
-    scanSound: {fileID: 0}
-    volume: 0
-    requiredScanTime: 0
+    dragSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
+    basePitch: 0.85
+    requiredScrapeTime: 0.7
   - materialName: Sweet
     evidenceID: sweet
     maskColor: {r: 0.8980393, g: 0.8196079, b: 0.77647066, a: 1}
-    scanSound: {fileID: 0}
-    volume: 0
-    requiredScanTime: 0
+    dragSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
+    basePitch: 1.1
+    requiredScrapeTime: 0.5
   - materialName: Umami
     evidenceID: umami
     maskColor: {r: 0.5411765, g: 0.20000002, b: 0, a: 1}
-    scanSound: {fileID: 0}
-    volume: 0
-    requiredScanTime: 0
+    dragSound: {fileID: 0}
+    basePitch: 1.1
+    requiredScrapeTime: 0.5
 --- !u!212 &95182758
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

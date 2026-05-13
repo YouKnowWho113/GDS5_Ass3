@@ -3313,16 +3313,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodRenderer: {fileID: 1541568025}
-  colorMask: {fileID: 0}
+  audioMask: {fileID: 2800000, guid: c79087e57e11db649be5d8acd3763a1b, type: 3}
   mouseButton: 0
-  ignoreUI: 1
+  ignoreWhenPointerOverUI: 1
   audioSource: {fileID: 0}
-  loopWhileHovering: 0
-  globalVolume: 1
-  playInterval: 0.35
+  loopSound: 1
+  globalVolumeMultiplier: 1
   colorTolerance: 0.1
-  gracePeriod: 0.12
-  regionSwitchDelay: 0.08
+  debugScan: 0
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
@@ -3342,7 +3340,6 @@ MonoBehaviour:
     scanSound: {fileID: 0}
     volume: 0
     requiredScanTime: 0
-  debugMode: 0
 --- !u!82 &1541568027
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3454,7 +3451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1561027284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4048,7 +4045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1682367152
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4779,7 +4776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1931396285
 RectTransform:
   m_ObjectHideFlags: 0
