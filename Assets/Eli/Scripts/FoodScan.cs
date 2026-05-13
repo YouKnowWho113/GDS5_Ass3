@@ -13,13 +13,13 @@ public struct MaterialAudioData
     public Color maskColor;
 
     [Header("Audio")]
-    public AudioClip dragSound;
+    public AudioClip scanSound;
 
-    [Range(0.5f, 2f)]
-    public float basePitch;
+    [Range(0f, 1f)]
+    public float volume;
 
     [Header("Evidence")]
-    public float requiredScrapeTime;
+    public float requiredScanTime;
 }
 
 [RequireComponent(typeof(AudioSource))]
@@ -35,104 +35,83 @@ public class FoodScan : MonoBehaviour
 
     [Header("Audio Settings")]
     public AudioSource audioSource;
-    public float maxSpeedThreshold = 15f;
-    public float minMouseSpeed = 0.1f;
+    public bool loopSound = true;
+    public float globalVolumeMultiplier = 1f;
     public float colorTolerance = 0.1f;
 
     [Header("Debug")]
     public bool debugScan = false;
-    private string lastDebugEvidenceID;
-    private Color lastDebugColor;
 
     [Header("Material Database")]
     public List<MaterialAudioData> materialDatabase = new List<MaterialAudioData>();
 
-    private Vector2 lastMousePos;
     private string currentEvidenceID;
-    private float scrapeTimer;
+    private float scanTimer;
     private bool evidenceUnlockedForCurrentRegion;
     private bool isPlayingMaterialSound;
+
+    private Color lastDebugColor;
 
     private void Awake()
     {
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
 
-        audioSource.loop = true;
         audioSource.playOnAwake = false;
+        audioSource.loop = loopSound;
+        audioSource.pitch = 1f;
     }
 
     private void Update()
     {
-        if (foodRenderer == null || audioMask == null)
+        if (foodRenderer == null || audioMask == null || Camera.main == null)
         {
+            ResetScan();
             StopAudio();
             return;
         }
-
-        if (Camera.main == null)
-        {
-            StopAudio();
-            return;
-        }
-
-        Vector2 currentMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (ignoreWhenPointerOverUI &&
             EventSystem.current != null &&
             EventSystem.current.IsPointerOverGameObject())
         {
-            ResetScrape();
+            ResetScan();
             StopAudio();
-            lastMousePos = currentMousePos;
             return;
         }
 
-        if (Input.GetMouseButton(mouseButton))
+        if (!Input.GetMouseButton(mouseButton))
         {
-            bool insideFood = foodRenderer.bounds.Contains(currentMousePos);
-
-            if (insideFood)
-            {
-                ProcessAudioForensics(currentMousePos);
-            }
-            else
-            {
-                ResetScrape();
-                StopAudio();
-            }
-        }
-        else
-        {
-            ResetScrape();
+            ResetScan();
             StopAudio();
+            return;
         }
 
-        lastMousePos = currentMousePos;
+        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (!foodRenderer.bounds.Contains(mouseWorldPos))
+        {
+            ResetScan();
+            StopAudio();
+            return;
+        }
+
+        ScanColorAndPlaySound(mouseWorldPos);
     }
 
-    private void ProcessAudioForensics(Vector2 mousePos)
+    private void ScanColorAndPlaySound(Vector2 worldPos)
     {
-        float deltaTime = Mathf.Max(Time.deltaTime, 0.0001f);
-        float mouseSpeed = Vector2.Distance(mousePos, lastMousePos) / deltaTime;
-
-        if (mouseSpeed < minMouseSpeed)
-        {
-            StopAudio();
-            return;
-        }
-
-        Color hitColor = GetColorFromMask(mousePos);
+        Color hitColor = GetColorFromMask(worldPos);
 
         if (!TryFindMaterial(hitColor, out MaterialAudioData matchedMaterial))
         {
-            ResetScrape();
+            ResetScan();
             StopAudio();
             return;
         }
 
-        PlayMaterialSound(matchedMaterial, mouseSpeed);
-        TrackSoundEvidence(matchedMaterial);
+        PlayMaterialSound(matchedMaterial);
+        TrackAudibleEvidence(matchedMaterial);
     }
 
     private bool TryFindMaterial(Color hitColor, out MaterialAudioData matchedMaterial)
@@ -152,51 +131,48 @@ public class FoodScan : MonoBehaviour
         return false;
     }
 
-    private void PlayMaterialSound(MaterialAudioData material, float mouseSpeed)
+    private void PlayMaterialSound(MaterialAudioData material)
     {
-        if (material.dragSound == null)
+        if (material.scanSound == null)
         {
             StopAudio();
             return;
         }
 
-        if (audioSource.clip != material.dragSound)
+        audioSource.loop = loopSound;
+        audioSource.pitch = 1f;
+        audioSource.volume = Mathf.Clamp01(material.volume * globalVolumeMultiplier);
+
+        if (audioSource.clip != material.scanSound)
         {
-            audioSource.clip = material.dragSound;
+            audioSource.clip = material.scanSound;
+            audioSource.Play();
+            isPlayingMaterialSound = true;
+            return;
+        }
+
+        if (!isPlayingMaterialSound || !audioSource.isPlaying)
+        {
             audioSource.Play();
             isPlayingMaterialSound = true;
         }
-        else if (!isPlayingMaterialSound)
-        {
-            audioSource.Play();
-            isPlayingMaterialSound = true;
-        }
-
-        float speedRatio = Mathf.Clamp01(mouseSpeed / maxSpeedThreshold);
-
-        audioSource.volume = Mathf.Lerp(0.2f, 1.0f, speedRatio);
-        audioSource.pitch = Mathf.Lerp(
-            material.basePitch - 0.2f,
-            material.basePitch + 0.3f,
-            speedRatio
-        );
     }
 
-    private void TrackSoundEvidence(MaterialAudioData material)
+    private void TrackAudibleEvidence(MaterialAudioData material)
     {
         if (currentEvidenceID != material.evidenceID)
         {
             currentEvidenceID = material.evidenceID;
-            scrapeTimer = 0f;
+            scanTimer = 0f;
             evidenceUnlockedForCurrentRegion = false;
         }
 
         if (evidenceUnlockedForCurrentRegion)
             return;
 
-        scrapeTimer += Time.deltaTime;
+        scanTimer += Time.deltaTime;
 
-        if (scrapeTimer >= material.requiredScrapeTime)
+        if (scanTimer >= material.requiredScanTime)
         {
             evidenceUnlockedForCurrentRegion = true;
 
@@ -219,30 +195,36 @@ public class FoodScan : MonoBehaviour
         float u = Mathf.InverseLerp(bounds.min.x, bounds.max.x, localPos.x);
         float v = Mathf.InverseLerp(bounds.min.y, bounds.max.y, localPos.y);
 
-        int pixelX = Mathf.Clamp(Mathf.RoundToInt(u * (audioMask.width - 1)), 0, audioMask.width - 1);
-        int pixelY = Mathf.Clamp(Mathf.RoundToInt(v * (audioMask.height - 1)), 0, audioMask.height - 1);
+        int pixelX = Mathf.Clamp(
+            Mathf.RoundToInt(u * (audioMask.width - 1)),
+            0,
+            audioMask.width - 1
+        );
+
+        int pixelY = Mathf.Clamp(
+            Mathf.RoundToInt(v * (audioMask.height - 1)),
+            0,
+            audioMask.height - 1
+        );
 
         Color pixelColor = audioMask.GetPixel(pixelX, pixelY);
 
-        if (debugScan)
+        if (debugScan && Vector4.Distance(pixelColor, lastDebugColor) > 0.05f)
         {
-            if (Vector4.Distance(pixelColor, lastDebugColor) > 0.05f)
-            {
-                Debug.Log(
-                    "[FoodScan] Pixel: " + pixelX + "," + pixelY +
-                    " | Color: " + pixelColor
-                );
+            Debug.Log(
+                "[FoodScan] Pixel: " + pixelX + "," + pixelY +
+                " | Color: " + pixelColor
+            );
 
-                lastDebugColor = pixelColor;
-            }
+            lastDebugColor = pixelColor;
         }
 
         return pixelColor;
     }
 
-    private void ResetScrape()
+    private void ResetScan()
     {
-        scrapeTimer = 0f;
+        scanTimer = 0f;
         currentEvidenceID = "";
         evidenceUnlockedForCurrentRegion = false;
     }
@@ -252,7 +234,7 @@ public class FoodScan : MonoBehaviour
         if (!isPlayingMaterialSound)
             return;
 
-        audioSource.Pause();
+        audioSource.Stop();
         isPlayingMaterialSound = false;
     }
 }

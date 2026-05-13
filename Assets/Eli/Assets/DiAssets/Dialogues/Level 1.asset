@@ -23,7 +23,7 @@ MonoBehaviour:
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: I heard that you and your vendor have become popular lately which caught
+    charText: i heard that you and your vendor have become popular lately which caught
       my interest
     characterEmotion: 0
     continueCheck: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "You seem like a true food enjoyer. Then, I\u2019d recommend my signature
+    charText: "You seem like a true food enjoyer. then, I\u2019d recommend my signature
       sliced grill-beef B\xE1nh M\xEC."
     characterEmotion: 0
     continueCheck: 0
