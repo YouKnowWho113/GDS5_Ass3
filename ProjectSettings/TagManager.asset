@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Portrait
+  - Clock
+  - Bed
+  - Wall
+  - Door
+  - TV
+  - Mirror
+  - Table
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -41,4 +49,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    uniqueID: 2398705591
     locked: 0
