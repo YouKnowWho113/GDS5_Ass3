@@ -2714,17 +2714,17 @@ MonoBehaviour:
   mouseButton: 0
   ignoreUI: 1
   audioSource: {fileID: 1541568027}
-  loopWhileHovering: 1
+  loopWhileHovering: 0
   globalVolume: 1
-  playInterval: 0.35
+  playInterval: 0.5
   colorTolerance: 1
-  gracePeriod: 0.12
+  gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
     maskColor: {r: 0.99607843, g: 0.003921569, b: 0.76862746, a: 0}
-    scanSound: {fileID: 8300000, guid: 200a6dbff4364444c83f324a9a1ed596, type: 3}
+    scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
     volume: 1
     requiredScanTime: 0.1
   debugMode: 0
@@ -2742,7 +2742,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3169,7 +3169,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 5fdadfdc9d4ee0540a7e77e25d33f2d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
