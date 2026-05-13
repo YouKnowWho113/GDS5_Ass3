@@ -21,16 +21,12 @@ public class NoteBookEvidenceUI : MonoBehaviour
         foreach (EvidenceUI obj in evidenceObjects)
         {
             if (obj.targetObject == null)
-            {
-                Debug.LogWarning(
-                    "Missing target object for evidence: " + obj.evidenceID
-                );
-
                 continue;
-            }
 
             bool unlocked =
                 EvidenceNotebook.Instance.HasAnyEvidence(obj.evidenceID);
+
+            Debug.Log(obj.evidenceID + " = " + unlocked);
 
             obj.targetObject.SetActive(unlocked);
         }
