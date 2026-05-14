@@ -231,7 +231,7 @@ public class FoodScan : MonoBehaviour
             return;
         }
 
-        if (hit.evidenceID == activeRegion.evidenceID)
+        if (IsSameRegion(hit, activeRegion))
         {
             // Same region — keep running.
             switchTimer = 0f;
@@ -270,7 +270,7 @@ public class FoodScan : MonoBehaviour
 
     private void SetActive(MaterialAudioData region)
     {
-        bool isNew = (region.evidenceID != trackedEvidenceID);
+        bool isNew = !IsSameRegion(region, activeRegion);
 
         activeRegion = region;
         hasActive = true;
@@ -289,20 +289,25 @@ public class FoodScan : MonoBehaviour
         // Audio
         if (region.scanSound != null)
         {
-            audioSource.clip = region.scanSound;
             audioSource.volume = Mathf.Clamp01(region.volume * globalVolume);
             audioSource.loop = loopWhileHovering;
 
             if (loopWhileHovering)
             {
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.Play();
-                    loopIsPlaying = true;
-                }
+                // Always stop then restart so the new clip takes effect immediately.
+                // Changing audioSource.clip on a playing source does NOT restart it —
+                // the old clip keeps playing until we call Stop() first.
+                audioSource.Stop();
+                audioSource.clip = region.scanSound;
+                audioSource.Play();
+                loopIsPlaying = true;
             }
             else
             {
+                audioSource.clip = region.scanSound;
+                // Reset the cooldown so the new region's sound plays immediately
+                // instead of being silenced by the previous region's interval.
+                nextOneShotTime = 0f;
                 TryPlayOneShot();
             }
         }
@@ -382,6 +387,25 @@ public class FoodScan : MonoBehaviour
                 Debug.LogWarning("[FoodScan] EvidenceNotebook instance not found in scene.");
         }
     }
+    // ═════════════════════════════════════════════════════════════════════════
+    //  Region identity
+    // ═════════════════════════════════════════════════════════════════════════
+
+    // Two materials are the "same region" if they share both clip and name.
+    // Critically this does NOT rely on evidenceID alone, so entries with a
+    // blank evidenceID field still switch correctly.
+    private static bool IsSameRegion(MaterialAudioData a, MaterialAudioData b)
+    {
+        // If both have a filled-in evidenceID, that is the canonical key.
+        if (!string.IsNullOrEmpty(a.evidenceID) && !string.IsNullOrEmpty(b.evidenceID))
+            return a.evidenceID == b.evidenceID;
+
+        // Fallback: treat entries as identical only when both the clip AND the
+        // material name match. This handles the common case where evidenceID
+        // is left blank for some or all entries.
+        return a.scanSound == b.scanSound && a.materialName == b.materialName;
+    }
+
 
     // ═════════════════════════════════════════════════════════════════════════
     //  Color matching  (hot path — zero allocations)

@@ -7879,8 +7879,14 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 0.99607843, g: 0.003921569, b: 0.76862746, a: 0}
+    maskColor: {r: 1, g: 0, b: 0.8235295, a: 1}
     scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
+    volume: 1
+    requiredScanTime: 0.1
+  - materialName: umami
+    evidenceID: umami
+    maskColor: {r: 0, g: 1, b: 0.1882353, a: 0}
+    scanSound: {fileID: 8300000, guid: 77e473d550b2bcf40b41984ba5b3fa61, type: 3}
     volume: 1
     requiredScanTime: 0.1
   debugMode: 0
@@ -7999,7 +8005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1562743913
 MonoBehaviour:
   m_ObjectHideFlags: 0
