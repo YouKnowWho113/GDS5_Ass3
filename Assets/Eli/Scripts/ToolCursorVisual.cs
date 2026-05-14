@@ -6,6 +6,12 @@ public class ToolCursorVisual : MonoBehaviour
     [Header("Cursor")]
     public bool hideSystemCursor = true;
 
+    [Header("Blocked / Menu Cursor")]
+    public Sprite menuCursorSprite;
+    public Vector2 menuCursorOffset = Vector2.zero;
+    public float menuCursorRotation = 0f;
+    public Vector2 menuCursorScale = Vector2.one;
+
     [Header("Input")]
     public int lightScanButton = 1; // right mouse
     public int soundScanButton = 0; // left mouse
@@ -52,6 +58,17 @@ public class ToolCursorVisual : MonoBehaviour
 
     private void Update()
     {
+        if (GameplayInputLock.IsLocked)
+        {
+            spriteRenderer.enabled = false;
+            Cursor.visible = true;
+            return;
+        }
+        else
+        {
+            Cursor.visible = false;
+        }
+
         bool usingLightScanner = Input.GetMouseButton(lightScanButton);
         bool usingSoundScanner = Input.GetMouseButton(soundScanButton);
 

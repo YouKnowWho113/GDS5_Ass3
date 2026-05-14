@@ -11,6 +11,9 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Button Object")]
     public Button nextLineButton;
+    [Header("Keyboard Advance")]
+    public bool allowSpacebarAdvance = true;
+    public KeyCode advanceKey = KeyCode.Space;
 
     [Header("Animators")]
     public Animator textBoxAnimator;
@@ -123,6 +126,20 @@ public class DialogueManager : MonoBehaviour
             SFXManager.instance.PlayDialogueOpen();
 
         ShowNextLine(false);
+    }
+
+    private void Update()
+    {
+        if (!allowSpacebarAdvance)
+            return;
+
+        if (!dialogueActive)
+            return;
+
+        if (Input.GetKeyDown(advanceKey))
+        {
+            AdvanceDialogue();
+        }
     }
 
     public void AdvanceDialogue()

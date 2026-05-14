@@ -44,6 +44,12 @@ public class UVFoodScanner : MonoBehaviour
 
     private void Update()
     {
+        if (GameplayInputLock.IsLocked)
+        {
+            UpdateScannerLight(false);
+            return;
+        }
+
         bool scanning = !requireInput || Input.GetMouseButton(mouseButton);
 
         UpdateScannerLight(scanning);

@@ -3,8 +3,12 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [Header("Dialogue Canvas")]
+    public GameObject dialogueCanvasRoot;
+    public bool disableCanvasWhenDialogueEnds = true;
+
     [Header("Scene Start Dialogue")]
-    public bool playOnSceneStart = true;
+    public bool playOnSceneStart = false;
     public DialogueBase sceneStartDialogue;
     public float sceneStartDelay = 0.3f;
 
@@ -19,29 +23,27 @@ public class DialogueTrigger : MonoBehaviour
     public bool playSceneStartOnlyOnce = true;
 
     private bool sceneStartPlayed;
+    private Coroutine canvasCloseRoutine;
 
     private void Start()
     {
+        if (dialogueCanvasRoot != null)
+            dialogueCanvasRoot.SetActive(false);
+
         if (playOnSceneStart && sceneStartDialogue != null)
-        {
             StartCoroutine(PlaySceneStartDialogue());
-        }
     }
 
     private void OnEnable()
     {
         if (DeductionManager.Instance != null)
-        {
             DeductionManager.Instance.OnReportSubmitted += HandleReportSubmitted;
-        }
     }
 
     private void OnDisable()
     {
         if (DeductionManager.Instance != null)
-        {
             DeductionManager.Instance.OnReportSubmitted -= HandleReportSubmitted;
-        }
     }
 
     private IEnumerator PlaySceneStartDialogue()
@@ -74,7 +76,6 @@ public class DialogueTrigger : MonoBehaviour
     private IEnumerator PlaySubmitDialogue(DialogueBase dialogue)
     {
         yield return new WaitForSeconds(submitDialogueDelay);
-
         PlayDialogue(dialogue);
     }
 
@@ -83,32 +84,63 @@ public class DialogueTrigger : MonoBehaviour
         if (dialogue == null)
             return;
 
-        if (DialogueManager.instance == null)
+        StartCoroutine(PlayDialogueRoutine(dialogue));
+    }
+
+    private IEnumerator PlayDialogueRoutine(DialogueBase dialogue)
+    {
+        if (waitUntilCurrentDialogueEnds)
+            yield return StartCoroutine(WaitUntilDialogueFree());
+
+        if (dialogueCanvasRoot != null && !dialogueCanvasRoot.activeSelf)
         {
-            Debug.LogWarning("[DialogueTrigger] DialogueManager missing in scene.");
-            return;
+            dialogueCanvasRoot.SetActive(true);
+
+            // Wait one frame so DialogueManager inside DiaCanvas wakes up.
+            yield return null;
         }
 
-        if (waitUntilCurrentDialogueEnds)
+        if (DialogueManager.instance == null)
         {
-            StartCoroutine(PlayWhenDialogueFree(dialogue));
+            Debug.LogWarning("[DialogueTrigger] DialogueManager missing. Check DiaCanvas and DialogueManager.");
+            yield break;
         }
-        else
+
+        DialogueManager.instance.EnqueueDialogue(dialogue);
+
+        if (disableCanvasWhenDialogueEnds)
         {
-            DialogueManager.instance.EnqueueDialogue(dialogue);
+            if (canvasCloseRoutine != null)
+                StopCoroutine(canvasCloseRoutine);
+
+            canvasCloseRoutine = StartCoroutine(DisableCanvasWhenDialogueEnds());
         }
     }
 
-    private IEnumerator PlayWhenDialogueFree(DialogueBase dialogue)
+    private IEnumerator WaitUntilDialogueFree()
     {
         while (DialogueManager.instance != null &&
-               DialogueManager.instance.dialogueBox != null &&
-               DialogueManager.instance.dialogueBox.activeSelf)
+               DialogueManager.instance.IsDialogueActive())
+        {
+            yield return null;
+        }
+    }
+
+    private IEnumerator DisableCanvasWhenDialogueEnds()
+    {
+        while (DialogueManager.instance != null &&
+               DialogueManager.instance.IsDialogueActive())
         {
             yield return null;
         }
 
-        DialogueManager.instance.EnqueueDialogue(dialogue);
+        // Wait one extra frame so DialogueManager can finish closing its dialogueBox.
+        yield return null;
+
+        if (dialogueCanvasRoot != null)
+            dialogueCanvasRoot.SetActive(false);
+
+        canvasCloseRoutine = null;
     }
 
     public void PlaySceneStartManually()

@@ -167,6 +167,12 @@ public class FoodScan : MonoBehaviour
 
     private void Update()
     {
+        if (GameplayInputLock.IsLocked)
+        {
+            Deactivate();
+            return;
+        }
+
         if (foodRenderer == null) return;
         if (cam == null) cam = Camera.main;
 
