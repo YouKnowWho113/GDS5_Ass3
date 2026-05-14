@@ -558,6 +558,7 @@ Transform:
   - {fileID: 1946040551}
   - {fileID: 540712359}
   - {fileID: 1075994783}
+  - {fileID: 1899297690}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86927998
@@ -1025,7 +1026,7 @@ Transform:
   m_GameObject: {fileID: 162947073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1044,34 +1045,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodRenderer: {fileID: 162947076}
-  colorMask: {fileID: 0}
+  colorMask: {fileID: 2800000, guid: 3e7fd73e18211b34c8221e073bad8123, type: 3}
   mouseButton: 0
   ignoreUI: 1
   audioSource: {fileID: 162947077}
   loopWhileHovering: 0
   globalVolume: 1
-  playInterval: 0.35
-  colorTolerance: 0.1
-  gracePeriod: 0.12
+  playInterval: 1
+  colorTolerance: 0.5
+  gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
-  - materialName: Sweet
-    evidenceID: sweet
-    maskColor: {r: 0.9960785, g: 0.9803922, b: 0.9686275, a: 1}
-    scanSound: {fileID: 0}
-    volume: 0
-    requiredScanTime: 0
-  - materialName: Salty
-    evidenceID: salty
-    maskColor: {r: 0.9490197, g: 0.7725491, b: 0.65882355, a: 1}
-    scanSound: {fileID: 0}
-    volume: 0
+  - materialName: Grainy
+    evidenceID: grainy
+    maskColor: {r: 0.098039225, g: 0.43921572, b: 0.1254902, a: 1}
+    scanSound: {fileID: 8300000, guid: b3f5a61fccc16274aa051893e92227ba, type: 3}
+    volume: 1
     requiredScanTime: 0
   - materialName: Umami
     evidenceID: umami
-    maskColor: {r: 0.13725491, g: 0.003921569, b: 0, a: 1}
-    scanSound: {fileID: 0}
-    volume: 0
+    maskColor: {r: 0.43529415, g: 0, b: 0, a: 1}
+    scanSound: {fileID: 8300000, guid: 77e473d550b2bcf40b41984ba5b3fa61, type: 3}
+    volume: 1
+    requiredScanTime: 0
+  - materialName: Moist
+    evidenceID: moist
+    maskColor: {r: 0.45098042, g: 0.10980393, b: 0.10980393, a: 1}
+    scanSound: {fileID: 8300000, guid: 3ad530affef16854e9dc539e4b27496c, type: 3}
+    volume: 1
     requiredScanTime: 0
   debugMode: 0
 --- !u!212 &162947076
@@ -3221,7 +3222,7 @@ Transform:
   m_GameObject: {fileID: 545355267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4695,7 +4696,7 @@ Transform:
   m_GameObject: {fileID: 840193214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5545,7 +5546,7 @@ Transform:
   m_GameObject: {fileID: 1075994781}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6737,7 +6738,7 @@ Transform:
   m_GameObject: {fileID: 1355670532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10396,6 +10397,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888721334}
   m_CullTransparentMesh: 1
+--- !u!1 &1899297689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899297690}
+  - component: {fileID: 1899297691}
+  m_Layer: 0
+  m_Name: CTMask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1899297690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899297689}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 58721789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1899297691
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899297689}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0e4a09eac34523f4a9c5af5bab4665a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1938005336
 GameObject:
   m_ObjectHideFlags: 0
@@ -10456,7 +10541,7 @@ Transform:
   m_GameObject: {fileID: 1946040550}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.85, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
