@@ -1289,10 +1289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overviewPanel: {fileID: 2021137607}
-  tastePanel: {fileID: 967408141}
-  texturePanel: {fileID: 21547832}
+  texTasPanel: {fileID: 0}
   conclusionPanel: {fileID: 485231098}
-  settingPanel: {fileID: 336503027}
+  instructionPanel: {fileID: 0}
+  menuPanel: {fileID: 0}
 --- !u!114 &184551401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8250,7 +8250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b3e3dc3f174a841ab688b6f87f7ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notebookPanel: {fileID: 184551397}
+  journal: {fileID: 0}
+  journalButton: {fileID: 0}
   evidenceUI: {fileID: 184551398}
 --- !u!114 &1562743914
 MonoBehaviour:
