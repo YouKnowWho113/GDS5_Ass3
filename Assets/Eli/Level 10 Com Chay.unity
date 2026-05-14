@@ -6519,7 +6519,7 @@ MonoBehaviour:
   loopWhileHovering: 0
   globalVolume: 1
   playInterval: 1.5
-  colorTolerance: 0.1
+  colorTolerance: 0.2
   gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
@@ -6837,7 +6837,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 21528062304863544978d724a1f3b940, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
