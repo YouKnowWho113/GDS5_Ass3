@@ -9,13 +9,8 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance;
     public static DialogueManager instance; // legacy support
 
-    [Header("Input")]
-    public bool allowSubmitInput = true;
-    public string submitButtonName = "Submit";
-
     [Header("Button Object")]
     public Button nextLineButton;
-    public bool useNextLineButton = true;
 
     [Header("Animators")]
     public Animator textBoxAnimator;
@@ -83,23 +78,9 @@ public class DialogueManager : MonoBehaviour
         UnregisterNextButton();
     }
 
-    private void Update()
-    {
-        if (!allowSubmitInput)
-            return;
-
-        if (!dialogueActive)
-            return;
-
-        if (Input.GetButtonDown(submitButtonName))
-        {
-            AdvanceDialogue();
-        }
-    }
-
     private void RegisterNextButton()
     {
-        if (!useNextLineButton || nextLineButton == null)
+        if (nextLineButton == null)
             return;
 
         nextLineButton.onClick.RemoveListener(AdvanceDialogue);
@@ -152,7 +133,7 @@ public class DialogueManager : MonoBehaviour
         ShowNextLine(true);
     }
 
-    // Legacy name so older scripts still work.
+    // Legacy name, so older scripts calling DequeueDialogue() still work.
     public void DequeueDialogue()
     {
         AdvanceDialogue();
@@ -172,6 +153,7 @@ public class DialogueManager : MonoBehaviour
         StopFaceCoroutines();
 
         DialogueBase.Info info = dialogueInfo.Dequeue();
+
         ApplyDialogueLine(info);
         PlayTextBoxAnim();
 
@@ -283,16 +265,22 @@ public class DialogueManager : MonoBehaviour
         while (slideDistance >= 0f)
         {
             if (dialoguePortrait != null)
+            {
                 dialoguePortrait.rectTransform.anchoredPosition =
                     new Vector3(xSprite - slideDistance, ySprite, 0f);
+            }
 
             if (dialogueEyes != null)
+            {
                 dialogueEyes.rectTransform.anchoredPosition =
                     new Vector3(xEyes - slideDistance, yEyes, 0f);
+            }
 
             if (dialogueMouths != null)
+            {
                 dialogueMouths.rectTransform.anchoredPosition =
                     new Vector3(xEyes - slideDistance, yEyes, 0f);
+            }
 
             slideDistance -= 4f;
             yield return new WaitForSeconds(0.05f);
