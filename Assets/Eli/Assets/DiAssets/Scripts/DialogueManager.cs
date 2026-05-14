@@ -13,6 +13,10 @@ public class DialogueManager : MonoBehaviour
     public bool allowSubmitInput = true;
     public string submitButtonName = "Submit";
 
+    [Header("Button Object")]
+    public Button nextLineButton;
+    public bool useNextLineButton = true;
+
     [Header("Animators")]
     public Animator textBoxAnimator;
     public Animator nameTagAnimator;
@@ -64,6 +68,21 @@ public class DialogueManager : MonoBehaviour
             dialogueBox.SetActive(false);
     }
 
+    private void OnEnable()
+    {
+        RegisterNextButton();
+    }
+
+    private void OnDisable()
+    {
+        UnregisterNextButton();
+    }
+
+    private void OnDestroy()
+    {
+        UnregisterNextButton();
+    }
+
     private void Update()
     {
         if (!allowSubmitInput)
@@ -76,6 +95,23 @@ public class DialogueManager : MonoBehaviour
         {
             AdvanceDialogue();
         }
+    }
+
+    private void RegisterNextButton()
+    {
+        if (!useNextLineButton || nextLineButton == null)
+            return;
+
+        nextLineButton.onClick.RemoveListener(AdvanceDialogue);
+        nextLineButton.onClick.AddListener(AdvanceDialogue);
+    }
+
+    private void UnregisterNextButton()
+    {
+        if (nextLineButton == null)
+            return;
+
+        nextLineButton.onClick.RemoveListener(AdvanceDialogue);
     }
 
     public void EnqueueDialogue(DialogueBase db)
@@ -102,8 +138,8 @@ public class DialogueManager : MonoBehaviour
         dialogueActive = true;
         dialogueBox.SetActive(true);
 
-        if (SFXManager.Instance != null)
-            SFXManager.Instance.PlayDialogueOpen();
+        if (SFXManager.instance != null)
+            SFXManager.instance.PlayDialogueOpen();
 
         ShowNextLine(false);
     }
@@ -116,7 +152,7 @@ public class DialogueManager : MonoBehaviour
         ShowNextLine(true);
     }
 
-    // Legacy name so older buttons/scripts still work.
+    // Legacy name so older scripts still work.
     public void DequeueDialogue()
     {
         AdvanceDialogue();
@@ -130,8 +166,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (playNextSfx && SFXManager.Instance != null)
-            SFXManager.Instance.PlayDialogueNext();
+        if (playNextSfx && SFXManager.instance != null)
+            SFXManager.instance.PlayDialogueNext();
 
         StopFaceCoroutines();
 
@@ -288,6 +324,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(2f, 4f));
 
             SetImageAlpha(dialogueEyes, 1f);
+
             if (dialogueEyes != null)
                 dialogueEyes.sprite = eyeBlink;
 
@@ -371,8 +408,8 @@ public class DialogueManager : MonoBehaviour
         if (dialogueBox != null)
             dialogueBox.SetActive(false);
 
-        if (SFXManager.Instance != null)
-            SFXManager.Instance.PlayDialogueClose();
+        if (SFXManager.instance != null)
+            SFXManager.instance.PlayDialogueClose();
     }
 
     public bool IsDialogueActive()
