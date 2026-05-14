@@ -8,4 +8,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Eli/Level 1 Banh My.unity
+    guid: c590695c6b9308043beea4f7eb43beec
+  - enabled: 1
+    path: Assets/Eli/Level 2 Che Hue.unity
+    guid: 2cbf46074d14cc849b0af3ce4cb97b8a
+  - enabled: 1
+    path: Assets/Eli/Level 3 Pho.unity
+    guid: e5a4bb34e4fd6e741aeaa2b4071ebf54
+  - enabled: 1
+    path: Assets/Eli/Level 4 Bun Cha.unity
+    guid: 456c41e2b0f79ca478f699bde548facb
+  - enabled: 1
+    path: Assets/Eli/Level 5 Banh Cuon.unity
+    guid: 7d51a780811856349ad2746844cd1e58
+  - enabled: 1
+    path: Assets/Eli/Level 6 TrauGacBep.unity
+    guid: a787f761dd2a58544a54e06e0f623db8
+  - enabled: 1
+    path: Assets/Eli/Level 7 BunDau.unity
+    guid: 974d03c476df960438bcf7f364941e1e
+  - enabled: 1
+    path: Assets/Eli/Level 8 Com Tam.unity
+    guid: d80d848aef0a1bf448f23a4b4f10c507
+  - enabled: 1
+    path: Assets/Eli/Level 9 Banh Xeo.unity
+    guid: 381f973f613bf144f9bb53115e4a25f1
+  - enabled: 1
+    path: Assets/Eli/Level 10 Com Chay.unity
+    guid: 5adae907a8ce3b2498e77e35e7189845
   m_configObjects: {}

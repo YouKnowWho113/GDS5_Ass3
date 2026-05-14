@@ -5,53 +5,53 @@ using UnityEngine;
 public class NoteBookTabs : MonoBehaviour
 {
     public GameObject overviewPanel;
-    public GameObject tastePanel;
-    public GameObject texturePanel;
+    public GameObject texTasPanel;
     public GameObject conclusionPanel;
-    public GameObject settingPanel;
+    public GameObject instructionPanel;
+    public GameObject menuPanel;
 
     public void OpenOverview()
     {
         overviewPanel.SetActive(true);
-        tastePanel.SetActive(false);
-        texturePanel.SetActive(false);
+        texTasPanel.SetActive(false);
+        instructionPanel.SetActive(false);
         conclusionPanel.SetActive(false);
-        settingPanel.SetActive(false);
+        menuPanel.SetActive(false);
     }
 
-    public void OpenTaste()
+    public void OpenTexTas()
     {
         overviewPanel.SetActive(false);
-        tastePanel.SetActive(true);
-        texturePanel.SetActive(false);
+        texTasPanel.SetActive(true);
         conclusionPanel.SetActive(false);
-        settingPanel.SetActive(false);
-    }
-
-    public void OpenTexture()
-    {
-        overviewPanel.SetActive(false);
-        tastePanel.SetActive(false);
-        texturePanel.SetActive(true);
-        conclusionPanel.SetActive(false);
-        settingPanel.SetActive(false);
+        instructionPanel.SetActive(false);
+        menuPanel.SetActive(false);
     }
 
     public void OpenConclusion()
     {
         overviewPanel.SetActive(false);
-        tastePanel.SetActive(false);
-        texturePanel.SetActive(false);
+        texTasPanel.SetActive(false);
         conclusionPanel.SetActive(true);
-        settingPanel.SetActive(false);
+        instructionPanel.SetActive(false);
+        menuPanel.SetActive(false);
     }
 
-    public void OpenSetting()
+    public void OpenInstruction()
     {
         overviewPanel.SetActive(false);
-        tastePanel.SetActive(false);
-        texturePanel.SetActive(false);
+        texTasPanel.SetActive(false);
         conclusionPanel.SetActive(false);
-        settingPanel.SetActive(true);
+        instructionPanel.SetActive(true);
+        menuPanel.SetActive(false);
+    }
+
+    public void OpenMenu()
+    {
+        overviewPanel.SetActive(false);
+        texTasPanel.SetActive(false);
+        conclusionPanel.SetActive(false);
+        instructionPanel.SetActive(false);
+        menuPanel.SetActive(true);
     }
 }

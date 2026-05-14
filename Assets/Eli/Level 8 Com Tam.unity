@@ -1071,7 +1071,7 @@ MonoBehaviour:
   - materialName: Moist
     evidenceID: moist
     maskColor: {r: 0.45098042, g: 0.10980393, b: 0.10980393, a: 1}
-    scanSound: {fileID: 8300000, guid: 3ad530affef16854e9dc539e4b27496c, type: 3}
+    scanSound: {fileID: 8300000, guid: 5fd694899e983a241a55b9be82cd283e, type: 3}
     volume: 1
     requiredScanTime: 0
   debugMode: 0
