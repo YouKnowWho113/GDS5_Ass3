@@ -15,9 +15,11 @@ MonoBehaviour:
   dishName: BanhXeo
   dishDescription: 
   correctEvidence:
-  - evidenceID: 'salty '
+  - evidenceID: salty
     evidenceChannel: -1
-  - evidenceID: crunchy
-    evidenceChannel: 2
   - evidenceID: sweet
     evidenceChannel: -1
+  - evidenceID: crispy
+    evidenceChannel: 2
+  - evidenceID: watery
+    evidenceChannel: 2
