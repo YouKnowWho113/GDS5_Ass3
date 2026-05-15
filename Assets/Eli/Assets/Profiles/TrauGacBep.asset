@@ -17,3 +17,5 @@ MonoBehaviour:
   correctEvidence:
   - evidenceID: umami
     evidenceChannel: 1
+  - evidenceID: chewy
+    evidenceChannel: 2

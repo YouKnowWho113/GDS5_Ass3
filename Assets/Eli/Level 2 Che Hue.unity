@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b3e3dc3f174a841ab688b6f87f7ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notebookPanel: {fileID: 1428998919}
+  journal: {fileID: 0}
   evidenceUI: {fileID: 1428998920}
 --- !u!114 &399005596
 MonoBehaviour:
@@ -5192,7 +5192,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: e27e65d0b6f0f334aa9d6dcd637905e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5764,10 +5764,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overviewPanel: {fileID: 1682367151}
-  tastePanel: {fileID: 549432372}
-  texturePanel: {fileID: 1548180021}
+  texTasPanel: {fileID: 0}
   conclusionPanel: {fileID: 1697445116}
-  settingPanel: {fileID: 1218181247}
+  instructionPanel: {fileID: 0}
+  menuPanel: {fileID: 0}
 --- !u!114 &1428998923
 MonoBehaviour:
   m_ObjectHideFlags: 0

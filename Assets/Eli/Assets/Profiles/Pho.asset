@@ -17,7 +17,7 @@ MonoBehaviour:
   correctEvidence:
   - evidenceID: umami
     evidenceChannel: 1
-  - evidenceID: salty
-    evidenceChannel: -1
-  - evidenceID: sweet
-    evidenceChannel: -1
+  - evidenceID: 'tender '
+    evidenceChannel: 2
+  - evidenceID: watery
+    evidenceChannel: 2

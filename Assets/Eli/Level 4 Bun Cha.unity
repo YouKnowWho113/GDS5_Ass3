@@ -1695,7 +1695,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 3ed18f236cfc07d4cbe5a9a28c06e8d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2164,7 +2164,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 3ed18f236cfc07d4cbe5a9a28c06e8d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3806,7 +3806,7 @@ Transform:
   m_GameObject: {fileID: 845337371}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3852,8 +3852,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 6c2aec23aad046f4384a78eaff2c5841, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: e8abe46df4f1bc642a2a501d5e9bb703, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4299,7 +4299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b3e3dc3f174a841ab688b6f87f7ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notebookPanel: {fileID: 1299208570}
+  journal: {fileID: 0}
+  journalButton: {fileID: 0}
   evidenceUI: {fileID: 1299208571}
 --- !u!114 &903235760
 MonoBehaviour:
@@ -5280,7 +5281,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a805abe5492822347b0d49dc46c4bdbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5339,7 +5340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDish: {fileID: 11400000, guid: 429c476aa466e1149b3c4d75ace55bb6, type: 2}
   remainingTries: 3
-  maxSelectedEvidence: 3
+  maxSelectedEvidence: 5
   requireEvidenceBeforeCorrect: 0
 --- !u!114 &1159629366
 MonoBehaviour:
@@ -6057,10 +6058,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overviewPanel: {fileID: 713856839}
-  tastePanel: {fileID: 104621080}
-  texturePanel: {fileID: 1984395442}
+  texTasPanel: {fileID: 0}
   conclusionPanel: {fileID: 1791984714}
-  settingPanel: {fileID: 1917326410}
+  instructionPanel: {fileID: 0}
+  menuPanel: {fileID: 0}
 --- !u!114 &1299208574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7107,7 +7108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 3ed18f236cfc07d4cbe5a9a28c06e8d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7588,34 +7589,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodRenderer: {fileID: 1541568025}
-  colorMask: {fileID: 2800000, guid: 6c2aec23aad046f4384a78eaff2c5841, type: 3}
+  colorMask: {fileID: 2800000, guid: e8abe46df4f1bc642a2a501d5e9bb703, type: 3}
   mouseButton: 0
   ignoreUI: 1
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1541568027}
   loopWhileHovering: 0
   globalVolume: 1
-  playInterval: 0.5
+  playInterval: 1.5
   colorTolerance: 0.2
   gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
+    maskColor: {r: 0.6745098, g: 0.4784314, b: 0.627451, a: 0}
+    scanSound: {fileID: 8300000, guid: c45f9e32a4618a0478f36b33b4d24349, type: 3}
+    volume: 1
+    requiredScanTime: 1
+  - materialName: Moist
+    evidenceID: moist
     maskColor: {r: 0.050980397, g: 0.9450981, b: 0.2627451, a: 0}
     scanSound: {fileID: 8300000, guid: 5fd694899e983a241a55b9be82cd283e, type: 3}
     volume: 1
     requiredScanTime: 0
-  - materialName: Umami
-    evidenceID: umami
+  - materialName: Watery
+    evidenceID: watery
     maskColor: {r: 0, g: 0.6666667, b: 0.15686275, a: 0}
     scanSound: {fileID: 8300000, guid: 6f35fa47a69de0b488ecf5e4cba1bdce, type: 3}
     volume: 1
-    requiredScanTime: 0
-  - materialName: Salty
-    evidenceID: salty
-    maskColor: {r: 1, g: 0.9960785, b: 0.9921569, a: 0}
-    scanSound: {fileID: 0}
-    volume: 0
     requiredScanTime: 0
   debugMode: 0
 --- !u!82 &1541568027
@@ -8074,7 +8075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1697445117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8662,6 +8663,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScannerRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 6916720826723832443, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916720826723832443, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183363750586660908, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
+      propertyPath: chopstickScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183363750586660908, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
+      propertyPath: chopstickScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8183363750586660908, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
       propertyPath: chopstickFrames.Array.size
       value: 2
@@ -8869,7 +8886,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: dce5637b44b9acc4c970b21d8c8a823c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
