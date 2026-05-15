@@ -200,8 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f41c880ce6f86438ef8e590a5a2cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowSubmitInput: 1
-  submitButtonName: Submit
+  nextLineButton: {fileID: 0}
+  allowSpacebarAdvance: 1
+  advanceKey: 32
   textBoxAnimator: {fileID: 9194175731888177014}
   nameTagAnimator: {fileID: 723559175808113825}
   boxTextAnimator: {fileID: 8991848114939132716}
@@ -320,6 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376964962203306878}
+  - component: {fileID: 3369073805189271529}
   m_Layer: 5
   m_Name: TextBoxFolder
   m_TagString: Untagged
@@ -353,6 +355,19 @@ RectTransform:
   m_AnchoredPosition: {x: 44, y: 554}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3369073805189271529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2797232882119642271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39979e6a3b4535b48b47bdd9b853c559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockReason: Dialogue
 --- !u!1 &2807744674719331968
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &176737225229784405
 Transform:
   m_ObjectHideFlags: 0
