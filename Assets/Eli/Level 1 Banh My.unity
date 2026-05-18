@@ -4586,12 +4586,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2700872975268600079, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+      propertyPath: m_text
+      value: You
+      objectReference: {fileID: 0}
     - target: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
       propertyPath: m_Name
       value: DiaCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5356655964380850551, guid: 74258bc25dd34a14582092297eba566f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74258bc25dd34a14582092297eba566f, type: 3}
