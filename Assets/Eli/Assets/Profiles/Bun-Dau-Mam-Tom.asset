@@ -19,3 +19,5 @@ MonoBehaviour:
     evidenceChannel: 1
   - evidenceID: sweet
     evidenceChannel: -1
+  - evidenceID: tender
+    evidenceChannel: 2
