@@ -168,7 +168,7 @@ MonoBehaviour:
   requireInput: 1
   mouseButton: 1
   revealStrength: 1.5
-  scannerLight2D: {fileID: 0}
+  scannerLight2D: {fileID: 6916720826723832443}
   maxLightIntensity: 1
   fadeInSpeed: 8
   fadeOutSpeed: 6
@@ -284,6 +284,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideSystemCursor: 1
+  menuCursorSprite: {fileID: 21300000, guid: 57b86b03ae4c0be4897d5afaa6d95261, type: 3}
+  menuCursorOffset: {x: 0, y: 0}
+  menuCursorRotation: 0
+  menuCursorScale: {x: 1, y: 1}
   lightScanButton: 1
   soundScanButton: 0
   flashlightSprite: {fileID: 21300000, guid: f9d4408230d6a30499e74e95edd43b72, type: 3}
@@ -296,7 +300,6 @@ MonoBehaviour:
   rotationTwitchAmount: 3
   chopstickFrames:
   - {fileID: 21300000, guid: 92145e83f02097c4eb27784c2049a13a, type: 3}
-  - {fileID: 21300000, guid: 687ddf96d91d7ca43a06c0588c7d56cf, type: 3}
   - {fileID: 21300000, guid: 0b81de63b61b30a458a9967bd8f1cded, type: 3}
   chopstickOffset: {x: 4, y: 2}
   chopstickRotation: -35

@@ -1308,6 +1308,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScannerRoot
       objectReference: {fileID: 0}
+    - target: {fileID: 8183363750586660908, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
+      propertyPath: menuCursorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 57b86b03ae4c0be4897d5afaa6d95261, type: 3}
+    - target: {fileID: 8183363750586660908, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
+      propertyPath: menuCursorScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183363750586660908, guid: 702fc6dd5f44845408ef622691d14381, type: 3}
+      propertyPath: menuCursorScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7830,7 +7842,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   journal: {fileID: 0}
   journalButton: {fileID: 0}
+  ovv: []
+  tnt: []
+  overview: {fileID: 0}
+  texTas: {fileID: 0}
+  conclu: {fileID: 0}
   evidenceUI: {fileID: 184551398}
+  noteBookTabs: {fileID: 0}
+  curLevel: 0
+  curPage: 0
+  prevPage: 0
+  nextPage: 0
+  lvS: 
 --- !u!114 &1562743914
 MonoBehaviour:
   m_ObjectHideFlags: 0
