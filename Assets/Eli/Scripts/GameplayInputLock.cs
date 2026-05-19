@@ -1,36 +1,36 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public static class GameplayInputLock
 {
-    private static readonly HashSet<string> lockReasons = new HashSet<string>();
+    private static readonly HashSet<string> activeLocks = new HashSet<string>();
 
-    public static bool IsLocked => lockReasons.Count > 0;
+    public static bool IsLocked
+    {
+        get { return activeLocks.Count > 0; }
+    }
 
     public static void Lock(string reason)
     {
-        if (string.IsNullOrWhiteSpace(reason))
-            return;
-
-        lockReasons.Add(reason);
+        activeLocks.Add(Normalize(reason));
     }
 
     public static void Unlock(string reason)
     {
-        if (string.IsNullOrWhiteSpace(reason))
-            return;
+        activeLocks.Remove(Normalize(reason));
+    }
 
-        lockReasons.Remove(reason);
+    public static bool IsLockedBy(string reason)
+    {
+        return activeLocks.Contains(Normalize(reason));
     }
 
     public static void ClearAll()
     {
-        lockReasons.Clear();
+        activeLocks.Clear();
     }
 
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void ResetOnSceneLoad()
+    private static string Normalize(string reason)
     {
-        lockReasons.Clear();
+        return string.IsNullOrWhiteSpace(reason) ? "Unknown" : reason;
     }
 }

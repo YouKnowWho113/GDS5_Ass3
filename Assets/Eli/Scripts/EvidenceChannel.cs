@@ -1,6 +1,3 @@
-using System;
-
-[Flags]
 public enum EvidenceChannel
 {
     None = 0,

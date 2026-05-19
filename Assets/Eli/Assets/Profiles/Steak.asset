@@ -16,6 +16,8 @@ MonoBehaviour:
   dishDescription: 
   correctEvidence:
   - evidenceID: salty
-    evidenceChannel: -1
+    evidenceChannel: 1
   - evidenceID: sweet
     evidenceChannel: -1
+  - evidenceID: tender
+    evidenceChannel: 2

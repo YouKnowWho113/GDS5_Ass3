@@ -7,8 +7,14 @@ public class StartGameplayMenu : MonoBehaviour
     public GameObject startMenuPanel;
     public Button tableButton;
 
-    [Header("Dialogue")]
+    [Header("Dialogue - Old Trigger")]
     public DialogueTrigger dialogueTrigger;
+
+    [Header("Dialogue - Action Trigger")]
+    public DialogueTriggerAction dialogueTriggerAction;
+    public string dialogueKeyAfterTableClick = "after_table_click";
+
+    [Header("Dialogue Settings")]
     public bool playDialogueAfterTableClick = true;
 
     [Header("Cursor")]
@@ -49,8 +55,24 @@ public class StartGameplayMenu : MonoBehaviour
         if (hideSystemCursorWhenGameplayStarts)
             Cursor.visible = false;
 
-        if (playDialogueAfterTableClick && dialogueTrigger != null)
+        if (!playDialogueAfterTableClick)
+            return;
+
+        // Preferred: action/key-based dialogue trigger.
+        if (dialogueTriggerAction != null)
+        {
+            dialogueTriggerAction.PlayByKey(dialogueKeyAfterTableClick);
+            return;
+        }
+
+        // Fallback: old dialogue trigger.
+        if (dialogueTrigger != null)
+        {
             dialogueTrigger.PlaySceneStartManually();
+            return;
+        }
+
+        Debug.LogWarning("[StartGameplayMenu] No DialogueTrigger or DialogueTriggerAction assigned.");
     }
 
     private void SetMenuCursor()
