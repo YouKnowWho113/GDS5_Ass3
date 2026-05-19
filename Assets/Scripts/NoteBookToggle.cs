@@ -10,8 +10,8 @@ public class NoteBookToggle : MonoBehaviour
     public GameObject journal;
     public GameObject journalButton;
     public GameObject[] ovv;
-    public GameObject[] tnt;
     public Image[] foodImage;
+    public GameObject[] tnt;
     public GameObject conclu;
 
     public NoteBookEvidenceUI evidenceUI;
@@ -43,12 +43,7 @@ public class NoteBookToggle : MonoBehaviour
         CloseJournal();
     }
 
-    private void Start()
-    {
-
-    }
-
-    private void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -60,144 +55,40 @@ public class NoteBookToggle : MonoBehaviour
             curLevel = SceneManager.GetActiveScene().buildIndex;
         }
 
-        if (curPage == 1 && lvS[1])
+        if (curPage == curLevel && !lvS[curLevel])
         {
-            ovv[1].SetActive(true);
-            ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false); ovv[6].SetActive(false);
-            ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[1].SetActive(true);
-            tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false); tnt[6].SetActive(false);
-            tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-            foodImage[0].color = Color.white;
-        }
-        else if (curPage == 2 && lvS[2])
-        {
-            ovv[2].SetActive(true);
-            ovv[1].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false); ovv[6].SetActive(false);
-            ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[2].SetActive(true);
-            tnt[1].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false); tnt[6].SetActive(false);
-            tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-        }
-        else if (curPage == 3 && lvS[3])
-        {
-            ovv[3].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false); ovv[6].SetActive(false);
-            ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[3].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false); tnt[6].SetActive(false);
-            tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-        }
-        else if (curPage == 4 && lvS[4])
-        {
-            ovv[4].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[5].SetActive(false); ovv[6].SetActive(false);
-            ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[4].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[5].SetActive(false); tnt[6].SetActive(false);
-            tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-        }
-        else if (curPage == 5 && lvS[5])
-        {
-            ovv[5].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[6].SetActive(false);
-            ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[5].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[6].SetActive(false);
-            tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-        }
-        else if (curPage == 6 && lvS[6])
-        {
-            ovv[6].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false);
-            ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[6].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false);
-            tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-        }
-        else if (curPage == 7 && lvS[7])
-        {
-            ovv[7].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false);
-            ovv[6].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[7].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false);
-            tnt[6].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-        }
-        else if (curPage == 8 && lvS[8])
-        {
-            ovv[8].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false);
-            ovv[6].SetActive(false); ovv[7].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[8].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false);
-            tnt[6].SetActive(false); tnt[7].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-        }
-        else if (curPage == 9 && lvS[9])
-        {
-            ovv[9].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false);
-            ovv[6].SetActive(false); ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[10].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[9].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false);
-            tnt[6].SetActive(false); tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
-            foodImage[8].color = Color.white;
-        }
-        else if (curPage == 10 && lvS[10])
-        {
-            ovv[10].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false);
-            ovv[6].SetActive(false); ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[0].SetActive(false);
-
-            tnt[10].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false);
-            tnt[6].SetActive(false); tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[0].SetActive(false);
-
-            conclu.SetActive(false);
+            conclu.SetActive(true);
         }
         else
         {
-            ovv[0].SetActive(true);
-            ovv[1].SetActive(false); ovv[2].SetActive(false); ovv[3].SetActive(false); ovv[4].SetActive(false); ovv[5].SetActive(false);
-            ovv[6].SetActive(false); ovv[7].SetActive(false); ovv[8].SetActive(false); ovv[9].SetActive(false); ovv[10].SetActive(false);
-
-            tnt[0].SetActive(true);
-            tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[5].SetActive(false);
-            tnt[6].SetActive(false); tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false);
-
-            conclu.SetActive(true);
+            conclu.SetActive(false);
         }
 
-        if (lvS[1] && lvS[2] && lvS[3] && lvS[4] && lvS[5] && lvS[6] && lvS[7] && lvS[8] && lvS[9] && lvS[10])
+        for (int i = 0; i < 11; i++)
         {
-            lvS[0] = true;
+            for (int j = 0; j < 11; j++)
+            {
+                if (j != i && i == curPage)
+                {
+                    foodImage[i].gameObject.SetActive(true);
+                    foodImage[j].gameObject.SetActive(false);
+
+                    if (lvS[i])
+                    {
+                        ovv[i].SetActive(true); tnt[i].SetActive(true);
+                        ovv[j].SetActive(false); tnt[j].SetActive(false);
+                        ovv[11].SetActive(false); tnt[11].SetActive(false);
+                        foodImage[i].color = Color.white;
+                    }
+                    else
+                    {
+                        ovv[i].SetActive(false); tnt[i].SetActive(false);
+                        ovv[j].SetActive(false); tnt[j].SetActive(false);
+                        ovv[11].SetActive(true); tnt[11].SetActive(true);
+                        foodImage[i].color = Color.black;
+                    }
+                }
+            }
         }
     }
 
@@ -227,7 +118,10 @@ public class NoteBookToggle : MonoBehaviour
     private void CloseJournal()
     {
         if (journal != null)
+        {
+            curPage = curLevel;
             journal.SetActive(false);
+        }
 
         if (ownsNotebookLock)
         {
@@ -238,14 +132,14 @@ public class NoteBookToggle : MonoBehaviour
 
     public void MainMenu()
     {
-        CloseJournal();
         journalButton.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(0);
     }
 
     public void ChangePageLeft()
     {
-        if (curPage != 1)
+        if (curPage != 0)
         {
             curPage--;
         }
@@ -259,17 +153,18 @@ public class NoteBookToggle : MonoBehaviour
     {
         if (curPage != 10)
         {
+            Debug.Log("Page not 0");
             curPage++;
         }
         else
         {
-            curPage = 1;
+            Debug.Log("Page 0)");
+            curPage = 0;
         }
     }
 
     public void LoadLv1()
     {
-        CloseJournal();
         curPage = 1;
         if (lvS[1])
         {
@@ -279,12 +174,12 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
+        CloseJournal();
         SceneManager.LoadScene(1);
     }
 
     public void LoadLv2()
     {
-        CloseJournal();
         curPage = 2;
         if (lvS[2])
         {
@@ -294,6 +189,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
+        CloseJournal();
         SceneManager.LoadScene(2);
     }
 
