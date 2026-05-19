@@ -18,11 +18,27 @@ MonoBehaviour:
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CNotice the beautiful, golden-brown glaze.\u201D"
+    charText: "\u201CNotice these tiny crystals on the surface.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThey look dry and matte, not glossy.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThat\u2019s salt. You can spot it visually before tasting anything.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
     charText: "\u201CGood. A critic should notice what the dish shows before tasting
-      it.\u201D\nTip: Use `left click` to inspect and hear the sound of texture."
+      it.\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: "\u201CSome evidence is visible. Your eyes are enough for this one.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: 'Tip: Use `left click` to inspect and hear the sound of texture.'
+    characterEmotion: 0
+    continueCheck: 1

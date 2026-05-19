@@ -13,22 +13,26 @@ MonoBehaviour:
   m_Name: IntroCorrectSubmit
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CFascinating. The initial flavor hits you with a delicate sweetness,
-      but it's immediately balanced by salt.\u201D"
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: "\u201CSuch an interesting discovery. My son really has what it takes
+      to be a food critic there.\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThen write those findings down properly.\u201D"
+    charText: "\u201CReally? Then I\u2019ll do my best to become THE legendary food
+      critic whose name will be heard and admired by all the chefs around the world!\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: "\u201CWell then, my little legendary food critic, would you like to
+      help me try some more food?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CYes, mom! Bring on the next course!\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CAnd with that, my journey has begun.\u201D"
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
-    charText: "\u201CSo texture is not only seen. Sometimes, you need to listen and
-      feel for it.\u201D"
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CRight. A proper review needs a clear report.\u201D\nTip: press
-      `\tTab` to open journal."
-    characterEmotion: 0
-    continueCheck: 0

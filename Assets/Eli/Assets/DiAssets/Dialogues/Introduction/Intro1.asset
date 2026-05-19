@@ -21,18 +21,20 @@ MonoBehaviour:
     charText: "\u201CHere. I have just finished making this. How about you become
       my first reviewer?\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: "\u201CSure, mom. Thanks for the food~\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: "\u201CNow, let's treat this like a proper tasting tutorial.\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
-    charText: "\u201CThen start like a critic. Don\u2019t rush the bite. Look at
-      the food first.\u201D\nTip: use `right click` to reveal what was used on the
-      dish."
+    charText: "\u201CDon\u2019t rush the bite. Look at the steak first.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: 'Tip: use `right click` to reveal what was used on the dish.'
     characterEmotion: 0
     continueCheck: 1

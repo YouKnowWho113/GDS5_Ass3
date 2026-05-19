@@ -18,6 +18,6 @@ MonoBehaviour:
   - evidenceID: umami
     evidenceChannel: 1
   - evidenceID: sweet
-    evidenceChannel: -1
+    evidenceChannel: 3
   - evidenceID: sour
-    evidenceChannel: -1
+    evidenceChannel: 3

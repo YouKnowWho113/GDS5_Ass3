@@ -14,21 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CFascinating. The initial flavor hits you with a delicate sweetness,
-      but it's immediately balanced by salt.\u201D"
+    charText: "\u201CWait\u2026 these crystals look similar to salt at first.\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThen write those findings down properly.\u201D"
+    charText: "\u201CBut they shine more under the light.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CAnd when I poke the area, the sound is different too.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CIt has a sticky, granular sound.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThat means this isn\u2019t salt. It\u2019s sugar.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
-    charText: "\u201CSo texture is not only seen. Sometimes, you need to listen and
-      feel for it.\u201D"
+    charText: "\u201CExactly. Some evidence needs more than one check.\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: "\u201CYour eyes noticed the shine, and your ears confirmed the texture.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CRight. A proper review needs a clear report.\u201D\nTip: press
-      `\tTab` to open journal."
+    charText: "\u201CSo the findings are clear now: salty, tender, and sweet.\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: "\u201CThen write your report. A critic should prove every claim before
+      submitting.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: 'Tip: Press `Tab` to open journal, select Salty, Tender, and Sweet,
+      then submit.'
+    characterEmotion: 0
+    continueCheck: 1

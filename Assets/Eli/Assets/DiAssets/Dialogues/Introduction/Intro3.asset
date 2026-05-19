@@ -18,12 +18,29 @@ MonoBehaviour:
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CBut texture is different. You don\u2019t always see it clearly.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CWhen I poke the food, listen to how soft the contact sounds.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThat gentle, low sound tells me the texture is tender.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: "\u201CAnd if we analyze the texture, notice how it has a distinct
       tenderness before completely melting.\u201D"
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: "\u201CSo texture is not only seen. Sometimes, you need to listen and
       feel for it.\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThis kind of evidence comes from probing the food, not just
+      looking at it.\u201D"
+    characterEmotion: 0
+    continueCheck: 1

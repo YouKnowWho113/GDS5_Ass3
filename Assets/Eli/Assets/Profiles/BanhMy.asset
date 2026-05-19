@@ -16,6 +16,6 @@ MonoBehaviour:
   dishDescription: 
   correctEvidence:
   - evidenceID: sweet
-    evidenceChannel: -1
+    evidenceChannel: 3
   - evidenceID: umami
-    evidenceChannel: -1
+    evidenceChannel: 3

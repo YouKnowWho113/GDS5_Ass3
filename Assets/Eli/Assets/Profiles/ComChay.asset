@@ -16,9 +16,9 @@ MonoBehaviour:
   dishDescription: 
   correctEvidence:
   - evidenceID: sweet
-    evidenceChannel: -1
+    evidenceChannel: 3
   - evidenceID: salty
-    evidenceChannel: -1
+    evidenceChannel: 3
   - evidenceID: grainy
     evidenceChannel: 2
   - evidenceID: crispy

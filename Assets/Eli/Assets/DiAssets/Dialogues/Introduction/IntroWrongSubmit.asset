@@ -13,22 +13,15 @@ MonoBehaviour:
   m_Name: IntroWrongSubmit
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CFascinating. The initial flavor hits you with a delicate sweetness,
-      but it's immediately balanced by salt.\u201D"
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: "\u201CSlow down. A critic should not guess.\u201D"
     characterEmotion: 0
     continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThen write those findings down properly.\u201D"
+  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
+    charText: "\u201CCheck what you actually found, then compare it with your report.\u201D"
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: e262628979374374ca9c78d134499f49, type: 2}
-    charText: "\u201CSo texture is not only seen. Sometimes, you need to listen and
-      feel for it.\u201D"
-    characterEmotion: 0
-    continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CRight. A proper review needs a clear report.\u201D\nTip: press
-      `\tTab` to open journal."
+    charText: "\u201CRight. I should review the evidence again before submitting.\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
