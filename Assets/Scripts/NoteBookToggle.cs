@@ -26,7 +26,6 @@ public class NoteBookToggle : MonoBehaviour
     private bool ownsNotebookLock;
 
     public bool[] lvS;
-    private const string NotebookLockReason = "Notebook";
 
     private void Awake()
     {
@@ -46,7 +45,7 @@ public class NoteBookToggle : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     private void Update()
@@ -120,7 +119,7 @@ public class NoteBookToggle : MonoBehaviour
             tnt[1].SetActive(false); tnt[2].SetActive(false); tnt[3].SetActive(false); tnt[4].SetActive(false); tnt[6].SetActive(false);
             tnt[7].SetActive(false); tnt[8].SetActive(false); tnt[9].SetActive(false); tnt[10].SetActive(false); tnt[0].SetActive(false);
 
-             conclu.SetActive(false);
+            conclu.SetActive(false);
         }
         else if (curPage == 6 && lvS[6])
         {
@@ -206,24 +205,35 @@ public class NoteBookToggle : MonoBehaviour
     {
         bool newState = !journal.activeSelf;
 
-        journal.SetActive(newState);
-
         if (newState)
         {
-            GameplayInputLock.Lock(NotebookLockReason);
-            Cursor.visible = true;
+            journal.SetActive(true);
 
-            evidenceUI.RefreshEvidence();
+            GameplayInputLock.Lock(gameplayLockReason);
+            ownsNotebookLock = true;
+
+            if (showSystemCursorWhenOpen)
+                Cursor.visible = true;
+
+            if (evidenceUI != null)
+                evidenceUI.RefreshEvidence();
         }
         else
         {
-            GameplayInputLock.Unlock(NotebookLockReason);
+            CloseJournal();
         }
     }
+
     private void CloseJournal()
     {
-        CloseJournal();
-        GameplayInputLock.Unlock(NotebookLockReason);
+        if (journal != null)
+            journal.SetActive(false);
+
+        if (ownsNotebookLock)
+        {
+            GameplayInputLock.Unlock(gameplayLockReason);
+            ownsNotebookLock = false;
+        }
     }
 
     public void MainMenu()
@@ -298,7 +308,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(3);
     }
 
@@ -313,7 +323,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(4);
     }
 
@@ -328,7 +338,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(5);
     }
 
@@ -343,7 +353,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(6);
     }
 
@@ -358,7 +368,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(7);
     }
 
@@ -373,7 +383,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(8);
     }
 
@@ -388,7 +398,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(9);
     }
 
@@ -403,7 +413,7 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
         }
-        journal.SetActive(false);
+        CloseJournal();
         SceneManager.LoadScene(10);
     }
 }
