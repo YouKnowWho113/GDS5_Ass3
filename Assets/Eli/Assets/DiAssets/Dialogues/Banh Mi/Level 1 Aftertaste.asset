@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Level 1 Aftertaste
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "So\u2026 how was my signature dish?"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Pretty good, I\u2019ll give you that. The savoury from the beef combined
+      with the sweetness of the bread"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: Why are you talking like you are a food reviewer there?
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Well, I prefer doing it the professional way\u2026"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "But yes, I\u2019m something of a food critic myself"
+    characterEmotion: 0
+    continueCheck: 1

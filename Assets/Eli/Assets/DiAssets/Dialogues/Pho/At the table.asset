@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: At the table
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: Good evening
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: I heard that a famous food critic has come to visit us today
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Hm? Famous might be a bit too much
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "But yes. I\u2019m here for your Ph\u1EDF"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: Then I shall personally prepare it for you
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Looking forward to it
+    characterEmotion: 0
+    continueCheck: 1

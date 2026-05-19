@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de96142db9930664c8ebc66d76258c61, type: 3}
+  m_Name: Employee
+  m_EditorClassIdentifier: 
+  myName: Employee
+  xBase: 0
+  yBase: 0
+  xFace: 0
+  yFace: 0
+  shadowStatus: 0
+  emotionBase:
+    neutralBase: {fileID: 0}
+    happyBase: {fileID: 0}
+    angeryBase: {fileID: 0}
+    sadBase: {fileID: 0}
+    surprisedBase: {fileID: 0}
+    hurtBase: {fileID: 0}
+    blushBase: {fileID: 0}
+    custom1Base: {fileID: 0}
+    custom2Base: {fileID: 0}
+    custom3Base: {fileID: 0}
+  emotionBlink:
+    neutralBlink: {fileID: 0}
+    happyBlink: {fileID: 0}
+    angeryBlink: {fileID: 0}
+    sadBlink: {fileID: 0}
+    surprisedBlink: {fileID: 0}
+    hurtBlink: {fileID: 0}
+    blushBlink: {fileID: 0}
+    custom1Blink: {fileID: 0}
+    custom2Blink: {fileID: 0}
+    custom3Blink: {fileID: 0}
+  emotionMouth2:
+    neutralMouth2: {fileID: 0}
+    happyMouth2: {fileID: 0}
+    angeryMouth2: {fileID: 0}
+    sadMouth2: {fileID: 0}
+    surprisedMouth2: {fileID: 0}
+    hurtMouth2: {fileID: 0}
+    blushMouth2: {fileID: 0}
+    custom1Mouth2: {fileID: 0}
+    custom2Mouth2: {fileID: 0}
+    custom3Mouth2: {fileID: 0}
+  emotionMouth3:
+    neutralMouth3: {fileID: 0}
+    happyMouth3: {fileID: 0}
+    angeryMouth3: {fileID: 0}
+    sadMouth3: {fileID: 0}
+    surprisedMouth3: {fileID: 0}
+    hurtMouth3: {fileID: 0}
+    blushMouth3: {fileID: 0}
+    custom1Mouth3: {fileID: 0}
+    custom2Mouth3: {fileID: 0}
+    custom3Mouth3: {fileID: 0}

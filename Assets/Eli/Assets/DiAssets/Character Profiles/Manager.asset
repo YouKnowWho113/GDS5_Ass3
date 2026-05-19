@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de96142db9930664c8ebc66d76258c61, type: 3}
-  m_Name: shCustomer
+  m_Name: Manager
   m_EditorClassIdentifier: 
-  myName: Customer
-  xBase: -382
-  yBase: 25
-  xFace: -407
-  yFace: 43
-  shadowStatus: 1
+  myName: Manager
+  xBase: 0
+  yBase: 0
+  xFace: 0
+  yFace: 0
+  shadowStatus: 0
   emotionBase:
-    neutralBase: {fileID: 21300000, guid: 39a8cc514ebdf8d47a78460c9dd1a878, type: 3}
-    happyBase: {fileID: 21300000, guid: 39a8cc514ebdf8d47a78460c9dd1a878, type: 3}
+    neutralBase: {fileID: 0}
+    happyBase: {fileID: 0}
     angeryBase: {fileID: 0}
-    sadBase: {fileID: 21300000, guid: 7448a7fe3eac86d42b52b862ba69a2df, type: 3}
+    sadBase: {fileID: 0}
     surprisedBase: {fileID: 0}
     hurtBase: {fileID: 0}
     blushBase: {fileID: 0}
-    custom1Base: {fileID: 21300000, guid: 39a8cc514ebdf8d47a78460c9dd1a878, type: 3}
+    custom1Base: {fileID: 0}
     custom2Base: {fileID: 0}
     custom3Base: {fileID: 0}
   emotionBlink:
-    neutralBlink: {fileID: 21300000, guid: 21c492067e4bab44d9798d0606d78a6c, type: 3}
-    happyBlink: {fileID: 21300000, guid: f2db37c6c2ac49f4f86d03fe323c0292, type: 3}
+    neutralBlink: {fileID: 0}
+    happyBlink: {fileID: 0}
     angeryBlink: {fileID: 0}
     sadBlink: {fileID: 0}
     surprisedBlink: {fileID: 0}
@@ -41,8 +41,8 @@ MonoBehaviour:
     custom2Blink: {fileID: 0}
     custom3Blink: {fileID: 0}
   emotionMouth2:
-    neutralMouth2: {fileID: 21300000, guid: 94a34e4ccd3f023498e91ac177c1e81d, type: 3}
-    happyMouth2: {fileID: 21300000, guid: 94a34e4ccd3f023498e91ac177c1e81d, type: 3}
+    neutralMouth2: {fileID: 0}
+    happyMouth2: {fileID: 0}
     angeryMouth2: {fileID: 0}
     sadMouth2: {fileID: 0}
     surprisedMouth2: {fileID: 0}
@@ -52,8 +52,8 @@ MonoBehaviour:
     custom2Mouth2: {fileID: 0}
     custom3Mouth2: {fileID: 0}
   emotionMouth3:
-    neutralMouth3: {fileID: 21300000, guid: 682f83ce00a2e4f46b4a2030b6879dc1, type: 3}
-    happyMouth3: {fileID: 21300000, guid: 682f83ce00a2e4f46b4a2030b6879dc1, type: 3}
+    neutralMouth3: {fileID: 0}
+    happyMouth3: {fileID: 0}
     angeryMouth3: {fileID: 0}
     sadMouth3: {fileID: 0}
     surprisedMouth3: {fileID: 0}

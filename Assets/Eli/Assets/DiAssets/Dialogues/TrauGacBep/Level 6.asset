@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Level 6
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: Welcome, sir! Please, have a seat!
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Oh. You are new? I didn\u2019t see you here last time."
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1f393af1b4bba2448b35dc18cc95801c, type: 2}
+    charText: "Yes\u2026 sir. I was newly recruited"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "Miss Dina said that it was thanks to the review from a food critic
+      that her place has got more customers\u2026"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: Which gave her the ability to hire more people
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "I see. So\u2026"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: Oh! You are here. Thank you so much for the last time. You are like
+      my saviour
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "If you weren\u2019t here, I might have been back to the countryside
+      by now."
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Happy to help. Guess I\u2019m your prestige guest now, huh?"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: Yes, you sure are.
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: (to the employee) Hey. Remember to treat our guest here well, okay?
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1f393af1b4bba2448b35dc18cc95801c, type: 2}
+    charText: Yes, miss.
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: (back to me) There are lots of customers right now so I have to get
+      back to work
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "If you need anything, just ask this employee of mine, if you don\u2019t
+      mind."
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Oh. No need to worry
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 3d268a191a4d0ed409ac9f560a10877f, type: 2}
+    charText: 'Dina left
+
+'
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Soo\u2026 Do you have private seating yet?"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Ah\u2026 I\u2019m sorry, sir but this diner is quite small\u2026"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Tch...
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 3d268a191a4d0ed409ac9f560a10877f, type: 2}
+    charText: The employee looks nervous
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1f393af1b4bba2448b35dc18cc95801c, type: 2}
+    charText: (fiddle) Are you unsatis-
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Nah. I was only joking. Don\u2019t be so tense"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1f393af1b4bba2448b35dc18cc95801c, type: 2}
+    charText: Yes. Right. T-Then, w-what would you like to order, sir?
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "The Tr\xE2u G\xE1c B\u1EBFp"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: And make it quick please
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1f393af1b4bba2448b35dc18cc95801c, type: 2}
+    charText: Yes, sir. Coming right up
+    characterEmotion: 0
+    continueCheck: 1

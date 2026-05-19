@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Level 6-Aftertaste  3-4 Rating
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: How was the food?
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: The seasoning was excellent
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: The savoury flavor blended deeply into the meat
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "Thank goodness\u2026"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: But the chewiness was slightly excessive.
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "\u2026 It\u2019s traditional style."
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Tradition should adapt to modern taste, no?
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "\u2026 I understand"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Still, it was acceptable
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "I\u2019m heading out now. Thanks for the food, though"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "Yes\u2026 See you next time\u2026"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "(mumble) Acceptable\u2026?"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "(mumble) Only\u2026 Acceptable?"
+    characterEmotion: 0
+    continueCheck: 1

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: Level 1
+  m_Name: Level 1 by a food vendor 1
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
@@ -19,62 +19,33 @@ MonoBehaviour:
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: What would you like to have?
+    charText: I'm Fendory. What would you like to have?
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: i heard that you and your vendor have become popular lately which caught
       my interest
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: And my nose is telling me that I have come to the right place.
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: Do you have any recommendations?
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
     charText: "You seem like a true food enjoyer. then, I\u2019d recommend my signature
       sliced grill-beef B\xE1nh M\xEC."
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
     charText: And just for you, my friend, since this is your first time here, you
       can have some extra slices of beef.
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
     charText: On the house, of course.
     characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 0}
-    charText: "So\u2026 how was my signature dish?"
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "Pretty good, I\u2019ll give you that. The savoury from the beef combined
-      with the sweetness of the bread."
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: Why are you talking like you are a food reviewer there?
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "Wait. Don\u2019t tell me you are one of those-"
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Well, I prefer doing it the professional way\u2026"
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "But yes, I\u2019m something of a food critic myself."
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 0}
-    charText: 
-    characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1

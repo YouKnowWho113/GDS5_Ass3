@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Enter Restaurant
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 26b8df2c53d25774a98417f35663a454, type: 2}
+    charText: 'Welcome, sir. Table for one? '
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Yes
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 26b8df2c53d25774a98417f35663a454, type: 2}
+    charText: Please follow me
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 3d268a191a4d0ed409ac9f560a10877f, type: 2}
+    charText: '*Staff whispers to another employee*
+
+'
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 26b8df2c53d25774a98417f35663a454, type: 2}
+    charText: "Isn\u2019t that the food critic everyone\u2019s talking about online
+      lately?"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 6cbc2fe164d1be146948a6741ae3067e, type: 2}
+    charText: "Oh no\u2026 We need to inform the chef!"
+    characterEmotion: 0
+    continueCheck: 1

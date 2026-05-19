@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Strange Person Left
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "Sorry for letting you see that. I hope it doesn\u2019t affect your
+      mood."
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "I\u2019m the owner of this diner. If you don\u2019t mind staying for
+      the meal, I\u2019ll only take half the price of what you want to order."
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "No, no! I can\u2019t do that! Just charge the full price like normal"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "I\u2019m a food critic, and I want to do my job professionally so
+      that my experience can be like everyone else"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: Fo- Fo- Food critic?!
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "I didn\u2019t get any heads up so I didn\u2019t have time to prepare!
+      Please excuse my-"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "It\u2019s alright. It\u2019s alright. You don\u2019t have to panic.
+      I\u2019m doing this \u2018cuz of the love for food so\u2026 may I?"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: Well, yes! Of course! Please, take a seat. Let me bring you the menu.
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Oh, no need. I came here today specifically for your B\xFAn Ch\u1EA3
+      dish so I\u2019ll have one serving, please"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "R-Right! One B\xFAn Ch\u1EA3 coming right up!"
+    characterEmotion: 0
+    continueCheck: 1

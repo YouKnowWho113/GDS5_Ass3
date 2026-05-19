@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Level 3 - At the diner
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: Greetings! Welcome to our restaurant. What would you like to order?
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: Well I heard that-
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 0ecc4b1221fa5754691833c65db6aa81, type: 2}
+    charText: "Hey! When are you gonna pay this month\u2019s rent, huh?!"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 0ecc4b1221fa5754691833c65db6aa81, type: 2}
+    charText: You told me you would have the money in 3 days and that is today!!
+      Now, where is it?!
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "I\u2019m so sorry. I\u2019m really close to having enough. Probably
+      just a few days more and I\u2019ll have the money by then. Please!"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 0ecc4b1221fa5754691833c65db6aa81, type: 2}
+    charText: "Fine! 3 days! That\u2019s all you get. And if you still don\u2019t
+      have it, be prepared to pack your crappy diner and get the hell out of my property!"
+    characterEmotion: 0
+    continueCheck: 1
