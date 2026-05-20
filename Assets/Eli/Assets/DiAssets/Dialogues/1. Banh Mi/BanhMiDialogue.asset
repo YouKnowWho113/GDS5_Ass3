@@ -56,16 +56,16 @@ MonoBehaviour:
     gameplayLockReason: Dialogue
     postDialogueAction: 1
     sceneNameToLoad: 
-    postDialogueDelay: 0
+    postDialogueDelay: 0.3
     hasPlayed: 0
   - key: after_wrong_submit
     dialogue: {fileID: 11400000, guid: 2eb793800aaeba64da733aa1e36aae6f, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
-    postDialogueAction: 1
+    postDialogueAction: 2
     sceneNameToLoad: 
-    postDialogueDelay: 0
+    postDialogueDelay: 0.3
     hasPlayed: 0
   evidenceDialogueRules:
   - evidenceID: sweet

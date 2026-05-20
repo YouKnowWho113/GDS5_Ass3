@@ -7,6 +7,7 @@ public class LevelCompCheck : MonoBehaviour
 {
     private static GameObject levelCheckPersist;
     public static LevelCompCheck Instance;
+    public List<string> unlockedEvidenceIDs = new List<string>();
     public int curLevel;
     public bool[] lvS;
 
@@ -50,5 +51,28 @@ public class LevelCompCheck : MonoBehaviour
         {
             Debug.LogWarning("[LevelCompCheck] lvS array missing or too small for level: " + level);
         }
+    }
+    public void UnlockEvidence(string evidenceID)
+    {
+        if (string.IsNullOrWhiteSpace(evidenceID))
+            return;
+
+        evidenceID = evidenceID.Trim().ToLower();
+
+        if (!unlockedEvidenceIDs.Contains(evidenceID))
+        {
+            unlockedEvidenceIDs.Add(evidenceID);
+            Debug.Log("[LevelCompCheck] Evidence unlocked: " + evidenceID);
+        }
+    }
+
+    public bool HasUnlockedEvidence(string evidenceID)
+    {
+        if (string.IsNullOrWhiteSpace(evidenceID))
+            return false;
+
+        evidenceID = evidenceID.Trim().ToLower();
+
+        return unlockedEvidenceIDs.Contains(evidenceID);
     }
 }
