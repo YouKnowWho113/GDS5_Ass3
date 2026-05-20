@@ -843,7 +843,6 @@ GameObject:
   - component: {fileID: 1487736200}
   - component: {fileID: 1487736199}
   - component: {fileID: 1487736198}
-  - component: {fileID: 1487736197}
   - component: {fileID: 1487736196}
   m_Layer: 0
   m_Name: GameSystems
@@ -866,36 +865,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMenuPanel: {fileID: 1981015643}
   tableButton: {fileID: 336501318}
-  dialogueTrigger: {fileID: 1487736197}
+  dialogueTrigger: {fileID: 0}
   dialogueTriggerAction: {fileID: 0}
   dialogueKeyAfterTableClick: after_table_click
   playDialogueAfterTableClick: 1
   menuCursorTexture: {fileID: 2800000, guid: 57b86b03ae4c0be4897d5afaa6d95261, type: 3}
   menuCursorHotspot: {x: 0, y: 0}
   hideSystemCursorWhenGameplayStarts: 1
---- !u!114 &1487736197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487736195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06ec3047dd8a7a48895945fd5f5b499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueCanvasRoot: {fileID: 1729095085}
-  disableCanvasWhenDialogueEnds: 1
-  playOnSceneStart: 0
-  sceneStartDialogue: {fileID: 11400000, guid: 007427096fbb06247b27ec52f6c1fc88, type: 2}
-  sceneStartDelay: 0.3
-  playAfterReportSubmit: 1
-  correctReportDialogue: {fileID: 0}
-  incorrectReportDialogue: {fileID: 0}
-  submitDialogueDelay: 0.2
-  waitUntilCurrentDialogueEnds: 1
-  playSceneStartOnlyOnce: 1
 --- !u!114 &1487736198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,11 +1495,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74258bc25dd34a14582092297eba566f, type: 3}
---- !u!1 &1729095085 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
-  m_PrefabInstance: {fileID: 1729095084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788985241
 GameObject:
   m_ObjectHideFlags: 0

@@ -981,23 +981,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d72c738533ca349a7354e1783530fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1159629369}
+  masterVolume: 1
+  dialogueVolume: 1
+  evidenceVolume: 1
+  scanVolume: 1
+  reportVolume: 1
+  uiVolume: 1
+  repeatedClipCooldown: 0.03
   dialogueOpen: {fileID: 0}
   dialogueNext: {fileID: 0}
   dialogueClose: {fileID: 0}
   evidenceFound: {fileID: 0}
+  visibleEvidenceFound: {fileID: 0}
+  audibleEvidenceFound: {fileID: 0}
+  bothEvidenceFound: {fileID: 0}
   scanStart: {fileID: 0}
   scanStop: {fileID: 0}
+  invalidAction: {fileID: 0}
   reportSelect: {fileID: 0}
   reportRemove: {fileID: 0}
   reportCorrect: {fileID: 0}
   reportWrong: {fileID: 0}
   journalOpen: {fileID: 0}
   journalClose: {fileID: 0}
-  spawnNext: {fileID: 0}
   panelOpen: {fileID: 0}
   panelClose: {fileID: 0}
   uiClick: {fileID: 0}
+  uiConfirm: {fileID: 0}
+  uiBack: {fileID: 0}
 --- !u!82 &1159629369
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1430,16 +1444,16 @@ MonoBehaviour:
   gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
-  - materialName: Sweet
-    evidenceID: sweet
+  - materialName: Crunchy
+    evidenceID: crunchy
     maskColor: {r: 1, g: 0, b: 0.8235295, a: 1}
     scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
     volume: 1
     requiredScanTime: 0.1
-  - materialName: umami
-    evidenceID: umami
+  - materialName: Sweet
+    evidenceID: sweet
     maskColor: {r: 0, g: 1, b: 0.1882353, a: 0}
-    scanSound: {fileID: 8300000, guid: 77e473d550b2bcf40b41984ba5b3fa61, type: 3}
+    scanSound: {fileID: 8300000, guid: c45f9e32a4618a0478f36b33b4d24349, type: 3}
     volume: 1
     requiredScanTime: 0.1
   debugMode: 0

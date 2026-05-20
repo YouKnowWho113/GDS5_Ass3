@@ -14,7 +14,8 @@ public class DialogueTriggerAction : MonoBehaviour
         None,
         LoadNextScene,
         ReloadCurrentScene,
-        LoadSceneByName
+        LoadSceneByName,
+        ShowToBeContinued
     }
 
     [System.Serializable]
@@ -585,6 +586,16 @@ public class DialogueTriggerAction : MonoBehaviour
                 }
 
                 SceneManager.LoadScene(entry.sceneNameToLoad);
+                break;
+            case PostDialogueAction.ShowToBeContinued:
+                if (ToBeContinued.Instance != null)
+                {
+                    ToBeContinued.Instance.Play();
+                }
+                else
+                {
+                    Debug.LogWarning("[DialogueTriggerAction] ToBeContinuedFade missing in scene.");
+                }
                 break;
         }
     }
