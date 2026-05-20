@@ -826,23 +826,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d72c738533ca349a7354e1783530fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1159629371}
-  dialogueOpen: {fileID: 0}
-  dialogueNext: {fileID: 0}
-  dialogueClose: {fileID: 0}
+  lightHoldSource: {fileID: 1159629371}
+  masterVolume: 0.7
+  dialogueVolume: 0.3
+  evidenceVolume: 1
+  scanVolume: 0.5
+  reportVolume: 1
+  uiVolume: 1
+  repeatedClipCooldown: 0.03
+  dialogueOpen: {fileID: 8300000, guid: 71c58f928d8532f488ef25bf87689556, type: 3}
+  dialogueNext: {fileID: 8300000, guid: 71c58f928d8532f488ef25bf87689556, type: 3}
+  dialogueClose: {fileID: 8300000, guid: 71c58f928d8532f488ef25bf87689556, type: 3}
   evidenceFound: {fileID: 0}
+  visibleEvidenceFound: {fileID: 0}
+  audibleEvidenceFound: {fileID: 0}
+  bothEvidenceFound: {fileID: 0}
+  lightOpen: {fileID: 8300000, guid: eb08f44cd3dd1044a9ba2ba593121009, type: 3}
+  lightClose: {fileID: 8300000, guid: eb08f44cd3dd1044a9ba2ba593121009, type: 3}
+  lightHoldLoop: {fileID: 8300000, guid: c470821b8a4dfd74882ae1fd4b0a44a7, type: 3}
   scanStart: {fileID: 0}
   scanStop: {fileID: 0}
-  reportSelect: {fileID: 0}
-  reportRemove: {fileID: 0}
-  reportCorrect: {fileID: 0}
-  reportWrong: {fileID: 0}
-  journalOpen: {fileID: 0}
-  journalClose: {fileID: 0}
-  spawnNext: {fileID: 0}
+  invalidAction: {fileID: 0}
+  reportSelect: {fileID: 8300000, guid: 769741a43f3d9a94ba6f513fc2a602c8, type: 3}
+  reportRemove: {fileID: 8300000, guid: 769741a43f3d9a94ba6f513fc2a602c8, type: 3}
+  reportCorrect: {fileID: 8300000, guid: ed910953f9ffc4a459656e3e7c1e5a28, type: 3}
+  reportWrong: {fileID: 8300000, guid: ee0f2161ab6f7d64d92bf2da6a493f4d, type: 3}
+  journalOpen: {fileID: 8300000, guid: 0f33834c5bb4d4c4db0c3ed56ffbf0ff, type: 3}
+  journalClose: {fileID: 8300000, guid: cac1080d1fa84ef40b549fbcde61079a, type: 3}
   panelOpen: {fileID: 0}
   panelClose: {fileID: 0}
   uiClick: {fileID: 0}
+  uiConfirm: {fileID: 0}
+  uiBack: {fileID: 0}
 --- !u!114 &1159629369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +899,8 @@ MonoBehaviour:
   startMenuPanel: {fileID: 2076766952}
   tableButton: {fileID: 778472899}
   dialogueTrigger: {fileID: 1159629369}
+  dialogueTriggerAction: {fileID: 0}
+  dialogueKeyAfterTableClick: after_table_click
   playDialogueAfterTableClick: 1
   menuCursorTexture: {fileID: 2800000, guid: 57b86b03ae4c0be4897d5afaa6d95261, type: 3}
   menuCursorHotspot: {x: 0, y: 0}

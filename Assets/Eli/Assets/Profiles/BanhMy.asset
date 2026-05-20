@@ -18,4 +18,6 @@ MonoBehaviour:
   - evidenceID: sweet
     evidenceChannel: 3
   - evidenceID: umami
-    evidenceChannel: 3
+    evidenceChannel: 1
+  - evidenceID: crunchy
+    evidenceChannel: 2
