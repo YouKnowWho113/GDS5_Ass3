@@ -720,6 +720,14 @@ PrefabInstance:
       propertyPath: m_text
       value: You
       objectReference: {fileID: 0}
+    - target: {fileID: 4126225091709085348, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925217478730174561, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
       propertyPath: m_Name
       value: DiaCanvas
@@ -917,8 +925,8 @@ GameObject:
   - component: {fileID: 1159629366}
   - component: {fileID: 1159629365}
   - component: {fileID: 1159629368}
-  - component: {fileID: 1159629371}
   - component: {fileID: 1159629370}
+  - component: {fileID: 1159629371}
   m_Layer: 0
   m_Name: GameSystems
   m_TagString: Untagged
@@ -981,23 +989,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d72c738533ca349a7354e1783530fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1159629369}
+  masterVolume: 1
+  dialogueVolume: 1
+  evidenceVolume: 1
+  scanVolume: 1
+  reportVolume: 1
+  uiVolume: 1
+  repeatedClipCooldown: 0.03
   dialogueOpen: {fileID: 0}
   dialogueNext: {fileID: 0}
   dialogueClose: {fileID: 0}
   evidenceFound: {fileID: 0}
+  visibleEvidenceFound: {fileID: 0}
+  audibleEvidenceFound: {fileID: 0}
+  bothEvidenceFound: {fileID: 0}
   scanStart: {fileID: 0}
   scanStop: {fileID: 0}
+  invalidAction: {fileID: 0}
   reportSelect: {fileID: 0}
   reportRemove: {fileID: 0}
   reportCorrect: {fileID: 0}
   reportWrong: {fileID: 0}
   journalOpen: {fileID: 0}
   journalClose: {fileID: 0}
-  spawnNext: {fileID: 0}
   panelOpen: {fileID: 0}
   panelClose: {fileID: 0}
   uiClick: {fileID: 0}
+  uiConfirm: {fileID: 0}
+  uiBack: {fileID: 0}
 --- !u!82 &1159629369
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1108,8 +1130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMenuPanel: {fileID: 1075241684}
   tableButton: {fileID: 221495807}
-  dialogueTrigger: {fileID: 1159629371}
-  dialogueTriggerAction: {fileID: 0}
+  dialogueTrigger: {fileID: 0}
+  dialogueTriggerAction: {fileID: 1159629371}
   dialogueKeyAfterTableClick: after_table_click
   playDialogueAfterTableClick: 1
   menuCursorTexture: {fileID: 2800000, guid: 57b86b03ae4c0be4897d5afaa6d95261, type: 3}
@@ -1124,20 +1146,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159629364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06ec3047dd8a7a48895945fd5f5b499, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e1095372586e8d419c4cd14ab93e3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueCanvasRoot: {fileID: 0}
-  disableCanvasWhenDialogueEnds: 1
-  playOnSceneStart: 0
-  sceneStartDialogue: {fileID: 11400000, guid: c55b7da6739aace49b7ace6c29d98aa6, type: 2}
-  sceneStartDelay: 0.3
+  foodDialogue: {fileID: 11400000, guid: 9da776ac79c634b43a6fa4e042482b17, type: 2}
+  useFoodDialogueAsset: 1
+  dialogueCanvasRoot: {fileID: 2042013404}
+  disableCanvasWhenQueueEnds: 1
+  actionDialogues: []
+  evidenceDialogueRules: []
+  allEvidenceDialogueRules: []
   playAfterReportSubmit: 1
-  correctReportDialogue: {fileID: 0}
-  incorrectReportDialogue: {fileID: 0}
+  correctReportKey: after_correct_submit
+  incorrectReportKey: after_wrong_submit
   submitDialogueDelay: 0.2
   waitUntilCurrentDialogueEnds: 1
-  playSceneStartOnlyOnce: 1
+  waitForFoodScanAudioBeforeAllEvidenceDialogue: 1
+  foodScanAudioWaitTimeout: 6
+  logEvidenceChecks: 1
 --- !u!1 &1420143825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,8 +1456,8 @@ MonoBehaviour:
   gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
-  - materialName: Sweet
-    evidenceID: sweet
+  - materialName: Crispy
+    evidenceID: crispy
     maskColor: {r: 1, g: 0, b: 0.8235295, a: 1}
     scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
     volume: 1
@@ -2148,6 +2174,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2042013404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+  m_PrefabInstance: {fileID: 869914676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6195520384840086437
 PrefabInstance:
   m_ObjectHideFlags: 0
