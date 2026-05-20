@@ -1,9 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueTriggerAction : MonoBehaviour
 {
+    [Header("Food Dialogue Asset")]
+    public FoodDialogue foodDialogue;
+    public bool useFoodDialogueAsset = true;
+
+    public enum PostDialogueAction
+    {
+        None,
+        LoadNextScene,
+        ReloadCurrentScene,
+        LoadSceneByName
+    }
+
     [System.Serializable]
     public class DialogueActionEntry
     {
@@ -19,6 +32,11 @@ public class DialogueTriggerAction : MonoBehaviour
         [Header("Gameplay Control")]
         public bool lockGameplayDuringDialogue = true;
         public string gameplayLockReason = "Dialogue";
+
+        [Header("After Dialogue")]
+        public PostDialogueAction postDialogueAction = PostDialogueAction.None;
+        public string sceneNameToLoad;
+        public float postDialogueDelay = 0f;
 
         [HideInInspector] public bool hasPlayed;
     }
@@ -104,6 +122,8 @@ public class DialogueTriggerAction : MonoBehaviour
 
     private void Awake()
     {
+        ApplyFoodDialogue();
+        ResetPlayedFlags();
         BuildMap();
     }
 
@@ -127,6 +147,26 @@ public class DialogueTriggerAction : MonoBehaviour
         }
 
         Unsubscribe();
+    }
+
+    private void ApplyFoodDialogue()
+    {
+        if (!useFoodDialogueAsset || foodDialogue == null)
+            return;
+
+        actionDialogues = foodDialogue.actionDialogues;
+        evidenceDialogueRules = foodDialogue.evidenceDialogueRules;
+        allEvidenceDialogueRules = foodDialogue.allEvidenceDialogueRules;
+
+        playAfterReportSubmit = foodDialogue.playAfterReportSubmit;
+        correctReportKey = foodDialogue.correctReportKey;
+        incorrectReportKey = foodDialogue.incorrectReportKey;
+        submitDialogueDelay = foodDialogue.submitDialogueDelay;
+
+        waitUntilCurrentDialogueEnds = foodDialogue.waitUntilCurrentDialogueEnds;
+        waitForFoodScanAudioBeforeAllEvidenceDialogue =
+            foodDialogue.waitForFoodScanAudioBeforeAllEvidenceDialogue;
+        foodScanAudioWaitTimeout = foodDialogue.foodScanAudioWaitTimeout;
     }
 
     private void BuildMap()
@@ -318,6 +358,8 @@ public class DialogueTriggerAction : MonoBehaviour
 
         if (entry.lockGameplayDuringDialogue)
             GameplayInputLock.Unlock(entry.gameplayLockReason);
+
+        yield return StartCoroutine(RunPostDialogueAction(entry));
     }
 
     private IEnumerator WaitUntilDialogueFree()
@@ -506,5 +548,44 @@ public class DialogueTriggerAction : MonoBehaviour
 
         pendingAllEvidenceCheck = false;
         dialogueQueue.Clear();
+    }
+    private IEnumerator RunPostDialogueAction(DialogueActionEntry entry)
+    {
+        if (entry == null || entry.postDialogueAction == PostDialogueAction.None)
+            yield break;
+
+        if (entry.postDialogueDelay > 0f)
+            yield return new WaitForSeconds(entry.postDialogueDelay);
+
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+
+        switch (entry.postDialogueAction)
+        {
+            case PostDialogueAction.LoadNextScene:
+                int nextIndex = currentIndex + 1;
+
+                if (nextIndex >= SceneManager.sceneCountInBuildSettings)
+                {
+                    Debug.LogWarning("[DialogueTriggerAction] No next scene in Build Settings.");
+                    yield break;
+                }
+
+                SceneManager.LoadScene(nextIndex);
+                break;
+
+            case PostDialogueAction.ReloadCurrentScene:
+                SceneManager.LoadScene(currentIndex);
+                break;
+
+            case PostDialogueAction.LoadSceneByName:
+                if (string.IsNullOrWhiteSpace(entry.sceneNameToLoad))
+                {
+                    Debug.LogWarning("[DialogueTriggerAction] Scene name is empty.");
+                    yield break;
+                }
+
+                SceneManager.LoadScene(entry.sceneNameToLoad);
+                break;
+        }
     }
 }

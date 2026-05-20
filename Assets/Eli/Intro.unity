@@ -10986,45 +10986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1095372586e8d419c4cd14ab93e3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodDialogue: {fileID: 11400000, guid: d00fb55864ad63e4ba3884a1ee205a50, type: 2}
+  useFoodDialogueAsset: 1
   dialogueCanvasRoot: {fileID: 1083861200}
   disableCanvasWhenQueueEnds: 1
-  actionDialogues:
-  - key: after_table_click
-    dialogue: {fileID: 11400000, guid: 781776ca2a4e26b4d838a6f7a4b775c5, type: 2}
-    playOnlyOnce: 1
-    lockGameplayDuringDialogue: 1
-    gameplayLockReason: Dialogue
-    hasPlayed: 0
-  - key: after_visual_scan
-    dialogue: {fileID: 11400000, guid: 5f144ffe77d5ddf458421509d318310e, type: 2}
-    playOnlyOnce: 1
-    lockGameplayDuringDialogue: 0
-    gameplayLockReason: Dialogue
-    hasPlayed: 0
-  - key: after_sound_scan
-    dialogue: {fileID: 11400000, guid: b1196a8604a02284497bf19358271c09, type: 2}
-    playOnlyOnce: 1
-    lockGameplayDuringDialogue: 0
-    gameplayLockReason: Dialogue
-    hasPlayed: 0
-  - key: before_report
-    dialogue: {fileID: 11400000, guid: f6c0d797b33b91b49980f298dd4f768a, type: 2}
-    playOnlyOnce: 1
-    lockGameplayDuringDialogue: 0
-    gameplayLockReason: Dialogue
-    hasPlayed: 0
-  - key: after_correct_submit
-    dialogue: {fileID: 11400000, guid: 71a35d8c22798fc49a9100941d8e4910, type: 2}
-    playOnlyOnce: 1
-    lockGameplayDuringDialogue: 1
-    gameplayLockReason: Dialogue
-    hasPlayed: 0
-  - key: after_wrong_submit
-    dialogue: {fileID: 11400000, guid: 0d12ca330ceb7624da0870c100cd1d49, type: 2}
-    playOnlyOnce: 1
-    lockGameplayDuringDialogue: 1
-    gameplayLockReason: Dialogue
-    hasPlayed: 0
+  actionDialogues: []
   evidenceDialogueRules:
   - evidenceID: salty
     requiredChannel: 1
@@ -11746,7 +11712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3369073805189271529, guid: 74258bc25dd34a14582092297eba566f, type: 3}
