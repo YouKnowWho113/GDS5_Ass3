@@ -10,49 +10,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: Level 2 Name Input
+  m_Name: CheHue_after_correct_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "*Name changed*, huh? An \u201Cinteresting\u201D choice for a name
-      there"
+    charText: "\u201CSo\u2026 how was it?\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "What? You don\u2019t think it\u2019s good?"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "It\u2019s cool. It\u2019s cool. It's up to you to decide after all"
+    charText: "\u201CHoly moly! That was so good!\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Ooo\u2026kay"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Oh yeah, I noticed that you don\u2019t just sell B\xE1nh M\xEC, right?"
+    charText: "\u201CThe sweetness is the big thing, but it doesn\u2019t feel flat.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "Yep. I sell Ch\xE8 Hu\u1EBF and-"
+    charText: "\u201CIt stays with the beans and syrup, so every spoonful still feels
+      full.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Sweet! I\u2019ll have one of that as well if you don\u2019t mind."
+    charText: "\u201CHonestly, I get why people like this.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: Sure thing, mate. Coming right up
+    charText: "\u201CHahaha!\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CLook at you! You really enjoyed my dessert that much, huh?\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "Oh and be sure to \u201Ccritic\u201D it as well, yeah?"
+    charText: "\u201CHahaha!\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: 'Gotcha
-
-'
+    charText: "\u201COf course! How could anyone not enjoy this?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CThen your review better be good about it.\u201D"
     characterEmotion: 0
     continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201COtherwise, I\u2019m gonna punch you in the face. Hahaha.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CAlright! You got it.\u201D"
+    characterEmotion: 0
+    continueCheck: 0

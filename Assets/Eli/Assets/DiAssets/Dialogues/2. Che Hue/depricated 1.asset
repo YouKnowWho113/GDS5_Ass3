@@ -10,44 +10,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: After Tasting 4+ rating
+  m_Name: depricated 1
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "So\u2026 how was it?"
+    charText: "*Name changed*, huh? An \u201Cinteresting\u201D choice for a name
+      there"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Holy moly! That was so good!
+    charText: "What? You don\u2019t think it\u2019s good?"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "It\u2019s cool. It\u2019s cool. It's up to you to decide after all"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: The flavours of the mixed beans compliment each other so well that
-      I could taste all of them without the feeling like they were fighting each
-      other at all.
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: Hahaha!
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: Look at you! You really enjoyed my dessert that much, huh?
+    charText: "Ooo\u2026kay"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Of course! How could anyone not enjoy this?
+    charText: "Oh yeah, I noticed that you don\u2019t just sell B\xE1nh M\xEC, right?"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: Then your review better be good about it
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "Otherwise, I\u2019m gonna punch you in the face. Hahaha."
+    charText: "Yep. I sell Ch\xE8 Hu\u1EBF and-"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Alright! You got it
+    charText: "Sweet! I\u2019ll have one of that as well if you don\u2019t mind."
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: Sure thing, mate. Coming right up
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "Oh and be sure to \u201Ccritic\u201D it as well, yeah?"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: 'Gotcha
+
+'
     characterEmotion: 0
     continueCheck: 1

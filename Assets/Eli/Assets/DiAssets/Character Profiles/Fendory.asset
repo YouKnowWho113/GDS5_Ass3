@@ -17,7 +17,7 @@ MonoBehaviour:
   yBase: 0
   xFace: 0
   yFace: 0
-  shadowStatus: 0
+  shadowStatus: 1
   emotionBase:
     neutralBase: {fileID: 0}
     happyBase: {fileID: 0}
