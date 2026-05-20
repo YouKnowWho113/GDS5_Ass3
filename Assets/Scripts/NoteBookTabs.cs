@@ -12,6 +12,8 @@ public class NoteBookTabs : MonoBehaviour
     public GameObject instructionPanel;
     public GameObject menuPanel;
 
+    public NoteBookEvidenceUI evidenceUI;
+
     public void OpenOverview()
     {
         overviewPanel.SetActive(true);
@@ -30,6 +32,9 @@ public class NoteBookTabs : MonoBehaviour
         conclusionPanel.SetActive(false);
         instructionPanel.SetActive(false);
         menuPanel.SetActive(false);
+
+        if (evidenceUI != null)
+            evidenceUI.RefreshEvidence();
     }
 
     public void OpenConclusion()

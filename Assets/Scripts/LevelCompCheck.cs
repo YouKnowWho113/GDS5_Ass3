@@ -57,7 +57,7 @@ public class LevelCompCheck : MonoBehaviour
         if (string.IsNullOrWhiteSpace(evidenceID))
             return;
 
-        evidenceID = evidenceID.Trim().ToLower();
+        evidenceID = evidenceID.Trim().ToLower().Replace(" ", "");
 
         if (!unlockedEvidenceIDs.Contains(evidenceID))
         {
@@ -71,7 +71,7 @@ public class LevelCompCheck : MonoBehaviour
         if (string.IsNullOrWhiteSpace(evidenceID))
             return false;
 
-        evidenceID = evidenceID.Trim().ToLower();
+        evidenceID = evidenceID.Trim().ToLower().Replace(" ", "");
 
         return unlockedEvidenceIDs.Contains(evidenceID);
     }

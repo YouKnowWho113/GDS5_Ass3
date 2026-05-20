@@ -76,13 +76,8 @@ public class NoteBookEvidenceUI : MonoBehaviour
 
         if (autoBuildFromChildren && evidenceRoot != null)
         {
-            Transform[] children = evidenceRoot.GetComponentsInChildren<Transform>(includeInactiveChildren);
-
-            foreach (Transform child in children)
+            foreach (Transform child in evidenceRoot)
             {
-                if (child == evidenceRoot)
-                    continue;
-
                 string id = NormalizeID(child.name);
 
                 if (!evidenceMap.ContainsKey(id))
