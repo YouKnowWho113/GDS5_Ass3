@@ -10,27 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: Level 1 Aftertaste
+  m_Name: BanhMi_after_wrong_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "So\u2026 how was my signature dish?"
+    charText: "\u201CHmm. That report doesn\u2019t really match what you found.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CDon\u2019t just guess because it\u2019s b\xE1nh m\xEC. The clues
+      are already there.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CYeah, I probably rushed that.\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Pretty good, I\u2019ll give you that. The savoury from the beef combined
-      with the sweetness of the bread"
+    charText: "\u201CI should check what I actually saw and heard, then compare it
+      with the journal.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: Why are you talking like you are a food reviewer there?
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Well, I prefer doing it the professional way\u2026"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "But yes, I\u2019m something of a food critic myself"
+    charText: "\u2026one of those details must be missing or wrong in my report.\u201D"
     characterEmotion: 0
     continueCheck: 1
