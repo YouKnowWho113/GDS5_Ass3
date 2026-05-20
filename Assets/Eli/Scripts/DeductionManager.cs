@@ -31,6 +31,11 @@ public class DeductionManager : MonoBehaviour
         }
 
         Instance = this;
+        if (levelCompCheck == null)
+            levelCompCheck = LevelCompCheck.Instance;
+
+        if (levelCompCheck == null)
+            levelCompCheck = FindObjectOfType<LevelCompCheck>();
     }
 
     public void SetCurrentDish(DishCase dishCase)
@@ -163,6 +168,14 @@ public class DeductionManager : MonoBehaviour
         if (reportCorrect)
         {
             Debug.Log("[Report] CORRECT REPORT: " + currentDish.dishName);
+
+            if (levelCompCheck == null)
+                levelCompCheck = LevelCompCheck.Instance;
+
+            if (levelCompCheck != null)
+                levelCompCheck.MarkCurrentLevelComplete();
+            else
+                Debug.LogWarning("[DeductionManager] LevelCompCheck missing.");
         }
         else
         {
