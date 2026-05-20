@@ -942,6 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d05a85232f6fa4dae0e4bd028ad4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  evidenceRoot: {fileID: 0}
   evidenceObjects:
   - evidenceID: crispy
     targetObject: {fileID: 447669896}
@@ -953,6 +954,9 @@ MonoBehaviour:
     targetObject: {fileID: 371184868}
   - evidenceID: sweet
     targetObject: {fileID: 1103411980}
+  autoBuildFromChildren: 1
+  includeInactiveChildren: 1
+  hideAllOnStart: 1
 --- !u!1 &78854625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,11 +3238,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d05a85232f6fa4dae0e4bd028ad4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  evidenceRoot: {fileID: 0}
   evidenceObjects:
   - evidenceID: sweet
     targetObject: {fileID: 1103411980}
   - evidenceID: cotony
     targetObject: {fileID: 447669896}
+  autoBuildFromChildren: 1
+  includeInactiveChildren: 1
+  hideAllOnStart: 1
 --- !u!114 &335395720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3295,6 +3303,7 @@ MonoBehaviour:
   conclusionPanel: {fileID: 1199465627}
   instructionPanel: {fileID: 1629618673}
   menuPanel: {fileID: 1194499590}
+  evidenceUI: {fileID: 0}
 --- !u!224 &335395723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4568,6 +4577,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 422320336}
+  lightHoldSource: {fileID: 0}
   masterVolume: 1
   dialogueVolume: 1
   evidenceVolume: 1
@@ -4582,6 +4592,9 @@ MonoBehaviour:
   visibleEvidenceFound: {fileID: 0}
   audibleEvidenceFound: {fileID: 0}
   bothEvidenceFound: {fileID: 0}
+  lightOpen: {fileID: 0}
+  lightClose: {fileID: 0}
+  lightHoldLoop: {fileID: 0}
   scanStart: {fileID: 0}
   scanStop: {fileID: 0}
   invalidAction: {fileID: 0}
@@ -4749,6 +4762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDish: {fileID: 11400000, guid: 52d1080eccab06a44b860c1c1423cd8f, type: 2}
+  levelCompCheck: {fileID: 0}
   remainingTries: 3
   maxSelectedEvidence: 5
   requireEvidenceBeforeCorrect: 0
@@ -7573,6 +7587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f33cd7d12c5644186f38613bcc5c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlockedEvidenceIDs: []
   curLevel: 9
   lvS: 0000000000000000000000
 --- !u!4 &698757938
@@ -20331,7 +20346,7 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Salty
     evidenceID: salty
-    maskColor: {r: 0, g: 0, b: 0, a: 1}
+    maskColor: {r: 0.9622642, g: 0, b: 0, a: 1}
     scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
     volume: 1
     requiredScanTime: 0.1
