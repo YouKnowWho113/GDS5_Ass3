@@ -16,9 +16,6 @@ public class SFXManager : MonoBehaviour
     [Header("Audio Source")]
     [SerializeField] private AudioSource sfxSource;
 
-    [Tooltip("Separate looping source for held flashlight/light sound. Optional. If empty, it is created automatically.")]
-    [SerializeField] private AudioSource lightHoldSource;
-
     [Header("Volume")]
     [Range(0f, 1f)][SerializeField] private float masterVolume = 1f;
     [Range(0f, 1f)][SerializeField] private float dialogueVolume = 1f;
@@ -42,15 +39,8 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioClip audibleEvidenceFound;
     [SerializeField] private AudioClip bothEvidenceFound;
 
-    [Header("Light Tool")]
-    [SerializeField] private AudioClip lightOpen;
-    [SerializeField] private AudioClip lightClose;
-    [SerializeField] private AudioClip lightHoldLoop;
-
-    [Header("Legacy Scanner Fallbacks")]
-    [Tooltip("Old scanner start sound. Used only if Light Open is empty.")]
+    [Header("Scanner / Tools")]
     [SerializeField] private AudioClip scanStart;
-    [Tooltip("Old scanner stop sound. Used only if Light Close is empty.")]
     [SerializeField] private AudioClip scanStop;
     [SerializeField] private AudioClip invalidAction;
 
@@ -99,8 +89,6 @@ public class SFXManager : MonoBehaviour
             sfxSource.playOnAwake = false;
             sfxSource.loop = false;
         }
-
-        SetupLightHoldSource();
     }
 
     private void Start()
@@ -116,15 +104,12 @@ public class SFXManager : MonoBehaviour
 
     private void OnDisable()
     {
-        StopLightHold();
         SceneManager.sceneLoaded -= HandleSceneLoaded;
         UnsubscribeFromGameEvents();
     }
 
     private void OnDestroy()
     {
-        StopLightHold();
-
         if (Instance == this)
         {
             Instance = null;
@@ -132,25 +117,8 @@ public class SFXManager : MonoBehaviour
         }
     }
 
-    private void SetupLightHoldSource()
-    {
-        if (lightHoldSource == null)
-        {
-            GameObject loopObj = new GameObject("LightHoldLoopSource");
-            loopObj.transform.SetParent(transform);
-            lightHoldSource = loopObj.AddComponent<AudioSource>();
-        }
-
-        lightHoldSource.playOnAwake = false;
-        lightHoldSource.loop = true;
-        lightHoldSource.clip = lightHoldLoop;
-        lightHoldSource.volume = Mathf.Clamp01(masterVolume * scanVolume);
-    }
-
     private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StopLightHold();
-
         if (!autoSubscribeToGameEvents)
             return;
 
@@ -268,48 +236,17 @@ public class SFXManager : MonoBehaviour
     }
 
     // ─────────────────────────────────────────────────────────────────────────
-    // Light Tool
+    // Scanner / Tools
     // ─────────────────────────────────────────────────────────────────────────
 
-    public void PlayLightOpen()
+    public void PlayScanStart()
     {
-        Play(lightOpen != null ? lightOpen : scanStart, scanVolume);
+        Play(scanStart, scanVolume);
     }
 
-    public void PlayLightClose()
+    public void PlayScanStop()
     {
-        Play(lightClose != null ? lightClose : scanStop, scanVolume);
-    }
-
-    public void StartLightHold()
-    {
-        if (lightHoldLoop == null)
-            return;
-
-        if (lightHoldSource == null)
-            SetupLightHoldSource();
-
-        if (lightHoldSource.isPlaying && lightHoldSource.clip == lightHoldLoop)
-            return;
-
-        lightHoldSource.clip = lightHoldLoop;
-        lightHoldSource.volume = Mathf.Clamp01(masterVolume * scanVolume);
-        lightHoldSource.loop = true;
-        lightHoldSource.Play();
-    }
-
-    public void StopLightHold()
-    {
-        if (lightHoldSource != null && lightHoldSource.isPlaying)
-            lightHoldSource.Stop();
-    }
-
-    public void SetLightHolding(bool holding)
-    {
-        if (holding)
-            StartLightHold();
-        else
-            StopLightHold();
+        Play(scanStop, scanVolume);
     }
 
     public void PlayInvalidAction()
@@ -403,16 +340,6 @@ public class SFXManager : MonoBehaviour
     // Legacy wrappers so older prototype scripts do not break.
     // ─────────────────────────────────────────────────────────────────────────
 
-    public void PlayScanStart()
-    {
-        PlayLightOpen();
-    }
-
-    public void PlayScanStop()
-    {
-        PlayLightClose();
-    }
-
     public void PlayObjectSelect()
     {
         PlayUIClick();
@@ -435,11 +362,11 @@ public class SFXManager : MonoBehaviour
 
     public void PlayRotateStart()
     {
-        PlayLightOpen();
+        PlayScanStart();
     }
 
     public void PlayRotateStop()
     {
-        PlayLightClose();
+        PlayScanStop();
     }
 }

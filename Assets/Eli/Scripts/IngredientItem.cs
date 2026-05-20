@@ -56,15 +56,7 @@ public class IngredientItem : MonoBehaviour
             return;
         }
 
-        bool wasSelected = DeductionManager.Instance.IsSelected(ingredientID);
-
         DeductionManager.Instance.ToggleEvidence(ingredientID);
-
-        bool isSelected = DeductionManager.Instance.IsSelected(ingredientID);
-
-        if (wasSelected != isSelected && SFXManager.instance != null)
-            SFXManager.instance.PlayReportToggle(isSelected);
-
         RefreshUI();
     }
 
@@ -73,17 +65,10 @@ public class IngredientItem : MonoBehaviour
         if (DeductionManager.Instance == null)
             return;
 
-        bool wasSelected = DeductionManager.Instance.IsSelected(ingredientID);
-
         if (selected)
             DeductionManager.Instance.AddEvidence(ingredientID);
         else
             DeductionManager.Instance.RemoveEvidence(ingredientID);
-
-        bool isSelected = DeductionManager.Instance.IsSelected(ingredientID);
-
-        if (wasSelected != isSelected && SFXManager.instance != null)
-            SFXManager.instance.PlayReportToggle(isSelected);
 
         RefreshUI();
     }

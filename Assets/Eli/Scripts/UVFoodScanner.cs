@@ -29,8 +29,6 @@ public class UVFoodScanner : MonoBehaviour
     private float currentLightIntensity;
     private readonly Collider2D[] hits = new Collider2D[32];
 
-    private bool wasLightScanning;
-
     private void Awake()
     {
         currentLightIntensity = 0f;
@@ -48,14 +46,11 @@ public class UVFoodScanner : MonoBehaviour
     {
         if (GameplayInputLock.IsLocked)
         {
-            HandleLightSFX(false);
             UpdateScannerLight(false);
             return;
         }
 
         bool scanning = !requireInput || Input.GetMouseButton(mouseButton);
-
-        HandleLightSFX(scanning);
 
         UpdateScannerLight(scanning);
 
@@ -138,10 +133,6 @@ public class UVFoodScanner : MonoBehaviour
             scannerLight2D.intensity = 0f;
             scannerLight2D.enabled = false;
         }
-        wasLightScanning = false;
-
-        if (SFXManager.instance != null)
-            SFXManager.instance.StopLightHold();
     }
 
     private void OnDrawGizmosSelected()
@@ -150,26 +141,5 @@ public class UVFoodScanner : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, visualRadius);
-    }
-    private void HandleLightSFX(bool scanning)
-    {
-        if (scanning == wasLightScanning)
-            return;
-
-        wasLightScanning = scanning;
-
-        if (SFXManager.instance == null)
-            return;
-
-        if (scanning)
-        {
-            SFXManager.instance.PlayLightOpen();
-            SFXManager.instance.StartLightHold();
-        }
-        else
-        {
-            SFXManager.instance.StopLightHold();
-            SFXManager.instance.PlayLightClose();
-        }
     }
 }
