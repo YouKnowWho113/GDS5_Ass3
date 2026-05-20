@@ -720,6 +720,14 @@ PrefabInstance:
       propertyPath: m_text
       value: You
       objectReference: {fileID: 0}
+    - target: {fileID: 4126225091709085348, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925217478730174561, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
       propertyPath: m_Name
       value: DiaCanvas
@@ -1448,8 +1456,8 @@ MonoBehaviour:
   gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
-  - materialName: Sweet
-    evidenceID: sweet
+  - materialName: Crispy
+    evidenceID: crispy
     maskColor: {r: 1, g: 0, b: 0.8235295, a: 1}
     scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
     volume: 1

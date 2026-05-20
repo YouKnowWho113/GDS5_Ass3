@@ -39,16 +39,16 @@ MonoBehaviour:
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 0
+    hasPlayed: 1
   - key: before_report
-    dialogue: {fileID: 11400000, guid: 433fb4e8922c7324d9a98776d461463e, type: 2}
+    dialogue: {fileID: 11400000, guid: 5efb03fb052e8614d8f7c8556a6841a1, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 0
+    hasPlayed: 1
   - key: after_correct_submit
     dialogue: {fileID: 11400000, guid: 4d3f7e69452624d4891bf2c5869b121a, type: 2}
     playOnlyOnce: 1
@@ -73,22 +73,22 @@ MonoBehaviour:
     dialogueKey: after_visual_scan
     playOnlyOnce: 1
     hasPlayed: 1
-  - evidenceID: crispy
+  - evidenceID: umami
     requiredChannel: 2
     dialogueKey: after_sound_scan
     playOnlyOnce: 1
-    hasPlayed: 0
+    hasPlayed: 1
   allEvidenceDialogueRules:
   - requiredEvidence:
     - evidenceID: sweet
-      requiredChannel: 3
+      requiredChannel: 1
     - evidenceID: crispy
       requiredChannel: 2
     - evidenceID: umami
       requiredChannel: 3
     dialogueKey: before_report
     playOnlyOnce: 1
-    hasPlayed: 0
+    hasPlayed: 1
   playAfterReportSubmit: 1
   correctReportKey: after_correct_submit
   incorrectReportKey: after_wrong_submit
