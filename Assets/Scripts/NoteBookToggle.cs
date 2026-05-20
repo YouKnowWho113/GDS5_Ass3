@@ -86,11 +86,13 @@ public class NoteBookToggle : MonoBehaviour
             tntPanel.SetActive(true);
             conclu.SetActive(true);
         }
+        /*
         else
         {
             tntPanel.SetActive(false);
             conclu.SetActive(false);
         }
+        */
 
         for (int i = 0; i < 11; i++)
         {
