@@ -10797,23 +10797,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d72c738533ca349a7354e1783530fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1000587592}
-  dialogueOpen: {fileID: 0}
-  dialogueNext: {fileID: 0}
-  dialogueClose: {fileID: 0}
+  masterVolume: 1
+  dialogueVolume: 1
+  evidenceVolume: 1
+  scanVolume: 1
+  reportVolume: 1
+  uiVolume: 1
+  repeatedClipCooldown: 0.03
+  dialogueOpen: {fileID: 8300000, guid: 71c58f928d8532f488ef25bf87689556, type: 3}
+  dialogueNext: {fileID: 8300000, guid: 71c58f928d8532f488ef25bf87689556, type: 3}
+  dialogueClose: {fileID: 8300000, guid: 71c58f928d8532f488ef25bf87689556, type: 3}
   evidenceFound: {fileID: 0}
+  visibleEvidenceFound: {fileID: 0}
+  audibleEvidenceFound: {fileID: 0}
+  bothEvidenceFound: {fileID: 0}
   scanStart: {fileID: 0}
   scanStop: {fileID: 0}
+  invalidAction: {fileID: 0}
   reportSelect: {fileID: 0}
   reportRemove: {fileID: 0}
   reportCorrect: {fileID: 0}
   reportWrong: {fileID: 0}
   journalOpen: {fileID: 0}
   journalClose: {fileID: 0}
-  spawnNext: {fileID: 0}
   panelOpen: {fileID: 0}
   panelClose: {fileID: 0}
   uiClick: {fileID: 0}
+  uiConfirm: {fileID: 0}
+  uiBack: {fileID: 0}
 --- !u!82 &1000587592
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12245,6 +12259,17 @@ MonoBehaviour:
   - {fileID: 913513430}
   - {fileID: 1461759932}
   - {fileID: 139068894}
+  foodImage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 552642324}
+  - {fileID: 0}
   tnt:
   - {fileID: 914572969}
   - {fileID: 1976736770}
@@ -12257,17 +12282,6 @@ MonoBehaviour:
   - {fileID: 1309357743}
   - {fileID: 1680390258}
   - {fileID: 932822458}
-  foodImage:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 552642324}
-  - {fileID: 0}
   conclu: {fileID: 1524078179}
   evidenceUI: {fileID: 848495432}
   noteBookTabs: {fileID: 848495428}
