@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Pho_after_table_click
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CSo\u2026 my guest here is really a professional, huh?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CIf that\u2019s the case, why have I never heard of you before?\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CDon\u2019t you use social media or something?\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CIt\u2019s \u2018cuz I only just started, duh.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CBold of you to think I\u2019m already famous.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHahahahahahahahahahaha!\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHahahahahahahahahahaha!\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201COh, I\u2019m dying!\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHahaha\u2026 ha\u2026 ha\u2026\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHahahahahahahahahahaha!\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CAre you done?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CAlmost\u2026\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHahahaha! Haa\u2026\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201COkay. I\u2019m done.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CSorry, sorry. You just sounded like you had decades of experience.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CWe all start somewhere, right?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CTrue.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CSo I chose your vendor to be the starting point of my career.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CI get to be a food critic and you get free advertisements. That\u2019s
+      a win-win situation, don\u2019t you think?\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CAlright. You got me. It\u2019s a deal then.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201COh yeah, I noticed that you don\u2019t just sell B\xE1nh M\xEC,
+      right?\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CYep. I sell Ch\xE8 Hu\u1EBF and-\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CSweet! I\u2019ll have one of that as well if you don\u2019t
+      mind.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CSure thing, mate. Coming right up.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201COh, and be sure to \u2018critic\u2019 it as well, yeah?\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CGotcha.\u201D"
+    characterEmotion: 0
+    continueCheck: 0

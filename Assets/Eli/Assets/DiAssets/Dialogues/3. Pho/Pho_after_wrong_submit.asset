@@ -10,30 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: At the table
+  m_Name: Pho_after_wrong_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: Good evening
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHmm. That doesn\u2019t sound right.\u201D"
     characterEmotion: 0
     continueCheck: 0
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: I heard that a famous food critic has come to visit us today
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CIt\u2019s Ch\xE8 Hu\u1EBF, mate. Don\u2019t overthink it so
+      hard you miss the obvious.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Hm? Famous might be a bit too much
+    charText: "\u201CYeah\u2026 I probably made that more complicated than it needed
+      to be.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThe clue should match what I saw and heard.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "But yes. I\u2019m here for your Ph\u1EDF"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: Then I shall personally prepare it for you
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Looking forward to it
+    charText: "\u201CThat shine, that sticky sound\u2026 I should check the report
+      again.\u201D"
     characterEmotion: 0
     continueCheck: 1

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310aec22f7e026e4fafa69a147ac5ec0, type: 3}
+  m_Name: PhoDialogue
+  m_EditorClassIdentifier: 
+  actionDialogues:
+  - key: after_table_click
+    dialogue: {fileID: 11400000, guid: a0d0c772e51b32044ac3ab15be9d2e01, type: 2}
+    playOnlyOnce: 1
+    lockGameplayDuringDialogue: 1
+    gameplayLockReason: Dialogue
+    postDialogueAction: 0
+    sceneNameToLoad: 
+    postDialogueDelay: 0
+    hasPlayed: 1
+  - key: after_visual_scan
+    dialogue: {fileID: 11400000, guid: b2e921351c6e23e4a89d87ea33b9774d, type: 2}
+    playOnlyOnce: 1
+    lockGameplayDuringDialogue: 0
+    gameplayLockReason: Dialogue
+    postDialogueAction: 0
+    sceneNameToLoad: 
+    postDialogueDelay: 0
+    hasPlayed: 1
+  - key: after_sound_scan
+    dialogue: {fileID: 11400000, guid: b84b2d6c64a71a64bb94405ee2864bd6, type: 2}
+    playOnlyOnce: 1
+    lockGameplayDuringDialogue: 0
+    gameplayLockReason: Dialogue
+    postDialogueAction: 0
+    sceneNameToLoad: 
+    postDialogueDelay: 0
+    hasPlayed: 1
+  - key: before_report
+    dialogue: {fileID: 11400000, guid: 2398603e49b9e9041945c5bbcab60962, type: 2}
+    playOnlyOnce: 1
+    lockGameplayDuringDialogue: 1
+    gameplayLockReason: Dialogue
+    postDialogueAction: 0
+    sceneNameToLoad: 
+    postDialogueDelay: 0
+    hasPlayed: 1
+  - key: after_correct_submit
+    dialogue: {fileID: 11400000, guid: 2dee2ded328d9da46b8c98a06cab69a1, type: 2}
+    playOnlyOnce: 1
+    lockGameplayDuringDialogue: 1
+    gameplayLockReason: Dialogue
+    postDialogueAction: 1
+    sceneNameToLoad: 
+    postDialogueDelay: 0.3
+    hasPlayed: 0
+  - key: after_wrong_submit
+    dialogue: {fileID: 11400000, guid: baa599996240af941865b909ebec7383, type: 2}
+    playOnlyOnce: 1
+    lockGameplayDuringDialogue: 1
+    gameplayLockReason: Dialogue
+    postDialogueAction: 2
+    sceneNameToLoad: 
+    postDialogueDelay: 0.3
+    hasPlayed: 0
+  evidenceDialogueRules:
+  - evidenceID: sweet
+    requiredChannel: 1
+    dialogueKey: after_visual_scan
+    playOnlyOnce: 1
+    hasPlayed: 1
+  allEvidenceDialogueRules:
+  - requiredEvidence:
+    - evidenceID: sweet
+      requiredChannel: 3
+    dialogueKey: before_report
+    playOnlyOnce: 1
+    hasPlayed: 1
+  playAfterReportSubmit: 1
+  correctReportKey: after_correct_submit
+  incorrectReportKey: after_wrong_submit
+  submitDialogueDelay: 0.2
+  waitUntilCurrentDialogueEnds: 1
+  waitForFoodScanAudioBeforeAllEvidenceDialogue: 1
+  foodScanAudioWaitTimeout: 6

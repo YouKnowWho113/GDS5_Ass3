@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
+  m_Name: Pho_after_correct_submit
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CSo\u2026 how was it?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CHoly moly! That was so good!\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThe sweetness is the big thing, but it doesn\u2019t feel flat.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CIt stays with the beans and syrup, so every spoonful still feels
+      full.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CHonestly, I get why people like this.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHahaha!\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CLook at you! You really enjoyed my dessert that much, huh?\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CHahaha!\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201COf course! How could anyone not enjoy this?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201CThen your review better be good about it.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\u201COtherwise, I\u2019m gonna punch you in the face. Hahaha.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CAlright! You got it.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
