@@ -8,6 +8,7 @@ public class DeductionManager : MonoBehaviour
 
     [Header("Current Dish")]
     public DishCase currentDish;
+    public LevelCompCheck levelCompCheck;
 
     [Header("Game State")]
     public int remainingTries = 3;

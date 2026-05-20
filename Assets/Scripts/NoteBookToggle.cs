@@ -6,17 +6,21 @@ using UnityEngine.UI;
 
 public class NoteBookToggle : MonoBehaviour
 {
-    private static GameObject journalPersist;
+    //private static GameObject journalPersist;
     public GameObject journal;
     public GameObject journalButton;
     public GameObject[] ovv;
     public Image[] foodImage;
-    public GameObject[] tnt;
+    public GameObject tnt;
+    public GameObject tntPanel;
     public GameObject conclu;
+    public GameObject levelCompCheck;
+
+    public GameObject leftArrow;
+    public GameObject rightArrow;
 
     public NoteBookEvidenceUI evidenceUI;
     public NoteBookTabs noteBookTabs;
-    public int curLevel;
     public int curPage;
 
     [Header("Input Lock")]
@@ -24,43 +28,67 @@ public class NoteBookToggle : MonoBehaviour
     public bool showSystemCursorWhenOpen = true;
 
     private bool ownsNotebookLock;
-
-    public bool[] lvS;
-
+    
     private void Awake()
     {
-        if (journalPersist == null)
+        if (levelCompCheck == null)
         {
-            journalPersist = gameObject;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        else if (journalPersist != gameObject)
-        {
-            Destroy(gameObject);
+            levelCompCheck = GameObject.Find("LevelCompCheck");
         }
 
         CloseJournal();
     }
+    
+    public void ChangePageLeft()
+    {
+        if (curPage != 0)
+        {
+            curPage--;
+        }
+    }
+
+    public void ChangePageRight()
+    {
+        if (curPage != 10)
+        {
+            curPage++;
+        }
+    }
 
     public void Update()
     {
+        if (curPage == 0)
+        {
+            leftArrow.SetActive(false);
+        }
+        else
+        {
+            leftArrow.SetActive(true);
+        }
+
+        if (curPage >= 10)
+        {
+            rightArrow.SetActive(false);
+        }
+        else
+        {
+            rightArrow.SetActive(true);
+        }
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             JournalToggle();
         }
 
-        if (SceneManager.GetActiveScene().buildIndex > 0)
+        if (curPage == levelCompCheck.GetComponent<LevelCompCheck>().curLevel
+            && !levelCompCheck.GetComponent<LevelCompCheck>().lvS[levelCompCheck.GetComponent<LevelCompCheck>().curLevel])
         {
-            curLevel = SceneManager.GetActiveScene().buildIndex;
-        }
-
-        if (curPage == curLevel && !lvS[curLevel])
-        {
+            tntPanel.SetActive(true);
             conclu.SetActive(true);
         }
         else
         {
+            tntPanel.SetActive(false);
             conclu.SetActive(false);
         }
 
@@ -73,18 +101,18 @@ public class NoteBookToggle : MonoBehaviour
                     foodImage[i].gameObject.SetActive(true);
                     foodImage[j].gameObject.SetActive(false);
 
-                    if (lvS[i])
+                    if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[i])
                     {
-                        ovv[i].SetActive(true); tnt[i].SetActive(true);
-                        ovv[j].SetActive(false); tnt[j].SetActive(false);
-                        ovv[11].SetActive(false); tnt[11].SetActive(false);
+                        ovv[i].SetActive(true);
+                        ovv[j].SetActive(false);
+                        ovv[11].SetActive(false);
                         foodImage[i].color = Color.white;
                     }
                     else
                     {
-                        ovv[i].SetActive(false); tnt[i].SetActive(false);
-                        ovv[j].SetActive(false); tnt[j].SetActive(false);
-                        ovv[11].SetActive(true); tnt[11].SetActive(true);
+                        ovv[i].SetActive(false);
+                        ovv[j].SetActive(false);
+                        ovv[11].SetActive(true);
                         foodImage[i].color = Color.black;
                     }
                 }
@@ -98,6 +126,7 @@ public class NoteBookToggle : MonoBehaviour
 
         if (newState)
         {
+            noteBookTabs.OpenConclusion();
             journal.SetActive(true);
 
             GameplayInputLock.Lock(gameplayLockReason);
@@ -119,7 +148,7 @@ public class NoteBookToggle : MonoBehaviour
     {
         if (journal != null)
         {
-            curPage = curLevel;
+            curPage = levelCompCheck.GetComponent<LevelCompCheck>().curLevel;
             journal.SetActive(false);
         }
 
@@ -137,36 +166,10 @@ public class NoteBookToggle : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void ChangePageLeft()
-    {
-        if (curPage != 0)
-        {
-            curPage--;
-        }
-        else
-        {
-            curPage = 10;
-        }
-    }
-
-    public void ChangePageRight()
-    {
-        if (curPage != 10)
-        {
-            Debug.Log("Page not 0");
-            curPage++;
-        }
-        else
-        {
-            Debug.Log("Page 0)");
-            curPage = 0;
-        }
-    }
-
     public void LoadLv1()
     {
         curPage = 1;
-        if (lvS[1])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[1])
         {
             noteBookTabs.OpenOverview();
         }
@@ -181,7 +184,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv2()
     {
         curPage = 2;
-        if (lvS[2])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[2])
         {
             noteBookTabs.OpenOverview();
         }
@@ -196,7 +199,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv3()
     {
         curPage = 3;
-        if (lvS[3])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[3])
         {
             noteBookTabs.OpenOverview();
         }
@@ -211,7 +214,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv4()
     {
         curPage = 4;
-        if (lvS[4])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[4])
         {
             noteBookTabs.OpenOverview();
         }
@@ -226,7 +229,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv5()
     {
         curPage = 5;
-        if (lvS[5])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[5])
         {
             noteBookTabs.OpenOverview();
         }
@@ -241,7 +244,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv6()
     {
         curPage = 6;
-        if (lvS[6])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[6])
         {
             noteBookTabs.OpenOverview();
         }
@@ -256,7 +259,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv7()
     {
         curPage = 7;
-        if (lvS[7])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[7])
         {
             noteBookTabs.OpenOverview();
         }
@@ -271,7 +274,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv8()
     {
         curPage = 8;
-        if (lvS[8])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[8])
         {
             noteBookTabs.OpenOverview();
         }
@@ -286,7 +289,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv9()
     {
         curPage = 9;
-        if (lvS[9])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[9])
         {
             noteBookTabs.OpenOverview();
         }
@@ -301,7 +304,7 @@ public class NoteBookToggle : MonoBehaviour
     public void LoadLv10()
     {
         curPage = 10;
-        if (lvS[10])
+        if (levelCompCheck.GetComponent<LevelCompCheck>().lvS[10])
         {
             noteBookTabs.OpenOverview();
         }
