@@ -56,6 +56,9 @@ public class EvidenceNotebook : MonoBehaviour
 
         Debug.Log("[EvidenceNotebook] Found " + channel + " evidence: " + evidenceID);
 
+        if (LevelCompCheck.Instance != null)
+            LevelCompCheck.Instance.UnlockEvidence(evidenceID);
+
         OnEvidenceAdded?.Invoke(evidenceID, newChannel);
     }
 

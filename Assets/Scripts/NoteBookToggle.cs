@@ -57,10 +57,18 @@ public class NoteBookToggle : MonoBehaviour
 
         if (curPage == curLevel && !lvS[curLevel])
         {
+<<<<<<< Updated upstream
+=======
+            //tntPanel.SetActive(true);
+>>>>>>> Stashed changes
             conclu.SetActive(true);
         }
         else
         {
+<<<<<<< Updated upstream
+=======
+            //tntPanel.SetActive(false);
+>>>>>>> Stashed changes
             conclu.SetActive(false);
         }
 
