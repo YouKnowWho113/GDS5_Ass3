@@ -41,17 +41,25 @@ public class NoteBookToggle : MonoBehaviour
 
     public void ChangePageLeft()
     {
-        if (curPage != 1)
+        if (curPage > 0)
         {
             curPage--;
+        }
+        else
+        {
+            curPage = 10;
         }
     }
 
     public void ChangePageRight()
     {
-        if (curPage != 10)
+        if (curPage < 10)
         {
             curPage++;
+        }
+        else
+        {
+            curPage = 0;
         }
     }
 
@@ -60,24 +68,6 @@ public class NoteBookToggle : MonoBehaviour
         if (levelCompCheck == null)
         {
             levelCompCheck = GameObject.Find("LevelCompCheck");
-        }
-
-        if (curPage == 0)
-        {
-            leftArrow.SetActive(false);
-        }
-        else
-        {
-            leftArrow.SetActive(true);
-        }
-
-        if (curPage >= 10)
-        {
-            rightArrow.SetActive(false);
-        }
-        else
-        {
-            rightArrow.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -155,7 +145,7 @@ public class NoteBookToggle : MonoBehaviour
     {
         if (journal != null)
         {
-            curPage = levelCompCheck.GetComponent<LevelCompCheck>().curLevel;
+            curPage = levelCompCheck.GetComponent<LevelCompCheck>().curLevel - 1;
             journal.SetActive(false);
         }
 
