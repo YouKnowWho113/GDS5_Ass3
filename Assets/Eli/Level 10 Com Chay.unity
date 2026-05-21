@@ -1512,7 +1512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &152084320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6265,7 +6265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &640208362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9467,7 +9467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1062458578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12590,8 +12590,8 @@ MonoBehaviour:
     kinds of bean, jelly, coconut milk, lotus seeds, or tapioca.\n\n- Ch\xE8 Hu\u1EBF
     reflects the elegant food culture of the former imperial city."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
-  m_sharedMaterial: {fileID: -7784278538909227094, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dedf9ad00db7fb4b8b81efbefddc15a, type: 2}
+  m_sharedMaterial: {fileID: -6479541379740112324, guid: 5dedf9ad00db7fb4b8b81efbefddc15a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12621,7 +12621,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -20464,7 +20464,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Textures
 
-    n Tastes'
+    & Tastes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
   m_sharedMaterial: {fileID: -7784278538909227094, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
