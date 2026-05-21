@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Eli/Menu.unity
+    guid: 30988179caf610c4392133db072fbaa3
+  - enabled: 1
     path: Assets/Eli/Intro.unity
     guid: 6aeb4f73fb9061a4db47f2892d086bd1
   - enabled: 1
@@ -15,11 +18,11 @@ EditorBuildSettings:
     path: Assets/Eli/Level 2 Che Hue.unity
     guid: 2cbf46074d14cc849b0af3ce4cb97b8a
   - enabled: 1
-    path: Assets/Eli/Level 3 Pho.unity
-    guid: e5a4bb34e4fd6e741aeaa2b4071ebf54
-  - enabled: 1
-    path: Assets/Eli/Level 4 Bun Cha.unity
+    path: Assets/Eli/Level 3 Bun Cha.unity
     guid: 456c41e2b0f79ca478f699bde548facb
+  - enabled: 1
+    path: Assets/Eli/Level 4 Pho.unity
+    guid: e5a4bb34e4fd6e741aeaa2b4071ebf54
   - enabled: 1
     path: Assets/Eli/Level 5 Banh Cuon.unity
     guid: 7d51a780811856349ad2746844cd1e58
@@ -38,9 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Eli/Level 10 Com Chay.unity
     guid: 5adae907a8ce3b2498e77e35e7189845
-  - enabled: 1
-    path: Assets/Eli/Menu.unity
-    guid: 30988179caf610c4392133db072fbaa3
   - enabled: 1
     path: Assets/Eli/Credit.unity
     guid: 4fdf1e136cadfbc49a51123e8a35c0d5

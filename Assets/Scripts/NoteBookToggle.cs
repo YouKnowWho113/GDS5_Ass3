@@ -33,10 +33,15 @@ public class NoteBookToggle : MonoBehaviour
     {
         CloseJournal();
     }
-    
+
+    private void Start()
+    {
+        curPage = SceneManager.GetActiveScene().buildIndex - 1;
+    }
+
     public void ChangePageLeft()
     {
-        if (curPage != 0)
+        if (curPage != 1)
         {
             curPage--;
         }
@@ -52,6 +57,10 @@ public class NoteBookToggle : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log(
+        "curPage = " + curPage +
+        " | curLevel = " + levelCompCheck.GetComponent<LevelCompCheck>().curLevel
+);
         if (levelCompCheck == null)
         {
             levelCompCheck = GameObject.Find("LevelCompCheck");
@@ -80,19 +89,19 @@ public class NoteBookToggle : MonoBehaviour
             JournalToggle();
         }
 
-        if (curPage == levelCompCheck.GetComponent<LevelCompCheck>().curLevel
-            && !levelCompCheck.GetComponent<LevelCompCheck>().lvS[levelCompCheck.GetComponent<LevelCompCheck>().curLevel])
+        if (curPage == levelCompCheck.GetComponent<LevelCompCheck>().curLevel - 1
+    && !levelCompCheck.GetComponent<LevelCompCheck>().lvS[levelCompCheck.GetComponent<LevelCompCheck>().curLevel - 1])
         {
             tntPanel.SetActive(true);
             conclu.SetActive(true);
         }
-        /*
         else
         {
             tntPanel.SetActive(false);
             conclu.SetActive(false);
         }
-        */
+
+
 
         for (int i = 0; i < 11; i++)
         {
@@ -180,7 +189,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void LoadLv2()
@@ -195,7 +204,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void LoadLv3()
@@ -210,7 +219,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     public void LoadLv4()
@@ -225,7 +234,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     public void LoadLv5()
@@ -240,7 +249,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
 
     public void LoadLv6()
@@ -255,7 +264,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(7);
     }
 
     public void LoadLv7()
@@ -270,7 +279,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(8);
     }
 
     public void LoadLv8()
@@ -285,7 +294,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(9);
     }
 
     public void LoadLv9()
@@ -300,7 +309,7 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(10);
     }
 
     public void LoadLv10()
@@ -315,6 +324,6 @@ public class NoteBookToggle : MonoBehaviour
             noteBookTabs.OpenConclusion();
         }
         CloseJournal();
-        SceneManager.LoadScene(10);
+        SceneManager.LoadScene(11);
     }
 }
