@@ -8958,7 +8958,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1159629365}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1
@@ -12045,7 +12045,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1159629371}
-  lightHoldSource: {fileID: 0}
+  lightHoldSource: {fileID: 1159629371}
   masterVolume: 1
   dialogueVolume: 1
   evidenceVolume: 1
@@ -12185,7 +12185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1095372586e8d419c4cd14ab93e3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodDialogue: {fileID: 11400000, guid: 9b701dfa5df314044a67627d26df823c, type: 2}
+  foodDialogue: {fileID: 11400000, guid: a87d825756f706d479c65248cf2b3301, type: 2}
   useFoodDialogueAsset: 1
   dialogueCanvasRoot: {fileID: 272545243}
   disableCanvasWhenQueueEnds: 1
@@ -15423,20 +15423,14 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 0.6745098, g: 0.4784314, b: 0.627451, a: 0}
+    maskColor: {r: 0.91764706, g: 0, b: 1, a: 0}
     scanSound: {fileID: 8300000, guid: c45f9e32a4618a0478f36b33b4d24349, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Salty
     evidenceID: salty
-    maskColor: {r: 0.050980397, g: 0.9450981, b: 0.2627451, a: 0}
+    maskColor: {r: 0, g: 1, b: 0, a: 0}
     scanSound: {fileID: 8300000, guid: 710d786aa9d661e4a8340dc06c34e4be, type: 3}
-    volume: 1
-    requiredScanTime: 0.1
-  - materialName: Watery
-    evidenceID: watery
-    maskColor: {r: 0, g: 0.092093945, b: 1, a: 0}
-    scanSound: {fileID: 8300000, guid: 6f35fa47a69de0b488ecf5e4cba1bdce, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Umami
@@ -15447,7 +15441,7 @@ MonoBehaviour:
     requiredScanTime: 0.1
   - materialName: Tender
     evidenceID: tender
-    maskColor: {r: 1, g: 0.87432665, b: 0, a: 0}
+    maskColor: {r: 0, g: 0.14901961, b: 1, a: 0}
     scanSound: {fileID: 8300000, guid: 7bb9a9e5aae793c43a9236cd320987f0, type: 3}
     volume: 1
     requiredScanTime: 0.1

@@ -31,10 +31,6 @@ MonoBehaviour:
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThe sweetness is really the main thing here.\u201D"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
     charText: "\u201CBut it doesn\u2019t feel cheap. It\u2019s mixed into the beans
       and syrup properly.\u201D"
     characterEmotion: 0

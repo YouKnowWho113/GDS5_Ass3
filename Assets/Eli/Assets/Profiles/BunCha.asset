@@ -22,6 +22,4 @@ MonoBehaviour:
   - evidenceID: salty
     evidenceChannel: 3
   - evidenceID: tender
-    evidenceChannel: 3
-  - evidenceID: watery
-    evidenceChannel: 3
+    evidenceChannel: 2

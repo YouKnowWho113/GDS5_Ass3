@@ -39,7 +39,7 @@ MonoBehaviour:
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 1
+    hasPlayed: 0
   - key: before_report
     dialogue: {fileID: 11400000, guid: 2398603e49b9e9041945c5bbcab60962, type: 2}
     playOnlyOnce: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 1
+    hasPlayed: 0
   - key: after_correct_submit
     dialogue: {fileID: 11400000, guid: 2dee2ded328d9da46b8c98a06cab69a1, type: 2}
     playOnlyOnce: 1
@@ -73,13 +73,20 @@ MonoBehaviour:
     dialogueKey: after_visual_scan
     playOnlyOnce: 1
     hasPlayed: 1
+  - evidenceID: cottony
+    requiredChannel: 2
+    dialogueKey: after_sound_scan
+    playOnlyOnce: 1
+    hasPlayed: 0
   allEvidenceDialogueRules:
   - requiredEvidence:
     - evidenceID: sweet
       requiredChannel: 3
+    - evidenceID: cottony
+      requiredChannel: 2
     dialogueKey: before_report
     playOnlyOnce: 1
-    hasPlayed: 1
+    hasPlayed: 0
   playAfterReportSubmit: 1
   correctReportKey: after_correct_submit
   incorrectReportKey: after_wrong_submit
