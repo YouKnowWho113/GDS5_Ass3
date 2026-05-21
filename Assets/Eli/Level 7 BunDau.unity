@@ -6575,11 +6575,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74258bc25dd34a14582092297eba566f, type: 3}
---- !u!1 &666132430 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
-  m_PrefabInstance: {fileID: 666132429}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &670205627
 GameObject:
   m_ObjectHideFlags: 0
@@ -7574,7 +7569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &802365876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11242,7 +11237,6 @@ GameObject:
   - component: {fileID: 1159629365}
   - component: {fileID: 1159629371}
   - component: {fileID: 1159629370}
-  - component: {fileID: 1159629369}
   - component: {fileID: 1159629368}
   m_Layer: 0
   m_Name: GameSystems
@@ -11342,29 +11336,6 @@ MonoBehaviour:
   uiClick: {fileID: 0}
   uiConfirm: {fileID: 0}
   uiBack: {fileID: 0}
---- !u!114 &1159629369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159629364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06ec3047dd8a7a48895945fd5f5b499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueCanvasRoot: {fileID: 666132430}
-  disableCanvasWhenDialogueEnds: 1
-  playOnSceneStart: 0
-  sceneStartDialogue: {fileID: 11400000, guid: 9ba2ba183a51065449214f191235848d, type: 2}
-  sceneStartDelay: 0.3
-  playAfterReportSubmit: 1
-  correctReportDialogue: {fileID: 0}
-  incorrectReportDialogue: {fileID: 0}
-  submitDialogueDelay: 0.2
-  waitUntilCurrentDialogueEnds: 1
-  playSceneStartOnlyOnce: 1
 --- !u!114 &1159629370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11379,7 +11350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMenuPanel: {fileID: 2076766952}
   tableButton: {fileID: 778472899}
-  dialogueTrigger: {fileID: 1159629369}
+  dialogueTrigger: {fileID: 0}
   dialogueTriggerAction: {fileID: 0}
   dialogueKeyAfterTableClick: after_table_click
   playDialogueAfterTableClick: 1

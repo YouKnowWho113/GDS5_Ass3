@@ -10,38 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: Level 8 AfterTaste 2.5 rating
+  m_Name: BunDau_after_wrong_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: So?
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "Hm. That report doesn\u2019t match the plate."
     characterEmotion: 0
     continueCheck: 0
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "How\u2019s the C\u01A1m T\u1EA5m?"
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: You think so?
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: The dip, the foam, and the tofu each give a different clue.
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: The rice texture was fine
+    charText: If you only judge the toppings, you miss what the sauce is doing.
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: But the ribs were too chewy
+    charText: Right. I should check the dip and texture again.
     characterEmotion: 0
-    continueCheck: 1
+    continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Thanks to a certain critic, maybe
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "I actually changed the recipe a little\u2026"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: And honestly?
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "I don\u2019t really understand why people line up for this"
+    charText: The answer is probably already in how it looks and breaks apart.
     characterEmotion: 0
     continueCheck: 1

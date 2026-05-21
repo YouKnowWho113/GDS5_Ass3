@@ -18,10 +18,8 @@ MonoBehaviour:
   - evidenceID: umami
     evidenceChannel: 3
   - evidenceID: sour
-    evidenceChannel: 3
+    evidenceChannel: 2
   - evidenceID: tender
-    evidenceChannel: 3
+    evidenceChannel: 2
   - evidenceID: salty
-    evidenceChannel: 3
-  - evidenceID: cotony
     evidenceChannel: 3

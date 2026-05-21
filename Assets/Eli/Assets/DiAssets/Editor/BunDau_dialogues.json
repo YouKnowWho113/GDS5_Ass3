@@ -1,0 +1,259 @@
+{
+  "dialogues": [
+    {
+      "assetName": "BunDau_after_table_click",
+      "lines": [
+        {
+          "text": "IT’S HIM!",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "The famous food critic!",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "Can I get a picture?!",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "Maybe later.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "Welcome! We prepared our best table for you!",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "Good. I dislike noisy areas.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "Of course! Our chef personally prepared this Bún Đậu platter.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "As expected.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "A restaurant of this level should know how to welcome important guests.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "Y-Yes…",
+          "emotion": "Neutral",
+          "continueCheck": false
+        }
+      ]
+    },
+    {
+      "assetName": "BunDau_after_visual_scan",
+      "lines": [
+        {
+          "text": "The dip is the first thing that catches my eye.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "That deep purple-brown color has a heavy fermented pull before I even taste it.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "The foam on top looks strong too, almost too aggressive for the rest of the platter.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "Visually, it promises depth, but also a sharp briny edge.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "The tofu and toppings look clean enough, but the dip is clearly controlling the plate.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "So the first impression is powerful, maybe a little unbalanced.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "BunDau_after_sound_scan",
+      "lines": [
+        {
+          "text": "The tofu gives way softly when I press it.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "No dry crack, no rubbery bounce. The bite sounds gentle enough.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "But the dip reacts differently.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "When it moves, the foam breaks with a thin, uneven sound.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "That texture makes the sharper notes stand out more than they should.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "The toppings are fine. The sauce is where the balance starts slipping.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        }
+      ]
+    },
+    {
+      "assetName": "BunDau_before_report",
+      "lines": [
+        {
+          "text": "Alright, I understand the platter now.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "The dip has real depth, but it comes with a heavy briny punch.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "The sharper lift after that feels louder than it needs to be.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "The tofu itself is soft enough, so the base isn’t the problem.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "The issue is how the sauce sits on everything.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "It pushes too hard and makes the whole plate feel less controlled.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "That should be enough for the report.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        }
+      ]
+    },
+    {
+      "assetName": "BunDau_after_correct_submit",
+      "lines": [
+        {
+          "text": "What do you think?",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "The toppings were decent.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "The tofu was soft enough, and the fermented base had depth.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "But the shrimp paste foam lacked consistency.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "Consistency?",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "It feels too airy and uneven.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "And the flavor balance leans too heavily into that sharp tang.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "I spent months refining that recipe…",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "Then perhaps spend a few more.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "You wanted an honest review, didn’t you?",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "BunDau_after_wrong_submit",
+      "lines": [
+        {
+          "text": "Hm. That report doesn’t match the plate.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "You think so?",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "The dip, the foam, and the tofu each give a different clue.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "If you only judge the toppings, you miss what the sauce is doing.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "Right. I should check the dip and texture again.",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "The answer is probably already in how it looks and breaks apart.",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    }
+  ]
+}
