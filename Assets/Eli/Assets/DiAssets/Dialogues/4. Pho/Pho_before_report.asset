@@ -10,32 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: Pho_after_sound_scan
+  m_Name: Pho_before_report
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201COkay, the sound backs it up too.\u201D"
+    charText: "\u201CAlright, I think the dish is clear now.\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CWhen I tap through it, it has this soft, sticky little sound.\u201D"
+    charText: "\u201CThe broth shows a strong umami base from the color and richness.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CNot crunchy, not watery. More like the syrup and beans are holding
-      together.\u201D"
+    charText: "\u201CThe beef is tender too. The sound is soft, not dry or tough.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThat makes the sweetness feel thicker, like it\u2019s mixed
-      into the whole bowl.\u201D"
+    charText: "\u201CBut the noodles are a little too loose.\u201D"
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "\u201CHah. You\u2019re really listening to dessert now.\u201D"
-    characterEmotion: 0
-    continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CYeah, and somehow it\u2019s actually helping.\u201D"
+    charText: "\u201CWhen I move them, the sound feels thin and wet instead of firm.\u201D"
     characterEmotion: 0
-    continueCheck: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CSo the evidence is umami, tender, and watery.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThat should be enough for the report.\u201D"
+    characterEmotion: 0
+    continueCheck: 1

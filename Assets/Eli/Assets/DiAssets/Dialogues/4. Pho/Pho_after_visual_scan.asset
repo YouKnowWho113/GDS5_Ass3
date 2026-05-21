@@ -14,32 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201COh, this already looks sweet.\u201D"
+    charText: "\u201CThe broth already looks serious.\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThe syrup has that shiny layer on top, and it\u2019s clinging
-      around the beans.\u201D"
+    charText: "\u201CIt has that deep, warm color, and the surface looks rich without
+      being too oily.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CIt doesn\u2019t look watery. It looks thick enough to carry
-      the sweetness properly.\u201D"
+    charText: "\u201CThat usually means the flavor has been pulled out slowly, not
+      rushed.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CJust from looking at it, the main clue is pretty clear.\u201D"
+    charText: "\u201CJust from looking at it, I\u2019m getting a strong umami clue.\u201D"
     characterEmotion: 0
     continueCheck: 1
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: "\u201CYou noticed that before tasting?\u201D"
+    characterEmotion: 0
+    continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThis Ch\xE8 Hu\u1EBF is probably going hard on sweetness.\u201D"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "\u201CYou got all that just from staring at it?\u201D"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CNot all of it. But the surface is basically snitching already.\u201D"
+    charText: "\u201CA good broth gives itself away a little.\u201D"
     characterEmotion: 0
     continueCheck: 1

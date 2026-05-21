@@ -10,45 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: Pho_before_report
+  m_Name: Pho_after_correct_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CAlright, I think I\u2019ve got this one.\u201D"
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: "\u201CHow was the dish?\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThe shine showed the sweetness first.\u201D"
+    charText: "\u201CThe broth was incredibly rich.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThen the sticky sound confirmed it wasn\u2019t just thin syrup
-      sitting on top.\u201D"
+    charText: "\u201CThe umami wasn\u2019t overwhelming, but it lingered naturally.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThe sweetness is really the main thing here.\u201D"
+    charText: "\u201CAnd the beef was tender enough to almost melt.\u201D"
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CThe sweetness is really the main thing here.\u201D"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CBut it doesn\u2019t feel cheap. It\u2019s mixed into the beans
-      and syrup properly.\u201D"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
-    charText: "\u201CSo your great critic brain has reached a conclusion?\u201D"
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: "\u201CHahaha! I\u2019m relieved to hear that.\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\u201CYep. The evidence is sweet.\u201D"
+    charText: "\u201CThough\u2026\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: "\u201CHm?\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CThe noodles felt a little too watery.\u201D"
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "*Tip: Press \u2018Tab\u2019 to open the journal, select the tastes
-      and textures you found then submit."
+    charText: "\u201CBut overall, this place deserves the popularity it has.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: "\u201CThank you for your honest review.\u201D"
     characterEmotion: 0
     continueCheck: 1
