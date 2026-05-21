@@ -57,10 +57,6 @@ public class NoteBookToggle : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(
-        "curPage = " + curPage +
-        " | curLevel = " + levelCompCheck.GetComponent<LevelCompCheck>().curLevel
-);
         if (levelCompCheck == null)
         {
             levelCompCheck = GameObject.Find("LevelCompCheck");
