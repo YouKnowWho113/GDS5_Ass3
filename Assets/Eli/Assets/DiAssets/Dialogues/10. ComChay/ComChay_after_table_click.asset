@@ -10,30 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: BunDau_after_sound_scan
+  m_Name: ComChay_after_table_click
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The tofu gives way softly when I press it."'
+    charText: "\"\u2026Why can\u2019t I stop thinking about what Fendory said?\""
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"No dry crack, no rubbery bounce. The bite sounds gentle enough."'
+    charText: "\"Tch. These notifications won\u2019t stop either.\""
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"But the dip reacts differently."'
+  - character: {fileID: 11400000, guid: 0b984171a6a6db64e97413486511e156, type: 2}
+    charText: '"You look exhausted, dear."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"When it moves, the foam breaks with a thin, uneven sound."'
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"That texture makes the sharper notes stand out more than they should."'
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The toppings are fine. The sauce is where the balance starts slipping."'
+    charText: "\"\u2026Just give me anything warm.\""
     characterEmotion: 0
     continueCheck: 0
+  - character: {fileID: 11400000, guid: 0b984171a6a6db64e97413486511e156, type: 2}
+    charText: '"No problem. Sit down first. Rain like this makes people think too
+      much."'
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\"I\u2019m not here to think. Just food.\""
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: 0b984171a6a6db64e97413486511e156, type: 2}
+    charText: '"Then warm food it is."'
+    characterEmotion: 0
+    continueCheck: 1

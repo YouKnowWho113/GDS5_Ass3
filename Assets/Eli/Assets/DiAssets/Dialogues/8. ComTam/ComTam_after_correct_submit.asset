@@ -10,46 +10,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: BunDau_after_correct_submit
+  m_Name: ComTam_after_correct_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"What do you think?"'
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: '"So?"'
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\"How\u2019s the C\u01A1m T\u1EA5m?\""
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The toppings were decent."'
+    charText: '"The rice texture was fine."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The tofu was soft enough, and the fermented base had depth."'
+    charText: "\"The broken grains stayed separate, and the sauce didn\u2019t drown
+      them.\""
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"But the shrimp paste foam lacked consistency."'
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"Consistency?"'
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"It feels too airy and uneven."'
+    charText: '"The rib had good glaze and a strong grilled depth."'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"And the flavor balance leans too heavily into that sharp tang."'
+    charText: '"But it was too resistant for what the plate needed."'
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: "\"I spent months refining that recipe\u2026\""
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\"I actually changed the recipe a little\u2026\""
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"Then perhaps spend a few more."'
+    charText: "\"And honestly? I don\u2019t really understand why people line up
+      for this.\""
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: "\"\u2026That harsh, huh?\""
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\"You wanted an honest review, didn\u2019t you?\""
+    charText: "\"I\u2019m just being honest.\""
     characterEmotion: 0
     continueCheck: 1

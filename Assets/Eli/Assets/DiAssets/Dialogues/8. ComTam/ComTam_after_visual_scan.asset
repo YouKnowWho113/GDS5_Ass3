@@ -10,46 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: BunDau_after_correct_submit
+  m_Name: ComTam_after_visual_scan
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"What do you think?"'
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: '"The ribs have a nice lacquer on the surface."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The toppings were decent."'
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The tofu was soft enough, and the fermented base had depth."'
+    charText: "\"There\u2019s a caramel shine around the edges, like the marinade
+      reduced properly.\""
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"But the shrimp paste foam lacked consistency."'
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"Consistency?"'
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"It feels too airy and uneven."'
+    charText: '"The rice looks separated too. Not mushy, not clumped into one block."'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"And the flavor balance leans too heavily into that sharp tang."'
+    charText: '"Each grain still keeps its shape, which is a good sign for a broken-rice
+      plate."'
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: "\"I spent months refining that recipe\u2026\""
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: '"Visually, it has promise. The plate knows how to sell itself."'
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: '"Heh. That sounds like a compliment."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"Then perhaps spend a few more."'
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "\"You wanted an honest review, didn\u2019t you?\""
+    charText: '"For now, it is."'
     characterEmotion: 0
     continueCheck: 1

@@ -1,0 +1,264 @@
+{
+  "dialogues": [
+    {
+      "assetName": "BanhXeo_after_table_click",
+      "lines": [
+        {
+          "text": "\"Hm?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Fendory?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Oh. The famous critic finally showed up.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"You’re working here?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Temporary collaboration. Helps bring customers in.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"I see.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"You’ve gotten pretty famous lately.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Well. Talent naturally attracts attention.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"…Sure.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Your Bánh Xèo is ready, sir.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "BanhXeo_after_visual_scan",
+      "lines": [
+        {
+          "text": "\"The crepe looks dramatic, at least.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The edge has a clean golden crust, but the filling looks heavily seasoned.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The dipping sauce has a light gloss, like there’s a small sugar lift in it.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Still, the darker specks around the filling make the seasoning look stronger than the balance.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"You already found something to complain about?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"I’m just reading the plate.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"It looks good, but it also looks easy to overdo.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "BanhXeo_after_sound_scan",
+      "lines": [
+        {
+          "text": "\"The shell breaks with a sharp little crack.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"That part is promising. The edge has a clean snap.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"But the sauce sounds too loose when I move through it.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"It runs away from the bite instead of staying with the crepe.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The sauce is meant to be light.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Light is fine. Thin is different.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "BanhXeo_before_report",
+      "lines": [
+        {
+          "text": "\"Alright, the dish is pretty clear.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The shell has a nice crackle, so the first bite has energy.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The sauce gives a small sugar lift, but it spreads too quickly.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The filling and sauce push the seasoning harder than they need to.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"So instead of feeling bright, the whole thing starts leaning heavy.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"There are good parts here, but the balance feels careless.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"That’s enough for the report.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "BanhXeo_after_correct_submit",
+      "lines": [
+        {
+          "text": "\"What did you think of the Bánh Xèo?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The shell had a decent crackle.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"But the seasoning pushed too hard, and the sauce was too loose.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"…I understand.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"No. You don’t.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"What?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"You used to smile when eating food.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Now you just sound like you’re trying to look superior.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"That’s called professionalism.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"No. That’s arrogance. When was the last time you actually enjoyed food?\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "BanhXeo_after_wrong_submit",
+      "lines": [
+        {
+          "text": "\"That report doesn’t match what I served.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"You’re saying I missed something?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The shell, filling, and sauce each speak differently.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"If you only judge the look, you miss how it breaks and how the sauce moves.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Maybe slow down for once.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Fine. I’ll check it again.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    }
+  ]
+}

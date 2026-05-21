@@ -10,30 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: BunDau_after_wrong_submit
+  m_Name: BanhXeo_after_wrong_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: "\"Hm. That doesn\u2019t match the plate.\""
+    charText: "\"That doesn\u2019t match what I served.\""
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"You think so?"'
+    charText: "\"You\u2019re saying I missed something?\""
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"The dip, the foam, and the tofu each give a different clue."'
+    charText: '"The shell, filling, and sauce each speak differently."'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"If you only judge the toppings, you miss what the sauce is doing."'
+    charText: '"If you only judge the look, you miss how it breaks and how the sauce
+      moves."'
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"Right. I should check the dip and texture again."'
+  - character: {fileID: 11400000, guid: b3301c203e1570d4baea337fddfeacfa, type: 2}
+    charText: '"Maybe slow down for once."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The answer is probably already in how it looks and breaks apart."'
+    charText: "\"Fine. I\u2019ll check it again.\""
     characterEmotion: 0
     continueCheck: 1

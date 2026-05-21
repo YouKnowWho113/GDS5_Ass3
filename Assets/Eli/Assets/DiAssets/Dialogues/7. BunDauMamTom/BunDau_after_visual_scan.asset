@@ -14,29 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: The dip is the first thing that catches my eye.
+    charText: '"The dip is the first thing that catches my eye."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: That deep purple-brown color has a heavy fermented pull before I even
-      taste it.
+    charText: '"That deep purple-brown color has a heavy fermented pull before I
+      even taste it."'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: The foam on top looks strong too, almost too aggressive for the rest
-      of the platter.
+    charText: '"The foam on top looks strong too, almost too aggressive for the rest
+      of the platter."'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Visually, it promises depth, but also a sharp briny edge.
+    charText: '"Visually, it promises depth, but also a sharp briny edge."'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: The tofu and toppings look clean enough, but the dip is clearly controlling
-      the plate.
+    charText: '"The tofu and toppings look clean enough, but the dip is clearly controlling
+      the plate."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: So the first impression is powerful, maybe a little unbalanced.
+    charText: '"So the first impression is powerful, maybe a little unbalanced."'
     characterEmotion: 0
     continueCheck: 1

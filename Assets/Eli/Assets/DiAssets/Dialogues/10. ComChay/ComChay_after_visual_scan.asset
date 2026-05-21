@@ -10,30 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: BunDau_after_wrong_submit
+  m_Name: ComChay_after_visual_scan
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: "\"Hm. That doesn\u2019t match the plate.\""
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: '"The rice has a deep golden crust around the edges."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"You think so?"'
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"The dip, the foam, and the tofu each give a different clue."'
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
-    charText: '"If you only judge the toppings, you miss what the sauce is doing."'
+    charText: '"Some spots are darker, but not burnt in a careless way."'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"Right. I should check the dip and texture again."'
+    charText: "\"There\u2019s a light glaze sitting on top, like the seasoning was
+      brushed in slowly.\""
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: '"It looks simple, but the surface has warmth."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The answer is probably already in how it looks and breaks apart."'
+    charText: '"Not restaurant-polished. More like something made carefully for someone."'
     characterEmotion: 0
     continueCheck: 1

@@ -1,0 +1,259 @@
+{
+  "dialogues": [
+    {
+      "assetName": "ComTam_after_table_click",
+      "lines": [
+        {
+          "text": "\"Welcome back.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Hm. This place is more crowded than before.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Business has been better lately.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Thanks to a certain critic, maybe.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Well, popularity raises expectations too.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"…Right.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"So? Same confidence as usual, or are you here to actually enjoy the food today?\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Depends. I heard your Cơm Tấm is getting talked about.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Then let’s see if the line outside makes sense.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComTam_after_visual_scan",
+      "lines": [
+        {
+          "text": "\"The ribs have a nice lacquer on the surface.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"There’s a caramel shine around the edges, like the marinade reduced properly.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The rice looks separated too. Not mushy, not clumped into one block.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Each grain still keeps its shape, which is a good sign for a broken-rice plate.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Visually, it has promise. The plate knows how to sell itself.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Heh. That sounds like a compliment.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"For now, it is.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComTam_after_sound_scan",
+      "lines": [
+        {
+          "text": "\"The rib gives me more resistance than I expected.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"When I press in, it doesn’t break cleanly. It pulls back first.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"That kind of bite can work if it feels intentional.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Here, it starts to feel like the meat is making me do extra work.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The rice sounds fine though. Light, separate, not wet and heavy.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"So the base is okay. The rib is where I’m starting to question it.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComTam_before_report",
+      "lines": [
+        {
+          "text": "\"Alright, I think I’ve got the plate now.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The ribs carry a nice caramel layer and a deeper grilled note.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The rice has that broken-grain texture, loose enough to feel proper.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"It isn’t dry either; there’s still enough warmth and softness to carry the sauce.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"But the rib fights back too much.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The plate has good ideas, but the main bite doesn’t land as cleanly as it should.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"That should be enough for the report.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComTam_after_correct_submit",
+      "lines": [
+        {
+          "text": "\"So?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"How’s the Cơm Tấm?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The rice texture was fine.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The broken grains stayed separate, and the sauce didn’t drown them.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The rib had good glaze and a strong grilled depth.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"But it was too resistant for what the plate needed.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"I actually changed the recipe a little…\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"And honestly? I don’t really understand why people line up for this.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"…That harsh, huh?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"I’m just being honest.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComTam_after_wrong_submit",
+      "lines": [
+        {
+          "text": "\"That report feels off.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"You sure you looked at the whole plate?\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The rice, the rib, and the sauce don’t all say the same thing.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"If you only judge the glaze, you’ll miss what happens when you actually press into it.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Right. I should check the surface, the rice, and the bite again.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The answer should come from how it looks and how it breaks down.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    }
+  ]
+}

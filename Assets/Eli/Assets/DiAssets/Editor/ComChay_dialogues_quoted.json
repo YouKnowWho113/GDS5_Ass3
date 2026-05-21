@@ -1,0 +1,214 @@
+{
+  "dialogues": [
+    {
+      "assetName": "ComChay_after_table_click",
+      "lines": [
+        {
+          "text": "\"…Why can’t I stop thinking about what Fendory said?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Tch. These notifications won’t stop either.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"You look exhausted, dear.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"…Just give me anything warm.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"No problem. Sit down first. Rain like this makes people think too much.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"I’m not here to think. Just food.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Then warm food it is.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComChay_after_visual_scan",
+      "lines": [
+        {
+          "text": "\"The rice has a deep golden crust around the edges.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Some spots are darker, but not burnt in a careless way.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"There’s a light glaze sitting on top, like the seasoning was brushed in slowly.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"It looks simple, but the surface has warmth.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Not restaurant-polished. More like something made carefully for someone.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComChay_after_sound_scan",
+      "lines": [
+        {
+          "text": "\"The first touch gives a clean crackle.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Then underneath that, the grains break apart in small, uneven bits.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"It’s not a fancy texture, but it feels honest.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Crisp on the outside, rough and warm inside.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"…That sound reminds me of something.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComChay_before_report",
+      "lines": [
+        {
+          "text": "\"Okay… I think I understand this dish.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"The crust gives it that dry snap first.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Then the broken grains spread the seasoning in little bursts.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"There’s a gentle sweetness under it, but the salty edge keeps it grounded.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"It isn’t trying to impress me.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"It just feels… familiar.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"That should be enough for the report.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComChay_after_correct_submit",
+      "lines": [
+        {
+          "text": "\"…Cơm cháy?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"It’s my son’s favorite dish. I always make it when he comes home.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"…This taste…\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Hm?\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"It reminds me of home.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"Food tastes best when it’s made with care.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"…When did I stop loving food?\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    },
+    {
+      "assetName": "ComChay_after_wrong_submit",
+      "lines": [
+        {
+          "text": "\"Dear, that sounds like you’re forcing an answer.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Food this simple doesn’t need to be bullied into sounding important.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"…Maybe I’m overthinking it.\"",
+          "emotion": "Neutral",
+          "continueCheck": false
+        },
+        {
+          "text": "\"Look again. Listen again.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        },
+        {
+          "text": "\"The crust, the grains, and the seasoning are already telling you enough.\"",
+          "emotion": "Neutral",
+          "continueCheck": true
+        }
+      ]
+    }
+  ]
+}

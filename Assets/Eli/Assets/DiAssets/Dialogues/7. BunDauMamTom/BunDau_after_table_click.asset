@@ -13,44 +13,44 @@ MonoBehaviour:
   m_Name: BunDau_after_table_click
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "IT\u2019S HIM!"
+  - character: {fileID: 11400000, guid: fc4c8d402e2327a4895eef6a3a4ea535, type: 2}
+    charText: "\"IT\u2019S HIM!\""
     characterEmotion: 0
     continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: The famous food critic!
+  - character: {fileID: 11400000, guid: 1bc1264bcd9e44448a6f66d77f95682b, type: 2}
+    charText: '"The famous food critic!"'
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 826f86664d72f9e438717536c7ef4777, type: 2}
+    charText: '"Can I get a picture?!"'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Can I get a picture?!
+    charText: '"Maybe later."'
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: 518bb15ee8597b540a94d5a6a2ca3baa, type: 2}
+    charText: '"Welcome! We prepared our best table for you!"'
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Maybe later.
+    charText: '"Good. I dislike noisy areas."'
     characterEmotion: 0
     continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Welcome! We prepared our best table for you!
+  - character: {fileID: 11400000, guid: 518bb15ee8597b540a94d5a6a2ca3baa, type: 2}
+    charText: "\"Of course! Our chef personally prepared this B\xFAn \u0110\u1EADu
+      platter.\""
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Good. I dislike noisy areas.
+    charText: '"As expected."'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Of course! Our chef personally prepared this B\xFAn \u0110\u1EADu
-      platter."
+    charText: '"A restaurant of this level should know how to welcome important guests."'
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: As expected.
-    characterEmotion: 0
-    continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: A restaurant of this level should know how to welcome important guests.
+  - character: {fileID: 11400000, guid: 518bb15ee8597b540a94d5a6a2ca3baa, type: 2}
+    charText: "\"Y-Yes\u2026\""
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Y-Yes\u2026"
-    characterEmotion: 0
-    continueCheck: 0

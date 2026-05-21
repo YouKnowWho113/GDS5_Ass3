@@ -10,30 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: BunDau_after_sound_scan
+  m_Name: ComChay_after_correct_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The tofu gives way softly when I press it."'
+    charText: "\"\u2026C\u01A1m ch\xE1y?\""
     characterEmotion: 0
     continueCheck: 0
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"No dry crack, no rubbery bounce. The bite sounds gentle enough."'
+  - character: {fileID: 11400000, guid: 0b984171a6a6db64e97413486511e156, type: 2}
+    charText: "\"It\u2019s my son\u2019s favorite dish. I always make it when he
+      comes home.\""
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"But the dip reacts differently."'
+    charText: "\"\u2026This taste\u2026\""
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: 0b984171a6a6db64e97413486511e156, type: 2}
+    charText: '"Hm?"'
     characterEmotion: 0
     continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"When it moves, the foam breaks with a thin, uneven sound."'
+    charText: '"It reminds me of home."'
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 0b984171a6a6db64e97413486511e156, type: 2}
+    charText: "\"Food tastes best when it\u2019s made with care.\""
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"That texture makes the sharper notes stand out more than they should."'
+    charText: "\"\u2026When did I stop loving food?\""
     characterEmotion: 0
     continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: '"The toppings are fine. The sauce is where the balance starts slipping."'
-    characterEmotion: 0
-    continueCheck: 0
