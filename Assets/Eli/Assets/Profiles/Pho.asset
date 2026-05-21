@@ -16,7 +16,7 @@ MonoBehaviour:
   dishDescription: 
   correctEvidence:
   - evidenceID: umami
-    evidenceChannel: 1
+    evidenceChannel: 3
   - evidenceID: tender
     evidenceChannel: 2
   - evidenceID: watery

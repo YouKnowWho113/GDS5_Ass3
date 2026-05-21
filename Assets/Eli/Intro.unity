@@ -627,7 +627,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1000587593}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1
@@ -9190,7 +9190,6 @@ GameObject:
   - component: {fileID: 876100473}
   - component: {fileID: 876100472}
   - component: {fileID: 876100475}
-  - component: {fileID: 876100476}
   - component: {fileID: 876100474}
   m_Layer: 5
   m_Name: NoteBookPanel
@@ -9275,27 +9274,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876100471}
   m_CullTransparentMesh: 1
---- !u!114 &876100476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876100471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d05a85232f6fa4dae0e4bd028ad4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evidenceRoot: {fileID: 0}
-  evidenceObjects:
-  - evidenceID: sweet
-    targetObject: {fileID: 0}
-  - evidenceID: cotony
-    targetObject: {fileID: 0}
-  autoBuildFromChildren: 1
-  includeInactiveChildren: 1
-  hideAllOnStart: 1
 --- !u!1 &886100156
 GameObject:
   m_ObjectHideFlags: 0
@@ -11215,7 +11193,7 @@ MonoBehaviour:
   levelCompCheck: {fileID: 2034109742}
   leftArrow: {fileID: 600422410}
   rightArrow: {fileID: 1793781999}
-  evidenceUI: {fileID: 876100476}
+  evidenceUI: {fileID: 0}
   noteBookTabs: {fileID: 876100472}
   curPage: 1
   gameplayLockReason: Notebook
@@ -11526,9 +11504,9 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1000587592}
-  lightHoldSource: {fileID: 0}
+  lightHoldSource: {fileID: 1000587592}
   masterVolume: 1
-  dialogueVolume: 1
+  dialogueVolume: 0.2
   evidenceVolume: 1
   scanVolume: 1
   reportVolume: 1
@@ -11667,7 +11645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDish: {fileID: 11400000, guid: 3477727a0fe724b498b05773c6b97dcc, type: 2}
-  levelCompCheck: {fileID: 0}
+  levelCompCheck: {fileID: 2034109743}
   remainingTries: 3
   maxSelectedEvidence: 3
   requireEvidenceBeforeCorrect: 0
@@ -11736,28 +11714,8 @@ MonoBehaviour:
   dialogueCanvasRoot: {fileID: 1083861200}
   disableCanvasWhenQueueEnds: 1
   actionDialogues: []
-  evidenceDialogueRules:
-  - evidenceID: salty
-    requiredChannel: 1
-    dialogueKey: after_visual_scan
-    playOnlyOnce: 1
-    hasPlayed: 0
-  - evidenceID: tender
-    requiredChannel: 2
-    dialogueKey: after_sound_scan
-    playOnlyOnce: 1
-    hasPlayed: 0
-  allEvidenceDialogueRules:
-  - requiredEvidence:
-    - evidenceID: salty
-      requiredChannel: 1
-    - evidenceID: sweet
-      requiredChannel: 3
-    - evidenceID: tender
-      requiredChannel: 2
-    dialogueKey: before_report
-    playOnlyOnce: 1
-    hasPlayed: 0
+  evidenceDialogueRules: []
+  allEvidenceDialogueRules: []
   playAfterReportSubmit: 1
   correctReportKey: after_correct_submit
   incorrectReportKey: after_wrong_submit

@@ -1452,7 +1452,7 @@ MonoBehaviour:
   loopWhileHovering: 0
   globalVolume: 1
   playInterval: 0.35
-  colorTolerance: 1
+  colorTolerance: 0.2
   gracePeriod: 1
   regionSwitchDelay: 0.08
   materialDatabase:
@@ -1464,13 +1464,13 @@ MonoBehaviour:
     requiredScanTime: 0.1
   - materialName: Tender
     evidenceID: tender
-    maskColor: {r: 0.86415094, g: 0.017935188, b: 0.11128253, a: 1}
+    maskColor: {r: 0.94509804, g: 0.03137255, b: 0.7176471, a: 1}
     scanSound: {fileID: 8300000, guid: 7bb9a9e5aae793c43a9236cd320987f0, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Watery
     evidenceID: watery
-    maskColor: {r: 0, g: 0.010385752, b: 1, a: 1}
+    maskColor: {r: 0, g: 0.08235294, b: 1, a: 1}
     scanSound: {fileID: 8300000, guid: 6f35fa47a69de0b488ecf5e4cba1bdce, type: 3}
     volume: 1
     requiredScanTime: 0.1
@@ -4742,7 +4742,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1487736200}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1
@@ -13677,9 +13677,9 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1487736199}
-  lightHoldSource: {fileID: 0}
+  lightHoldSource: {fileID: 1487736199}
   masterVolume: 1
-  dialogueVolume: 1
+  dialogueVolume: 0.2
   evidenceVolume: 1
   scanVolume: 1
   reportVolume: 1
@@ -13818,7 +13818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDish: {fileID: 11400000, guid: fc028913181c0fe40bdbee14013f5e7d, type: 2}
-  levelCompCheck: {fileID: 0}
+  levelCompCheck: {fileID: 179322494}
   remainingTries: 3
   maxSelectedEvidence: 3
   requireEvidenceBeforeCorrect: 0
@@ -19660,7 +19660,7 @@ GameObject:
   - component: {fileID: 2048482444}
   - component: {fileID: 2048482443}
   m_Layer: 5
-  m_Name: MenuCanvas (1)
+  m_Name: MenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

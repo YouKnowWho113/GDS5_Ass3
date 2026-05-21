@@ -21,7 +21,7 @@ MonoBehaviour:
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 1
+    hasPlayed: 0
   - key: after_visual_scan
     dialogue: {fileID: 11400000, guid: 7d4c3d20a853077488208ac5e2658928, type: 2}
     playOnlyOnce: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 1
+    hasPlayed: 0
   - key: after_sound_scan
     dialogue: {fileID: 11400000, guid: ea79724c05d36e44a8b29a72c4560ad8, type: 2}
     playOnlyOnce: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 1
+    hasPlayed: 0
   - key: before_report
     dialogue: {fileID: 11400000, guid: 89a287e6006384146b79b9a3f3b067c0, type: 2}
     playOnlyOnce: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
     postDialogueAction: 0
     sceneNameToLoad: 
     postDialogueDelay: 0
-    hasPlayed: 1
+    hasPlayed: 0
   - key: after_correct_submit
     dialogue: {fileID: 11400000, guid: 1902e50d50b6a1d4db2fae095edf7df8, type: 2}
     playOnlyOnce: 1
@@ -72,23 +72,23 @@ MonoBehaviour:
     requiredChannel: 1
     dialogueKey: after_visual_scan
     playOnlyOnce: 1
-    hasPlayed: 1
+    hasPlayed: 0
   - evidenceID: tender
     requiredChannel: 2
     dialogueKey: after_sound_scan
     playOnlyOnce: 1
-    hasPlayed: 1
+    hasPlayed: 0
   allEvidenceDialogueRules:
   - requiredEvidence:
     - evidenceID: umami
-      requiredChannel: 1
+      requiredChannel: 3
     - evidenceID: watery
       requiredChannel: 2
     - evidenceID: tender
       requiredChannel: 2
     dialogueKey: before_report
     playOnlyOnce: 1
-    hasPlayed: 1
+    hasPlayed: 0
   playAfterReportSubmit: 1
   correctReportKey: after_correct_submit
   incorrectReportKey: after_wrong_submit

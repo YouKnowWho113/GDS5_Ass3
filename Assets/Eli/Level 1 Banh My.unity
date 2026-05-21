@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1159629365}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1
@@ -10454,7 +10454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDish: {fileID: 11400000, guid: e850fb63e8d80014585c185b1ca0e58d, type: 2}
-  levelCompCheck: {fileID: 0}
+  levelCompCheck: {fileID: 1899949491}
   remainingTries: 3
   maxSelectedEvidence: 3
   requireEvidenceBeforeCorrect: 0
@@ -10500,9 +10500,9 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   autoSubscribeToGameEvents: 1
   sfxSource: {fileID: 1159629369}
-  lightHoldSource: {fileID: 0}
+  lightHoldSource: {fileID: 1159629369}
   masterVolume: 1
-  dialogueVolume: 1
+  dialogueVolume: 0.2
   evidenceVolume: 1
   scanVolume: 1
   reportVolume: 1
@@ -14165,14 +14165,8 @@ MonoBehaviour:
     requiredScanTime: 0.1
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 1, g: 0, b: 0.06754398, a: 0}
+    maskColor: {r: 1, g: 0, b: 0.015686275, a: 0}
     scanSound: {fileID: 8300000, guid: c45f9e32a4618a0478f36b33b4d24349, type: 3}
-    volume: 1
-    requiredScanTime: 0.1
-  - materialName: Tender
-    evidenceID: tender
-    maskColor: {r: 0, g: 0.27434874, b: 1, a: 0}
-    scanSound: {fileID: 8300000, guid: 7bb9a9e5aae793c43a9236cd320987f0, type: 3}
     volume: 1
     requiredScanTime: 0.1
   debugMode: 0
