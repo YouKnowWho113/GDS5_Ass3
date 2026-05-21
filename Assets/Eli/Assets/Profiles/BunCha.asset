@@ -18,10 +18,10 @@ MonoBehaviour:
   - evidenceID: sweet
     evidenceChannel: 3
   - evidenceID: umami
-    evidenceChannel: 1
+    evidenceChannel: 3
   - evidenceID: salty
     evidenceChannel: 3
   - evidenceID: tender
-    evidenceChannel: 2
+    evidenceChannel: 3
   - evidenceID: watery
-    evidenceChannel: 2
+    evidenceChannel: 3

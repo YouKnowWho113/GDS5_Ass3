@@ -16,8 +16,12 @@ MonoBehaviour:
   dishDescription: 
   correctEvidence:
   - evidenceID: umami
-    evidenceChannel: 1
-  - evidenceID: sweet
+    evidenceChannel: 3
+  - evidenceID: sour
     evidenceChannel: 3
   - evidenceID: tender
-    evidenceChannel: 2
+    evidenceChannel: 3
+  - evidenceID: salty
+    evidenceChannel: 3
+  - evidenceID: cotony
+    evidenceChannel: 3

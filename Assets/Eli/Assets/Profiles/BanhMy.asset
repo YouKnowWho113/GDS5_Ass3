@@ -19,3 +19,7 @@ MonoBehaviour:
     evidenceChannel: 3
   - evidenceID: umami
     evidenceChannel: 3
+  - evidenceID: tender
+    evidenceChannel: 3
+  - evidenceID: crispy
+    evidenceChannel: 3

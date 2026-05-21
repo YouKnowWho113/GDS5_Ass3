@@ -21,3 +21,5 @@ MonoBehaviour:
     evidenceChannel: 3
   - evidenceID: sour
     evidenceChannel: 3
+  - evidenceID: watery
+    evidenceChannel: 3

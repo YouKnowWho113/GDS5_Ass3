@@ -22392,20 +22392,20 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Salty
     evidenceID: salty
-    maskColor: {r: 0, g: 0, b: 0, a: 1}
+    maskColor: {r: 1, g: 0, b: 0.81018925, a: 1}
     scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 0, g: 0, b: 0, a: 1}
+    maskColor: {r: 1, g: 0, b: 0, a: 1}
     scanSound: {fileID: 8300000, guid: c45f9e32a4618a0478f36b33b4d24349, type: 3}
     volume: 1
     requiredScanTime: 0.1
-  - materialName: Crunchy
-    evidenceID: crunchy
+  - materialName: Crispy
+    evidenceID: crispy
     maskColor: {r: 1, g: 0.9647059, b: 0, a: 1}
-    scanSound: {fileID: 8300000, guid: 081ba88f5f7c0dc49aa99149cb2118db, type: 3}
+    scanSound: {fileID: 8300000, guid: 67a9382a79a3e174d85622a07fea49c5, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Watery

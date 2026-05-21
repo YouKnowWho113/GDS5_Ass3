@@ -17,3 +17,5 @@ MonoBehaviour:
   correctEvidence:
   - evidenceID: sweet
     evidenceChannel: 3
+  - evidenceID: cotony
+    evidenceChannel: 3
