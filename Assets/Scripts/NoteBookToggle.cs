@@ -31,11 +31,6 @@ public class NoteBookToggle : MonoBehaviour
     
     private void Awake()
     {
-        if (levelCompCheck == null)
-        {
-            levelCompCheck = GameObject.Find("LevelCompCheck");
-        }
-
         CloseJournal();
     }
     
@@ -57,6 +52,11 @@ public class NoteBookToggle : MonoBehaviour
 
     public void Update()
     {
+        if (levelCompCheck == null)
+        {
+            levelCompCheck = GameObject.Find("LevelCompCheck");
+        }
+
         if (curPage == 0)
         {
             leftArrow.SetActive(false);
