@@ -6694,6 +6694,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+--- !u!1 &666132430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8644124957449841530, guid: 74258bc25dd34a14582092297eba566f, type: 3}
+  m_PrefabInstance: {fileID: 666132429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &670205627
 GameObject:
   m_ObjectHideFlags: 0
@@ -10528,6 +10533,7 @@ GameObject:
   - component: {fileID: 1159629371}
   - component: {fileID: 1159629370}
   - component: {fileID: 1159629368}
+  - component: {fileID: 1159629372}
   m_Layer: 0
   m_Name: GameSystems
   m_TagString: Untagged
@@ -10641,7 +10647,7 @@ MonoBehaviour:
   startMenuPanel: {fileID: 2076766952}
   tableButton: {fileID: 778472899}
   dialogueTrigger: {fileID: 0}
-  dialogueTriggerAction: {fileID: 0}
+  dialogueTriggerAction: {fileID: 1159629372}
   dialogueKeyAfterTableClick: after_table_click
   playDialogueAfterTableClick: 1
   menuCursorTexture: {fileID: 2800000, guid: 57b86b03ae4c0be4897d5afaa6d95261, type: 3}
@@ -10743,6 +10749,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1159629372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159629364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1095372586e8d419c4cd14ab93e3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodDialogue: {fileID: 11400000, guid: ab549dc3e9e399c48ab8a48b1138c3ab, type: 2}
+  useFoodDialogueAsset: 1
+  dialogueCanvasRoot: {fileID: 666132430}
+  disableCanvasWhenQueueEnds: 1
+  actionDialogues: []
+  evidenceDialogueRules: []
+  allEvidenceDialogueRules: []
+  playAfterReportSubmit: 1
+  correctReportKey: after_correct_submit
+  incorrectReportKey: after_wrong_submit
+  submitDialogueDelay: 0.2
+  waitUntilCurrentDialogueEnds: 1
+  waitForFoodScanAudioBeforeAllEvidenceDialogue: 1
+  foodScanAudioWaitTimeout: 6
+  logEvidenceChecks: 1
 --- !u!1 &1173652281
 GameObject:
   m_ObjectHideFlags: 0

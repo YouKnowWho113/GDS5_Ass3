@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDialogues:
   - key: after_table_click
-    dialogue: {fileID: 11400000, guid: cc036a099b4c9ff4fa6cfe55a060a3ef, type: 2}
+    dialogue: {fileID: 11400000, guid: 5d5ef25b216809047afc954226475f81, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
@@ -23,7 +23,7 @@ MonoBehaviour:
     postDialogueDelay: 0
     hasPlayed: 1
   - key: after_visual_scan
-    dialogue: {fileID: 11400000, guid: 7484b11c4fb252e4687ede615ebd26f4, type: 2}
+    dialogue: {fileID: 11400000, guid: 23bd9b0c9187d364199dc6d0b50f5db9, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 0
     gameplayLockReason: Dialogue
@@ -32,7 +32,7 @@ MonoBehaviour:
     postDialogueDelay: 0
     hasPlayed: 1
   - key: after_sound_scan
-    dialogue: {fileID: 11400000, guid: adfae6faf113a0d4889fa7bb29b49629, type: 2}
+    dialogue: {fileID: 11400000, guid: cbae4e7cec7399e459c5578b123a9161, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 0
     gameplayLockReason: Dialogue
@@ -41,7 +41,7 @@ MonoBehaviour:
     postDialogueDelay: 0
     hasPlayed: 1
   - key: before_report
-    dialogue: {fileID: 11400000, guid: 6c89813fa9430e94c822db20f2804c2a, type: 2}
+    dialogue: {fileID: 11400000, guid: a437717704fbac74ea9a82e0c81dfec5, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
@@ -50,7 +50,7 @@ MonoBehaviour:
     postDialogueDelay: 0
     hasPlayed: 1
   - key: after_correct_submit
-    dialogue: {fileID: 11400000, guid: c15fbdef4ef19c54086d6b16a305db9f, type: 2}
+    dialogue: {fileID: 11400000, guid: 80d31d013bd482a42aeb741b05726609, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
@@ -59,7 +59,7 @@ MonoBehaviour:
     postDialogueDelay: 0.3
     hasPlayed: 0
   - key: after_wrong_submit
-    dialogue: {fileID: 11400000, guid: 87898151ccc8faa4780c0d8734e127db, type: 2}
+    dialogue: {fileID: 11400000, guid: 4052ccc88ccfcbd41ae9cf51cf7795c0, type: 2}
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
@@ -68,7 +68,7 @@ MonoBehaviour:
     postDialogueDelay: 0.3
     hasPlayed: 0
   evidenceDialogueRules:
-  - evidenceID: salty
+  - evidenceID: sweet
     requiredChannel: 1
     dialogueKey: after_visual_scan
     playOnlyOnce: 1
@@ -80,13 +80,13 @@ MonoBehaviour:
     hasPlayed: 1
   allEvidenceDialogueRules:
   - requiredEvidence:
-    - evidenceID: salty
-      requiredChannel: 3
     - evidenceID: sweet
       requiredChannel: 3
-    - evidenceID: crispy
+    - evidenceID: salty
+      requiredChannel: 3
+    - evidenceID: grainy
       requiredChannel: 2
-    - evidenceID: chewy
+    - evidenceID: crispy
       requiredChannel: 2
     dialogueKey: before_report
     playOnlyOnce: 1

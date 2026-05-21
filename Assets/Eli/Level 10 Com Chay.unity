@@ -10381,9 +10381,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDish: {fileID: 11400000, guid: 1aa43f69f5552fe48b507318b860c997, type: 2}
-  levelCompCheck: {fileID: 0}
+  levelCompCheck: {fileID: 1559545935}
   remainingTries: 3
-  maxSelectedEvidence: 5
+  maxSelectedEvidence: 4
   requireEvidenceBeforeCorrect: 0
 --- !u!114 &1159629366
 MonoBehaviour:
@@ -10588,7 +10588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1095372586e8d419c4cd14ab93e3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodDialogue: {fileID: 11400000, guid: 9b701dfa5df314044a67627d26df823c, type: 2}
+  foodDialogue: {fileID: 11400000, guid: 3a5fe4b219ce7074a8acc0e0bb9a6af0, type: 2}
   useFoodDialogueAsset: 1
   dialogueCanvasRoot: {fileID: 439255593}
   disableCanvasWhenQueueEnds: 1
