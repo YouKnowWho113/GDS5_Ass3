@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 177c24059c31ee74cab2bfbdddb04ede
+guid: 6e3c85c95088f2541a882353a2417b7e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Playwrite GB S
+  - Young Display Bold
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
