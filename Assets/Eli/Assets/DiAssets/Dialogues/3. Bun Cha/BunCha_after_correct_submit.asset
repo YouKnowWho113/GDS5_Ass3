@@ -10,51 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e99d2aa6db43f2478d3198a0ca05313, type: 3}
-  m_Name: depricated 3
+  m_Name: BunCha_after_correct_submit
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Wow~ It\u2019s\u2026"
+  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
+    charText: "\u201CUh\u2026 Mr. Food Critic\u2026 how did it taste?\u201D"
     characterEmotion: 0
     continueCheck: 0
-  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
-    charText: "Uh\u2026 Umm. Mr. Food Critic\u2026"
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CIt was great.\u201D"
+    characterEmotion: 0
+    continueCheck: 1
+  - character: {fileID: 11400000, guid: 66353d41dda40ed4b916194c7b110f3c, type: 2}
+    charText: "\u201CThe sauce had that sweet-salty balance without feeling messy.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CAnd the pork carried the umami really well.\u201D"
+    characterEmotion: 0
+    continueCheck: 0
+  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
+    charText: "\u201CTender too. It didn\u2019t fight back when I bit into it.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Oh! Yes?
+    charText: "\u201CYour place deserves way more guests than this.\u201D"
     characterEmotion: 0
-    continueCheck: 1
+    continueCheck: 0
   - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: 'Ah! Right. You can just call me '
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
-    charText: O-Okay... how did it taste?
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: IT! WAS! GREAT!!
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: How come I have never had anything like this?
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
-    charText: "Oh, it\u2019s noth-"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: "Your place deserves way more guests than just this. Don\u2019t worry,
-      I\u2019m gonna write the best review for you"
-    characterEmotion: 0
-    continueCheck: 1
-  - character: {fileID: 11400000, guid: dcbb5bf5c792b71498b2fb1c38ad7fd7, type: 2}
-    charText: Hope that it will help you a bit
+    charText: "\u201CI\u2019ll write a good review. Hope it helps a bit.\u201D"
     characterEmotion: 0
     continueCheck: 1
   - character: {fileID: 11400000, guid: 1a5b9bec349684c4fa27f47e4f1c1f8f, type: 2}
-    charText: (teary) Th-Thank you so much!
+    charText: "\u201CTh-Thank you so much!\u201D"
     characterEmotion: 0
     continueCheck: 1
