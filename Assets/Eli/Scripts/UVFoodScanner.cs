@@ -30,6 +30,7 @@ public class UVFoodScanner : MonoBehaviour
     private readonly Collider2D[] hits = new Collider2D[32];
 
     private bool wasLightScanning;
+    private bool hasInitializedLightSFX;
 
     private void Awake()
     {
@@ -55,7 +56,15 @@ public class UVFoodScanner : MonoBehaviour
 
         bool scanning = !requireInput || Input.GetMouseButton(mouseButton);
 
-        HandleLightSFX(scanning);
+        if (!hasInitializedLightSFX)
+        {
+            hasInitializedLightSFX = true;
+            wasLightScanning = scanning;
+        }
+        else
+        {
+            HandleLightSFX(scanning);
+        }
 
         UpdateScannerLight(scanning);
 
@@ -138,7 +147,9 @@ public class UVFoodScanner : MonoBehaviour
             scannerLight2D.intensity = 0f;
             scannerLight2D.enabled = false;
         }
+
         wasLightScanning = false;
+        hasInitializedLightSFX = false;
 
         if (SFXManager.instance != null)
             SFXManager.instance.StopLightHold();
