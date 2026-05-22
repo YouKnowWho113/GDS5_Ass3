@@ -5884,7 +5884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 495060249}
-  messageText: {fileID: 0}
+  messageText: {fileID: 634766922}
   defaultMessage: After that, you head to the street vendor.
   transitionTexts:
   - fromSceneIndex: 8
@@ -8952,7 +8952,7 @@ MonoBehaviour:
   - {fileID: 1390121575}
   - {fileID: 1908197798}
   - {fileID: 732001747}
-  - {fileID: 0}
+  - {fileID: 117124319}
   - {fileID: 1371385709}
   - {fileID: 253741853}
   - {fileID: 671884585}

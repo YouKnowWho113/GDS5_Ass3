@@ -5831,7 +5831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 543121214}
-  messageText: {fileID: 0}
+  messageText: {fileID: 116439258}
   defaultMessage: sybau
   transitionTexts:
   - fromSceneIndex: 6
@@ -13194,7 +13194,7 @@ MonoBehaviour:
   currentDish: {fileID: 11400000, guid: a5e44b6ad0e81514cb868d81d12bb3fe, type: 2}
   levelCompCheck: {fileID: 0}
   remainingTries: 3
-  maxSelectedEvidence: 3
+  maxSelectedEvidence: 4
   requireEvidenceBeforeCorrect: 0
 --- !u!114 &1159629366
 MonoBehaviour:

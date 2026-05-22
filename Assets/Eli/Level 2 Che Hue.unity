@@ -15368,7 +15368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1497413457}
-  messageText: {fileID: 0}
+  messageText: {fileID: 1524045244}
   defaultMessage: sybau
   transitionTexts:
   - fromSceneIndex: 3
