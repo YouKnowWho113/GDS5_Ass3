@@ -7889,7 +7889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &673820765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11776,7 +11776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &979154596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17567,7 +17567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1563017502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20190,7 +20190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1850258085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21477,7 +21477,12 @@ MonoBehaviour:
   canvasGroup: {fileID: 1946831014}
   messageText: {fileID: 0}
   defaultMessage: You walk out in a rainy day, deeply think about what Fendory saod
-  transitionTexts: []
+  transitionTexts:
+  - fromSceneIndex: 10
+    toSceneIndex: 11
+    message: 'Back where the journey began...
+
+'
   fadeInDuration: 1
   holdDuration: 10
   fadeOutDuration: 1

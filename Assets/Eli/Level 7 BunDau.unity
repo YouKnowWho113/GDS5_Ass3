@@ -1236,7 +1236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &89757097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5886,7 +5886,12 @@ MonoBehaviour:
   canvasGroup: {fileID: 495060249}
   messageText: {fileID: 0}
   defaultMessage: After that, you head to the street vendor.
-  transitionTexts: []
+  transitionTexts:
+  - fromSceneIndex: 8
+    toSceneIndex: 9
+    message: 'At a restaurant collaboration...
+
+'
   fadeInDuration: 1
   holdDuration: 10
   fadeOutDuration: 1
@@ -12637,7 +12642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1062442660
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15658,7 +15663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1311852114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22938,7 +22943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1970797883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23835,7 +23840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2073316567
 RectTransform:
   m_ObjectHideFlags: 0

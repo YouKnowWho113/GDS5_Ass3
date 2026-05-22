@@ -44,7 +44,7 @@ public class LevelCompCheck : MonoBehaviour
 
         if (lvS != null && level < lvS.Length)
         {
-            lvS[level] = true;
+            lvS[level - 1] = true;
             Debug.Log("[LevelCompCheck] Level completed: " + level);
         }
         else

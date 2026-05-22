@@ -9231,8 +9231,8 @@ RectTransform:
   - {fileID: 193385617}
   - {fileID: 1498552088}
   - {fileID: 1795600735}
-  - {fileID: 1658302820}
   - {fileID: 368659928}
+  - {fileID: 1658302820}
   - {fileID: 2091270657}
   m_Father: {fileID: 989251791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9409,8 +9409,8 @@ MonoBehaviour:
   overviewPanel: {fileID: 193385616}
   foodImagePanel: {fileID: 1498552087}
   texTasPanel: {fileID: 1795600734}
-  conclusionPanel: {fileID: 1658302819}
-  instructionPanel: {fileID: 368659927}
+  conclusionPanel: {fileID: 368659927}
+  instructionPanel: {fileID: 1658302819}
   menuPanel: {fileID: 2091270656}
   evidenceUI: {fileID: 989251787}
 --- !u!224 &876100473
@@ -19633,9 +19633,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1730517847}
-  messageText: {fileID: 0}
-  defaultMessage: STFU
-  transitionTexts: []
+  messageText: {fileID: 1008372397}
+  defaultMessage: 
+  transitionTexts:
+  - fromSceneIndex: 1
+    toSceneIndex: 2
+    message: 'Back where the journey began...
+
+'
   fadeInDuration: 1
   holdDuration: 10
   fadeOutDuration: 1
