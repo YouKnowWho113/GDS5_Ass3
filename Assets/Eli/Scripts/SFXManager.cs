@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager Instance;
-    public static SFXManager instance; // legacy support for existing scripts
+    public static SFXManager instance;
 
     [Header("Lifetime")]
     [SerializeField] private bool dontDestroyOnLoad = false;
@@ -15,20 +15,17 @@ public class SFXManager : MonoBehaviour
 
     [Header("Audio Source")]
     [SerializeField] private AudioSource sfxSource;
-
-    [Tooltip("Separate looping source for held flashlight/light sound. Optional. If empty, it is created automatically.")]
     [SerializeField] private AudioSource lightHoldSource;
 
     [Header("Volume")]
     [Range(0f, 1f)][SerializeField] private float masterVolume = 1f;
     [Range(0f, 1f)][SerializeField] private float dialogueVolume = 1f;
     [Range(0f, 1f)][SerializeField] private float evidenceVolume = 1f;
-    [Range(0f, 1f)][SerializeField] private float scanVolume = 1f;
+    [Range(0f, 1f)][SerializeField] private float lightVolume = 1f;
     [Range(0f, 1f)][SerializeField] private float reportVolume = 1f;
     [Range(0f, 1f)][SerializeField] private float uiVolume = 1f;
 
     [Header("Spam Protection")]
-    [Tooltip("Prevents the same clip from firing multiple times in the same moment.")]
     [SerializeField] private float repeatedClipCooldown = 0.03f;
 
     [Header("Dialogue")]
@@ -47,32 +44,23 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioClip lightClose;
     [SerializeField] private AudioClip lightHoldLoop;
 
-    [Header("Legacy Scanner Fallbacks")]
-    [Tooltip("Old scanner start sound. Used only if Light Open is empty.")]
-    [SerializeField] private AudioClip scanStart;
-    [Tooltip("Old scanner stop sound. Used only if Light Close is empty.")]
-    [SerializeField] private AudioClip scanStop;
-    [SerializeField] private AudioClip invalidAction;
-
     [Header("Report")]
     [SerializeField] private AudioClip reportSelect;
     [SerializeField] private AudioClip reportRemove;
     [SerializeField] private AudioClip reportCorrect;
     [SerializeField] private AudioClip reportWrong;
 
-    [Header("Journal / Panels")]
+    [Header("Journal")]
     [SerializeField] private AudioClip journalOpen;
     [SerializeField] private AudioClip journalClose;
-    [SerializeField] private AudioClip panelOpen;
-    [SerializeField] private AudioClip panelClose;
 
     [Header("UI")]
     [SerializeField] private AudioClip uiClick;
     [SerializeField] private AudioClip uiConfirm;
     [SerializeField] private AudioClip uiBack;
+    [SerializeField] private AudioClip invalidAction;
 
-    private readonly Dictionary<AudioClip, float> lastPlayedTime =
-        new Dictionary<AudioClip, float>();
+    private readonly Dictionary<AudioClip, float> lastPlayedTime = new Dictionary<AudioClip, float>();
 
     private bool subscribedToEvidence;
     private bool subscribedToReport;
@@ -144,7 +132,7 @@ public class SFXManager : MonoBehaviour
         lightHoldSource.playOnAwake = false;
         lightHoldSource.loop = true;
         lightHoldSource.clip = lightHoldLoop;
-        lightHoldSource.volume = Mathf.Clamp01(masterVolume * scanVolume);
+        lightHoldSource.volume = Mathf.Clamp01(masterVolume * lightVolume);
     }
 
     private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -154,7 +142,6 @@ public class SFXManager : MonoBehaviour
         if (!autoSubscribeToGameEvents)
             return;
 
-        // If this manager persists across scenes, old scene objects were destroyed.
         subscribedToEvidence = false;
         subscribedToReport = false;
 
@@ -225,10 +212,6 @@ public class SFXManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, finalVolume);
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // Dialogue
-    // ─────────────────────────────────────────────────────────────────────────
-
     public void PlayDialogueOpen()
     {
         Play(dialogueOpen, dialogueVolume);
@@ -243,10 +226,6 @@ public class SFXManager : MonoBehaviour
     {
         Play(dialogueClose, dialogueVolume);
     }
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // Evidence
-    // ─────────────────────────────────────────────────────────────────────────
 
     public void PlayEvidenceFound()
     {
@@ -267,18 +246,14 @@ public class SFXManager : MonoBehaviour
         Play(selectedClip, evidenceVolume);
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // Light Tool
-    // ─────────────────────────────────────────────────────────────────────────
-
     public void PlayLightOpen()
     {
-        Play(lightOpen != null ? lightOpen : scanStart, scanVolume);
+        Play(lightOpen, lightVolume);
     }
 
     public void PlayLightClose()
     {
-        Play(lightClose != null ? lightClose : scanStop, scanVolume);
+        Play(lightClose, lightVolume);
     }
 
     public void StartLightHold()
@@ -293,7 +268,7 @@ public class SFXManager : MonoBehaviour
             return;
 
         lightHoldSource.clip = lightHoldLoop;
-        lightHoldSource.volume = Mathf.Clamp01(masterVolume * scanVolume);
+        lightHoldSource.volume = Mathf.Clamp01(masterVolume * lightVolume);
         lightHoldSource.loop = true;
         lightHoldSource.Play();
     }
@@ -311,15 +286,6 @@ public class SFXManager : MonoBehaviour
         else
             StopLightHold();
     }
-
-    public void PlayInvalidAction()
-    {
-        Play(invalidAction, uiVolume, 0.9f);
-    }
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // Report
-    // ─────────────────────────────────────────────────────────────────────────
 
     public void PlayReportSelect()
     {
@@ -344,18 +310,14 @@ public class SFXManager : MonoBehaviour
         Play(correct ? reportCorrect : reportWrong, reportVolume);
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // Journal / Panels / UI
-    // ─────────────────────────────────────────────────────────────────────────
-
     public void PlayJournalOpen()
     {
-        Play(journalOpen != null ? journalOpen : panelOpen, uiVolume);
+        Play(journalOpen, uiVolume);
     }
 
     public void PlayJournalClose()
     {
-        Play(journalClose != null ? journalClose : panelClose, uiVolume);
+        Play(journalClose, uiVolume);
     }
 
     public void PlayJournalToggle(bool isOpen)
@@ -364,24 +326,6 @@ public class SFXManager : MonoBehaviour
             PlayJournalOpen();
         else
             PlayJournalClose();
-    }
-
-    public void PlayPanelOpen()
-    {
-        Play(panelOpen, uiVolume);
-    }
-
-    public void PlayPanelClose()
-    {
-        Play(panelClose, uiVolume);
-    }
-
-    public void PlayPanelToggle(bool isOpen)
-    {
-        if (isOpen)
-            PlayPanelOpen();
-        else
-            PlayPanelClose();
     }
 
     public void PlayUIClick()
@@ -399,47 +343,8 @@ public class SFXManager : MonoBehaviour
         Play(uiBack != null ? uiBack : uiClick, uiVolume);
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // Legacy wrappers so older prototype scripts do not break.
-    // ─────────────────────────────────────────────────────────────────────────
-
-    public void PlayScanStart()
+    public void PlayInvalidAction()
     {
-        PlayLightOpen();
-    }
-
-    public void PlayScanStop()
-    {
-        PlayLightClose();
-    }
-
-    public void PlayObjectSelect()
-    {
-        PlayUIClick();
-    }
-
-    public void PlayInvalidPlacement()
-    {
-        PlayInvalidAction();
-    }
-
-    public void PlayPlaceConfirm()
-    {
-        PlayUIConfirm();
-    }
-
-    public void PlaySpawnNext()
-    {
-        PlayUIConfirm();
-    }
-
-    public void PlayRotateStart()
-    {
-        PlayLightOpen();
-    }
-
-    public void PlayRotateStop()
-    {
-        PlayLightClose();
+        Play(invalidAction, uiVolume);
     }
 }
