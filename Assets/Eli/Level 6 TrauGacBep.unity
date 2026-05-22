@@ -8664,7 +8664,7 @@ MonoBehaviour:
   transitionTexts:
   - fromSceneIndex: 7
     toSceneIndex: 8
-    message: "Back at Fendory\u2019s crowded vendor...\r\n"
+    message: "At Dina\u2019s growing diner..."
   fadeInDuration: 1
   holdDuration: 10
   fadeOutDuration: 1
@@ -16532,7 +16532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STFU
+  m_text: "At Dina\u2019s growing diner..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
   m_sharedMaterial: {fileID: -7784278538909227094, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
