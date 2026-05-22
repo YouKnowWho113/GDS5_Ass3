@@ -10859,7 +10859,7 @@ MonoBehaviour:
   visibleEvidenceFound: {fileID: 0}
   audibleEvidenceFound: {fileID: 0}
   bothEvidenceFound: {fileID: 0}
-  lightOpen: {fileID: 8300000, guid: eb08f44cd3dd1044a9ba2ba593121009, type: 3}
+  lightOpen: {fileID: 0}
   lightClose: {fileID: 8300000, guid: 40308a3575006734ab636e38582f2b8e, type: 3}
   lightHoldLoop: {fileID: 0}
   reportSelect: {fileID: 8300000, guid: 769741a43f3d9a94ba6f513fc2a602c8, type: 3}
