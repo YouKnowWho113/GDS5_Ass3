@@ -125,6 +125,8 @@ public class NoteBookToggle : MonoBehaviour
         {
             noteBookTabs.OpenConclusion();
             journal.SetActive(true);
+            if (SFXManager.instance != null)
+                SFXManager.instance.PlayJournalOpen();
 
             GameplayInputLock.Lock(gameplayLockReason);
             ownsNotebookLock = true;
@@ -145,8 +147,13 @@ public class NoteBookToggle : MonoBehaviour
     {
         if (journal != null)
         {
-            curPage = levelCompCheck.GetComponent<LevelCompCheck>().curLevel - 1;
+            if (levelCompCheck != null)
+                curPage = levelCompCheck.GetComponent<LevelCompCheck>().curLevel - 1;
+
             journal.SetActive(false);
+
+            if (SFXManager.instance != null)
+                SFXManager.instance.PlayJournalClose();
         }
 
         if (ownsNotebookLock)
