@@ -29,6 +29,11 @@ public static class GameplayInputLock
         activeLocks.Clear();
     }
 
+    public static void ClearAllLocks()
+    {
+        activeLocks.Clear();
+    }
+
     private static string Normalize(string reason)
     {
         return string.IsNullOrWhiteSpace(reason) ? "Unknown" : reason;

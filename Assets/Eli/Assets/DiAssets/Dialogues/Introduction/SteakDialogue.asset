@@ -54,7 +54,7 @@ MonoBehaviour:
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
-    postDialogueAction: 1
+    postDialogueAction: 4
     sceneNameToLoad: 
     postDialogueDelay: 0.3
     hasPlayed: 0
@@ -72,12 +72,12 @@ MonoBehaviour:
     requiredChannel: 1
     dialogueKey: after_visual_scan
     playOnlyOnce: 1
-    hasPlayed: 1
+    hasPlayed: 0
   - evidenceID: tender
     requiredChannel: 2
     dialogueKey: after_sound_scan
     playOnlyOnce: 1
-    hasPlayed: 1
+    hasPlayed: 0
   allEvidenceDialogueRules:
   - requiredEvidence:
     - evidenceID: salty
@@ -88,7 +88,7 @@ MonoBehaviour:
       requiredChannel: 2
     dialogueKey: before_report
     playOnlyOnce: 1
-    hasPlayed: 1
+    hasPlayed: 0
   playAfterReportSubmit: 1
   correctReportKey: after_correct_submit
   incorrectReportKey: after_wrong_submit

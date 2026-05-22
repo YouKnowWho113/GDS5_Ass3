@@ -38,6 +38,8 @@ public class StartGameplayMenu : MonoBehaviour
         if (startMenuPanel != null)
             startMenuPanel.SetActive(true);
 
+        GameplayInputLock.Lock("StartMenu");
+
         SetMenuCursor();
     }
 
@@ -52,20 +54,20 @@ public class StartGameplayMenu : MonoBehaviour
         if (startMenuPanel != null)
             startMenuPanel.SetActive(false);
 
+        GameplayInputLock.Unlock("StartMenu");
+
         if (hideSystemCursorWhenGameplayStarts)
             Cursor.visible = false;
 
         if (!playDialogueAfterTableClick)
             return;
 
-        // Preferred: action/key-based dialogue trigger.
         if (dialogueTriggerAction != null)
         {
             dialogueTriggerAction.PlayByKey(dialogueKeyAfterTableClick);
             return;
         }
 
-        // Fallback: old dialogue trigger.
         if (dialogueTrigger != null)
         {
             dialogueTrigger.PlaySceneStartManually();

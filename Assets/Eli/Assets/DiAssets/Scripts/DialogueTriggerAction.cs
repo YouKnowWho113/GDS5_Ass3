@@ -14,7 +14,8 @@ public class DialogueTriggerAction : MonoBehaviour
         None,
         LoadNextScene,
         ReloadCurrentScene,
-        LoadSceneByName
+        LoadSceneByName,
+        TransitionNextScene
     }
 
     [System.Serializable]
@@ -586,6 +587,25 @@ public class DialogueTriggerAction : MonoBehaviour
 
                 SceneManager.LoadScene(entry.sceneNameToLoad);
                 break;
+
+            case PostDialogueAction.TransitionNextScene:
+                {
+                    if (SceneTransitionFade.Instance != null)
+                    {
+                        SceneTransitionFade.Instance.TransitionToNextScene("TO BE CONTINUED...");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[DialogueTriggerAction] SceneTransitionFade missing. Loading next scene directly.");
+
+                        int directNextIndex = currentIndex + 1;
+
+                        if (directNextIndex < SceneManager.sceneCountInBuildSettings)
+                            SceneManager.LoadScene(directNextIndex);
+                    }
+
+                    break;
+                }
         }
     }
 }
