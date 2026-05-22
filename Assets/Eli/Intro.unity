@@ -11149,7 +11149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TO BE CONTINUED...
+  m_text: STFU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
   m_sharedMaterial: {fileID: -7784278538909227094, guid: f6b83f304dc3a98448bbbbe575dcc972, type: 2}
@@ -17106,7 +17106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1730517847}
   messageText: {fileID: 0}
-  defaultMessage: TO BE CONTINUED...
+  defaultMessage: STFU
   fadeInDuration: 1
   holdDuration: 10
   fadeOutDuration: 1

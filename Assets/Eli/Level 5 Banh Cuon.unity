@@ -3229,8 +3229,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 3e5ee7641eda8554e8acaadbd2f0b819, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: cb48e14a4eb7c134691d19d8efdff79c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15350,7 +15350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodRenderer: {fileID: 1600606023}
-  colorMask: {fileID: 2800000, guid: 3e5ee7641eda8554e8acaadbd2f0b819, type: 3}
+  colorMask: {fileID: 2800000, guid: cb48e14a4eb7c134691d19d8efdff79c, type: 3}
   mouseButton: 0
   ignoreUI: 1
   audioSource: {fileID: 1600606024}
@@ -15363,25 +15363,25 @@ MonoBehaviour:
   materialDatabase:
   - materialName: Sweet
     evidenceID: sweet
-    maskColor: {r: 1, g: 0, b: 0.029707909, a: 1}
+    maskColor: {r: 0.9960785, g: 0, b: 0.81568635, a: 1}
     scanSound: {fileID: 8300000, guid: c45f9e32a4618a0478f36b33b4d24349, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Watery
     evidenceID: watery
-    maskColor: {r: 0, g: 0.38142967, b: 1, a: 1}
+    maskColor: {r: 0.9960785, g: 0.98823535, b: 0, a: 1}
     scanSound: {fileID: 8300000, guid: 6f35fa47a69de0b488ecf5e4cba1bdce, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Sour
     evidenceID: sour
-    maskColor: {r: 0.93848777, g: 1, b: 0, a: 1}
+    maskColor: {r: 0.9960785, g: 0.4156863, b: 0, a: 1}
     scanSound: {fileID: 8300000, guid: 052034a3a6535de47933948f4cc06878, type: 3}
     volume: 1
     requiredScanTime: 0.1
   - materialName: Tender
     evidenceID: tender
-    maskColor: {r: 0, g: 1, b: 0.0033640862, a: 1}
+    maskColor: {r: 0.07450981, g: 0.9960785, b: 0.7686275, a: 1}
     scanSound: {fileID: 8300000, guid: 7bb9a9e5aae793c43a9236cd320987f0, type: 3}
     volume: 1
     requiredScanTime: 0.1
@@ -15922,7 +15922,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1159629365}
         m_TargetAssemblyTypeName: DeductionManager, Assembly-CSharp
         m_MethodName: MakeConclusion
         m_Mode: 1

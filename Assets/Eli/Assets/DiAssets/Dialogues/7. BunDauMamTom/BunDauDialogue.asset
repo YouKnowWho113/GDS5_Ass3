@@ -81,9 +81,9 @@ MonoBehaviour:
   allEvidenceDialogueRules:
   - requiredEvidence:
     - evidenceID: umami
-      requiredChannel: 1
+      requiredChannel: 3
     - evidenceID: sour
-      requiredChannel: 2
+      requiredChannel: 3
     - evidenceID: tender
       requiredChannel: 2
     - evidenceID: salty
