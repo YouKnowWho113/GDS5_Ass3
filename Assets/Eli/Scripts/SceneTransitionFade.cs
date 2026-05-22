@@ -7,12 +7,24 @@ public class SceneTransitionFade : MonoBehaviour
 {
     public static SceneTransitionFade Instance;
 
+    [System.Serializable]
+    public class TransitionTextEntry
+    {
+        public int fromSceneIndex;
+        public int toSceneIndex;
+        [TextArea(2, 4)] public string message;
+    }
+
     [Header("UI")]
     public CanvasGroup canvasGroup;
     public TMP_Text messageText;
 
-    [Header("Text")]
+    [Header("Default Text")]
+    [TextArea(2, 4)]
     public string defaultMessage = "TO BE CONTINUED...";
+
+    [Header("Scene Transition Texts")]
+    public TransitionTextEntry[] transitionTexts;
 
     [Header("Timing")]
     public float fadeInDuration = 1f;
@@ -51,13 +63,16 @@ public class SceneTransitionFade : MonoBehaviour
 
     public void TransitionToNextScene(string message = "")
     {
-        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextIndex = currentIndex + 1;
+
         TransitionToScene(nextIndex, message);
     }
 
     public void ReloadCurrentScene(string message = "")
     {
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
+
         TransitionToScene(currentIndex, message);
     }
 
@@ -72,18 +87,42 @@ public class SceneTransitionFade : MonoBehaviour
             return;
         }
 
-        StartCoroutine(TransitionRoutine(sceneIndex, message));
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+
+        StartCoroutine(TransitionRoutine(currentIndex, sceneIndex, message));
     }
 
-    private IEnumerator TransitionRoutine(int sceneIndex, string message)
+    private string GetTransitionMessage(int fromSceneIndex, int toSceneIndex)
+    {
+        if (transitionTexts != null)
+        {
+            foreach (TransitionTextEntry entry in transitionTexts)
+            {
+                if (entry.fromSceneIndex == fromSceneIndex &&
+                    entry.toSceneIndex == toSceneIndex &&
+                    !string.IsNullOrWhiteSpace(entry.message))
+                {
+                    return entry.message;
+                }
+            }
+        }
+
+        return defaultMessage;
+    }
+
+    private IEnumerator TransitionRoutine(int fromSceneIndex, int toSceneIndex, string message)
     {
         isTransitioning = true;
 
         UnlockCommonGameplayLocks();
         GameplayInputLock.Lock(transitionLockReason);
 
+        string finalMessage = string.IsNullOrWhiteSpace(message)
+            ? GetTransitionMessage(fromSceneIndex, toSceneIndex)
+            : message;
+
         if (messageText != null)
-            messageText.text = string.IsNullOrWhiteSpace(message) ? defaultMessage : message;
+            messageText.text = finalMessage;
 
         if (canvasGroup != null)
         {
@@ -94,7 +133,7 @@ public class SceneTransitionFade : MonoBehaviour
         yield return FadeTo(1f, fadeInDuration);
         yield return new WaitForSeconds(holdDuration);
 
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(toSceneIndex);
 
         yield return null;
 
@@ -117,6 +156,13 @@ public class SceneTransitionFade : MonoBehaviour
             yield break;
 
         float startAlpha = canvasGroup.alpha;
+
+        if (duration <= 0f)
+        {
+            canvasGroup.alpha = targetAlpha;
+            yield break;
+        }
+
         float timer = 0f;
 
         while (timer < duration)

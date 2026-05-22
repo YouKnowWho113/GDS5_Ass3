@@ -592,7 +592,7 @@ public class DialogueTriggerAction : MonoBehaviour
                 {
                     if (SceneTransitionFade.Instance != null)
                     {
-                        SceneTransitionFade.Instance.TransitionToNextScene("TO BE CONTINUED...");
+                        SceneTransitionFade.Instance.TransitionToNextScene();
                     }
                     else
                     {
