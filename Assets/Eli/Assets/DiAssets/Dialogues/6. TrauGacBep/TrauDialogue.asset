@@ -54,7 +54,7 @@ MonoBehaviour:
     playOnlyOnce: 1
     lockGameplayDuringDialogue: 1
     gameplayLockReason: Dialogue
-    postDialogueAction: 1
+    postDialogueAction: 4
     sceneNameToLoad: 
     postDialogueDelay: 0.3
     hasPlayed: 0
