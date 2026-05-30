@@ -11294,15 +11294,15 @@ RectTransform:
   m_GameObject: {fileID: 1008372395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.95049, y: 0.95049, z: 0.95049}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1788198277}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2000, y: 2000}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1008372397
 MonoBehaviour:
@@ -19665,11 +19665,51 @@ MonoBehaviour:
   transitionTexts:
   - fromSceneIndex: 1
     toSceneIndex: 2
-    message: 'Back where the journey began...
-
-'
+    message: One home kitchen led to another. And so, with my notebook and a hungry
+      ambition, I set out to find the first real test of my skills.
+  - fromSceneIndex: 2
+    toSceneIndex: 3
+    message: "A good first impression. But a real professional doesn\u2019t stop
+      after one dish. If I wanted Fendory to take me seriously, I had to prove I
+      could handle more than just a sandwich."
+  - fromSceneIndex: 3
+    toSceneIndex: 4
+    message: Word travels fast in a small city. Before I knew it, my name started
+      opening doors. And sometimes, those doors were already cracking under pressure.
+  - fromSceneIndex: 4
+    toSceneIndex: 5
+    message: "That feeling of helping someone with a single review\u2026 it stuck
+      with me. But success has a funny way of raising the stakes and the expectations."
+  - fromSceneIndex: 5
+    toSceneIndex: 6
+    message: "One vendor\u2019s smile, another\u2019s nervous laugh. I told myself
+      I was just being honest. But somewhere along the way, honesty started sounding
+      a lot like judgment."
+  - fromSceneIndex: 6
+    toSceneIndex: 7
+    message: "Acceptable. That word echoed longer than I expected. Maybe that\u2019s
+      why I walked into the next restaurant already sharpening my tongue."
+  - fromSceneIndex: 7
+    toSceneIndex: 8
+    message: "The chef\u2019s silence followed me home. But instead of slowing down,
+      I doubled down. If they wanted a real critic, I\u2019d give them one, no filters,
+      no mercy."
+  - fromSceneIndex: 8
+    toSceneIndex: 9
+    message: "I\u2019d burned a bridge without even realizing it. And when I saw
+      Fendory again, standing behind a different counter, the look in his eyes told
+      me this wouldn\u2019t be just another tasting."
+  - fromSceneIndex: 9
+    toSceneIndex: 10
+    message: "That question followed me through the rain. No phone, no followers,
+      no reputation. Just a hungry stomach and a memory I\u2019d buried a long time
+      ago."
+  - fromSceneIndex: 10
+    toSceneIndex: 11
+    message: "Somewhere between the first bite and the last review, I forgot why
+      I started. But maybe\u2026 it\u2019s not too late to remember."
   fadeInDuration: 1
-  holdDuration: 10
+  holdDuration: 5
   fadeOutDuration: 1
   transitionLockReason: SceneTransition
   notebookLockReason: Notebook
@@ -19688,7 +19728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -19733,7 +19773,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: -1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 20
@@ -20305,7 +20345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 293858a486763bc4a803abd339876291, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -560,48 +560,83 @@ public class DialogueTriggerAction : MonoBehaviour
 
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
 
+        Debug.Log(
+            "[DialogueTriggerAction] Post action: " +
+            entry.key +
+            " | Action: " +
+            entry.postDialogueAction +
+            " | Current scene index: " +
+            currentIndex
+        );
+
         switch (entry.postDialogueAction)
         {
             case PostDialogueAction.LoadNextScene:
-                int nextIndex = currentIndex + 1;
-
-                if (nextIndex >= SceneManager.sceneCountInBuildSettings)
-                {
-                    Debug.LogWarning("[DialogueTriggerAction] No next scene in Build Settings.");
-                    yield break;
-                }
-
-                SceneManager.LoadScene(nextIndex);
-                break;
-
-            case PostDialogueAction.ReloadCurrentScene:
-                SceneManager.LoadScene(currentIndex);
-                break;
-
-            case PostDialogueAction.LoadSceneByName:
-                if (string.IsNullOrWhiteSpace(entry.sceneNameToLoad))
-                {
-                    Debug.LogWarning("[DialogueTriggerAction] Scene name is empty.");
-                    yield break;
-                }
-
-                SceneManager.LoadScene(entry.sceneNameToLoad);
-                break;
-
             case PostDialogueAction.TransitionNextScene:
                 {
+                    int nextIndex = currentIndex + 1;
+
+                    if (nextIndex >= SceneManager.sceneCountInBuildSettings)
+                    {
+                        Debug.LogWarning("[DialogueTriggerAction] No next scene in Build Settings.");
+                        yield break;
+                    }
+
                     if (SceneTransitionFade.Instance != null)
                     {
-                        SceneTransitionFade.Instance.TransitionToNextScene();
+                        Debug.Log("[DialogueTriggerAction] Loading next scene through SceneTransitionFade: "
+                                  + currentIndex + " -> " + nextIndex);
+
+                        SceneTransitionFade.Instance.TransitionToScene(nextIndex);
                     }
                     else
                     {
-                        Debug.LogWarning("[DialogueTriggerAction] SceneTransitionFade missing. Loading next scene directly.");
+                        Debug.LogWarning("[DialogueTriggerAction] SceneTransitionFade missing. Direct loading fallback: "
+                                         + currentIndex + " -> " + nextIndex);
 
-                        int directNextIndex = currentIndex + 1;
+                        SceneManager.LoadScene(nextIndex);
+                    }
 
-                        if (directNextIndex < SceneManager.sceneCountInBuildSettings)
-                            SceneManager.LoadScene(directNextIndex);
+                    break;
+                }
+
+            case PostDialogueAction.ReloadCurrentScene:
+                {
+                    if (SceneTransitionFade.Instance != null)
+                    {
+                        Debug.Log("[DialogueTriggerAction] Reloading through SceneTransitionFade: " + currentIndex);
+                        SceneTransitionFade.Instance.ReloadCurrentScene();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[DialogueTriggerAction] SceneTransitionFade missing. Direct reload fallback.");
+                        SceneManager.LoadScene(currentIndex);
+                    }
+
+                    break;
+                }
+
+            case PostDialogueAction.LoadSceneByName:
+                {
+                    if (string.IsNullOrWhiteSpace(entry.sceneNameToLoad))
+                    {
+                        Debug.LogWarning("[DialogueTriggerAction] Scene name is empty.");
+                        yield break;
+                    }
+
+                    if (SceneTransitionFade.Instance != null)
+                    {
+                        Debug.Log("[DialogueTriggerAction] Loading scene by name through SceneTransitionFade: "
+                                  + entry.sceneNameToLoad);
+
+                        SceneTransitionFade.Instance.TransitionToSceneByName(entry.sceneNameToLoad);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[DialogueTriggerAction] SceneTransitionFade missing. Direct name load fallback: "
+                                         + entry.sceneNameToLoad);
+
+                        SceneManager.LoadScene(entry.sceneNameToLoad);
                     }
 
                     break;

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -43,6 +44,7 @@ public class SceneTransitionFade : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
+            Debug.LogWarning("[SceneTransitionFade] Duplicate destroyed in scene: " + gameObject.scene.name);
             Destroy(gameObject);
             return;
         }
@@ -53,12 +55,7 @@ public class SceneTransitionFade : MonoBehaviour
         if (canvasGroup == null)
             canvasGroup = GetComponent<CanvasGroup>();
 
-        if (canvasGroup != null)
-        {
-            canvasGroup.alpha = 0f;
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-        }
+        HideCanvasInstant();
     }
 
     public void TransitionToNextScene(string message = "")
@@ -72,14 +69,35 @@ public class SceneTransitionFade : MonoBehaviour
     public void ReloadCurrentScene(string message = "")
     {
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
-
         TransitionToScene(currentIndex, message);
+    }
+
+    public void TransitionToSceneByName(string sceneName, string message = "")
+    {
+        if (string.IsNullOrWhiteSpace(sceneName))
+        {
+            Debug.LogWarning("[SceneTransitionFade] Scene name is empty.");
+            return;
+        }
+
+        int sceneIndex = GetBuildIndexBySceneName(sceneName);
+
+        if (sceneIndex < 0)
+        {
+            Debug.LogWarning("[SceneTransitionFade] Scene not found in Build Settings: " + sceneName);
+            return;
+        }
+
+        TransitionToScene(sceneIndex, message);
     }
 
     public void TransitionToScene(int sceneIndex, string message = "")
     {
         if (isTransitioning)
+        {
+            Debug.LogWarning("[SceneTransitionFade] Transition ignored because another transition is already running.");
             return;
+        }
 
         if (sceneIndex < 0 || sceneIndex >= SceneManager.sceneCountInBuildSettings)
         {
@@ -89,24 +107,47 @@ public class SceneTransitionFade : MonoBehaviour
 
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
 
+        Debug.Log("[SceneTransitionFade] Transition requested: " + currentIndex + " -> " + sceneIndex);
+
         StartCoroutine(TransitionRoutine(currentIndex, sceneIndex, message));
+    }
+
+    private int GetBuildIndexBySceneName(string sceneName)
+    {
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            string foundSceneName = Path.GetFileNameWithoutExtension(scenePath);
+
+            if (foundSceneName == sceneName)
+                return i;
+        }
+
+        return -1;
     }
 
     private string GetTransitionMessage(int fromSceneIndex, int toSceneIndex)
     {
+        Debug.Log("[SceneTransitionFade] Looking for text: " + fromSceneIndex + " -> " + toSceneIndex);
+
         if (transitionTexts != null)
         {
             foreach (TransitionTextEntry entry in transitionTexts)
             {
+                if (entry == null)
+                    continue;
+
                 if (entry.fromSceneIndex == fromSceneIndex &&
                     entry.toSceneIndex == toSceneIndex &&
                     !string.IsNullOrWhiteSpace(entry.message))
                 {
+                    Debug.Log("[SceneTransitionFade] Found transition text: " + entry.message);
                     return entry.message;
                 }
             }
         }
 
+        Debug.LogWarning("[SceneTransitionFade] No transition text found for " + fromSceneIndex + " -> " + toSceneIndex + ". Using default.");
         return defaultMessage;
     }
 
@@ -124,28 +165,20 @@ public class SceneTransitionFade : MonoBehaviour
         if (messageText != null)
             messageText.text = finalMessage;
 
-        if (canvasGroup != null)
-        {
-            canvasGroup.interactable = true;
-            canvasGroup.blocksRaycasts = true;
-        }
+        ShowCanvasBlockInput();
 
         yield return FadeTo(1f, fadeInDuration);
-        yield return new WaitForSeconds(holdDuration);
+        yield return new WaitForSecondsRealtime(holdDuration);
 
-        SceneManager.LoadScene(toSceneIndex);
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(toSceneIndex);
 
-        yield return null;
-
-        UnlockCommonGameplayLocks();
+        while (loadOperation != null && !loadOperation.isDone)
+            yield return null;
 
         yield return FadeTo(0f, fadeOutDuration);
 
-        if (canvasGroup != null)
-        {
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-        }
+        HideCanvasInstant();
+        UnlockCommonGameplayLocks();
 
         isTransitioning = false;
     }
@@ -167,12 +200,31 @@ public class SceneTransitionFade : MonoBehaviour
 
         while (timer < duration)
         {
-            timer += Time.deltaTime;
+            timer += Time.unscaledDeltaTime;
             canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, timer / duration);
             yield return null;
         }
 
         canvasGroup.alpha = targetAlpha;
+    }
+
+    private void ShowCanvasBlockInput()
+    {
+        if (canvasGroup == null)
+            return;
+
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    private void HideCanvasInstant()
+    {
+        if (canvasGroup == null)
+            return;
+
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 
     private void UnlockCommonGameplayLocks()
